@@ -30,4 +30,4 @@ title: Содержание
 
 ---
 
-- :memo:&nbsp;&nbsp;[Как учить API Development](./api-deevelopment)
+- :memo:&nbsp;&nbsp;[Как учить API Development](./../basics_api/index.md)
