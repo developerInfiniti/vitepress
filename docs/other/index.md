@@ -27,3 +27,7 @@ title: Содержание
 
 - :floppy_disk:&nbsp;&nbsp;[Пример файла `.gitconfig`](./gitconfig)
 - :floppy_disk:&nbsp;&nbsp;[Пример файла `.gitignore`](./gitignore)
+
+---
+
+- :memo:&nbsp;&nbsp;[Как учить API Development](./api-deevelopment)

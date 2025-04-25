@@ -94,6 +94,122 @@ export default defineConfig({
         ]
       },
       {
+            text: 'API',
+            collapsible: true,
+            collapsed: true,
+            link: '/basics_vue/index',
+            items: [
+              {text: 'Home', link: '/basics_api/index'},
+              {
+                text: 'Основи API (API Fundamentals)',
+                collapsible: true,
+                collapsed: true,
+                items: [
+                  {text: 'Що таке API', link: '/basics_api/something-api'},
+                  {text: 'Типи API', link: '/basics_api/api-types'},
+                  {text: 'API vs SDK', link: '/basics_api/api-vs-sdk'},
+                ]
+              },
+              {
+                text: 'Запит і відповідь API (API Request & Response)',
+                collapsible: true,
+                collapsed: true,
+                items: [
+                  {text: 'Методи', link: '/basics_api/methods'},
+                  {text: 'Заголовки (Headers)', link: '/basics_api/headers'},
+                  {text: 'Коди відповідей', link: '/basics_api/response-codes'},
+                ]
+              },
+              {
+                text: 'Аутентифікація та безпека (Authentication & Security)',
+                link: '/basics_api/authentication-methods',
+                collapsible: true,
+                collapsed: true,
+                items: [
+                  {
+                    text: 'Методи аутентифікації',
+                    link: '/basics_api/methods',
+                    collapsible: true,
+                    collapsed: true,
+                    items: [
+                      {text: 'API Keys', link: '/basics_api/api-keys-description'},
+                      {text: 'OAuth 2', link: '/basics_api/o-auth-2'},
+                      {text: 'JWT', link: '/basics_api/jwt'},
+                      {text: 'Basic Auth', link: '/basics_api/basic-auth'},
+                    ]
+                  },
+                  {
+                    text: 'Заходи безпеки',
+                    link: '/basics_api/headers',
+                    collapsible: true,
+                    collapsed: true,
+                    items: [
+                      {text: 'Rate Limiting', link: '/basics_api/rate-limiting'},
+                      {text: 'CORS', link: '/basics_api/cors'},
+                      {text: 'HTTPS/TLS', link: '/basics_api/https-tls'}
+                    ]
+                  },
+                ]
+              },
+              {
+                text: 'Проєктування та розробка API (API Design and Development',
+                link: '/basics_api/api-design-development',
+              },
+              {
+                text: 'Тестування API (API Testing)',
+                link: '/basics_api/testing',
+                collapsible: true,
+                collapsed: true,
+                items: [
+                  {
+                    text: 'Postman',
+                    link: '/basics_api/postman',
+                  },
+                  {
+                    text: 'CURL',
+                    link: '/basics_api/curl',
+                  },
+                  {
+                    text: 'Insomnia',
+                    link: '/basics_api/insomnia',
+                  },
+                  {
+                    text: 'SoapUI',
+                    link: '/basics_api/soap-ui',
+                  },
+                  {
+                    text: 'JSON Placeholder',
+                    link: '/basics_api/json-placeholder',
+                  },
+                  {
+                    text: 'WireMock',
+                    link: '/basics_api/wire-mock',
+                  },
+                ]
+              },
+              {
+                text: 'Деплой та інтеграція API (API Deployment & Integration)',
+                link: '/basics_api/testing',
+                collapsible: true,
+                collapsed: true,
+                items: [
+                  {
+                    text: 'Використання API',
+                    link: '/basics_api/consuming-apis',
+                  },
+                  {
+                    text: 'third-party',
+                    link: '/basics_api/third-party',
+                  },
+                  {
+                    text: 'Шлюзи (Gateways)',
+                    link: '/basics_api/gateways',
+                  }
+                ]
+              },
+            ]
+      },
+      {
         text: 'Руководства',
         link: '/guide/guide'
       },
