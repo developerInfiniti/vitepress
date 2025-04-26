@@ -101,7 +101,7 @@ export default defineConfig({
             text: 'API',
             collapsible: true,
             collapsed: true,
-            link: '/basics_vue/index',
+            link: '/basics_api/index',
             items: [
               {text: 'Home', link: '/basics_api/index'},
               {
