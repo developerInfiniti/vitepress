@@ -40,6 +40,10 @@ export default defineConfig({
             ]
           },
           {
+            text: 'Контекст выполнения',
+            link: '/basics_js/execution-context',
+          },
+          {
             text: 'Объекты',
             collapsible: true,
             collapsed: true,
