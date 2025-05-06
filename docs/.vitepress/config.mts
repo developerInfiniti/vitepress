@@ -82,7 +82,7 @@ export default defineConfig({
         collapsible: true,
         collapsed: true,
         sidebarKey: 'group2',
-        items: [
+        items: [          
           {text: 'Components', link: '/basics_vue/components'},
           {text: 'Composables', link: '/basics_vue/composables'},
           {text: 'Composition Api', link: '/basics_vue/composition-api'},
@@ -95,6 +95,25 @@ export default defineConfig({
           {text: 'Watch Effect', link: '/basics_vue/watchEffect'},
           {text: 'Slots', link: '/basics_vue/slot'},
           {text: 'Вопросы по Vue - 1', link: '/basics_vue/vue_questions'},
+        ]
+      },
+      {
+        text: 'База Laravel',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group3',
+        items: [          
+          {text: 'Commands in console', link: '/basic_laravel/commands_console'},
+          {text: 'Laravel MIX', link: '/basics_vue/laravel_mix'}
+        ]
+      },
+      {
+        text: 'База Docker',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group4',
+        items: [          
+          {text: 'Commands in console', link: '/basic_docker/commands_console'}
         ]
       },
       {

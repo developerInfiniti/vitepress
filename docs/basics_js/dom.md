@@ -1,87 +1,87 @@
 ---
-title: Работа с DOM
-description: Руководство по манипуляции с DOM в JavaScript
+title: Робота з DOM
+description: Посібник з маніпуляції DOM в JavaScript
 ---
 
-# Работа с DOM в JavaScript
+# Робота з DOM в JavaScript
 
-## 1. Выбор элементов
+## 1. Вибір елементів
 
-### Основные методы выбора
+### Основні методи вибору
 ```javascript
-// Выбор по ID
+// Вибір за ID
 const element = document.getElementById('myId');
 
-// Выбор по классу
+// Вибір за класом
 const elements = document.getElementsByClassName('myClass');
 
-// Выбор по тегу
+// Вибір за тегом
 const divs = document.getElementsByTagName('div');
 
-// Современные методы
-const element = document.querySelector('.myClass'); // первый элемент
-const elements = document.querySelectorAll('.myClass'); // все элементы
+// Сучасні методи
+const element = document.querySelector('.myClass'); // перший елемент
+const elements = document.querySelectorAll('.myClass'); // всі елементи
 ```
 
-## 2. Манипуляция элементами
+## 2. Маніпуляція елементами
 
-### Создание элементов
+### Створення елементів
 ```javascript
-// Создание нового элемента
+// Створення нового елемента
 const div = document.createElement('div');
 div.className = 'myClass';
-div.textContent = 'Новый элемент';
+div.textContent = 'Новий елемент';
 
-// Добавление в DOM
+// Додавання в DOM
 parentElement.appendChild(div);
 ```
 
-### Изменение содержимого
+### Зміна вмісту
 ```javascript
-// Текстовое содержимое
-element.textContent = 'Новый текст';
+// Текстовий вміст
+element.textContent = 'Новий текст';
 
-// HTML содержимое
+// HTML вміст
 element.innerHTML = '<span>HTML контент</span>';
 ```
 
-## 3. Работа с атрибутами
+## 3. Робота з атрибутами
 
-### Управление атрибутами
+### Керування атрибутами
 ```javascript
-// Установка атрибута
+// Встановлення атрибута
 element.setAttribute('data-id', '123');
 
-// Получение атрибута
+// Отримання атрибута
 const value = element.getAttribute('data-id');
 
-// Проверка наличия атрибута
+// Перевірка наявності атрибута
 const hasAttribute = element.hasAttribute('data-id');
 
-// Удаление атрибута
+// Видалення атрибута
 element.removeAttribute('data-id');
 ```
 
-## 4. События
+## 4. Події
 
-### Добавление обработчиков событий
+### Додавання обробників подій
 ```javascript
-// Современный способ
+// Сучасний спосіб
 element.addEventListener('click', (event) => {
-  console.log('Клик!', event);
+  console.log('Клік!', event);
 });
 
-// Удаление обработчика
-const handler = (event) => console.log('Клик!');
+// Видалення обробника
+const handler = (event) => console.log('Клік!');
 element.addEventListener('click', handler);
 element.removeEventListener('click', handler);
 ```
 
-### Делегирование событий
+### Делегування подій
 ```javascript
 document.getElementById('parent').addEventListener('click', (event) => {
   if (event.target.matches('.child')) {
-    console.log('Клик по дочернему элементу');
+    console.log('Клік по дочірньому елементу');
   }
 });
 ```

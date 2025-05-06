@@ -1,94 +1,94 @@
 ---
-title: События в JavaScript
-description: Подробное руководство по работе с событиями
+title: Події в JavaScript
+description: Детальний посібник з роботи з подіями
 ---
 
-# События в JavaScript
+# Події в JavaScript
 
-## 1. Типы событий
+## 1. Типи подій
 
-### События мыши
+### Події миші
 ```javascript
-// Клик
+// Клік
 element.addEventListener('click', () => {});
 
-// Двойной клик
+// Подвійний клік
 element.addEventListener('dblclick', () => {});
 
-// Наведение
+// Наведення
 element.addEventListener('mouseover', () => {});
 element.addEventListener('mouseout', () => {});
 
-// Перемещение
+// Переміщення
 element.addEventListener('mousemove', (event) => {
   console.log(event.clientX, event.clientY);
 });
 ```
 
-### События клавиатуры
+### Події клавіатури
 ```javascript
-// Нажатие клавиши
+// Натискання клавіші
 document.addEventListener('keydown', (event) => {
   console.log(event.key, event.code);
 });
 
-// Отпускание клавиши
+// Відпускання клавіші
 document.addEventListener('keyup', (event) => {});
 
-// Ввод текста
+// Введення тексту
 input.addEventListener('input', (event) => {
   console.log(event.target.value);
 });
 ```
 
-## 2. Объект события
+## 2. Об'єкт події
 
-### Свойства события
+### Властивості події
 ```javascript
 element.addEventListener('click', (event) => {
-  // Координаты относительно окна
+  // Координати відносно вікна
   console.log(event.clientX, event.clientY);
   
-  // Координаты относительно документа
+  // Координати відносно документа
   console.log(event.pageX, event.pageY);
   
-  // Целевой элемент
+  // Цільовий елемент
   console.log(event.target);
   
-  // Текущий элемент (где сработал обработчик)
+  // Поточний елемент (де спрацював обробник)
   console.log(event.currentTarget);
 });
 ```
 
-## 3. Всплытие и погружение
+## 3. Спливання та занурення
 
-### Фазы события
+### Фази події
 ```javascript
-// Погружение (capturing)
+// Занурення (capturing)
 element.addEventListener('click', () => {}, true);
 
-// Всплытие (bubbling)
-element.addEventListener('click', () => {}, false); // по умолчанию
+// Спливання (bubbling)
+element.addEventListener('click', () => {}, false); // за замовчуванням
 
-// Остановка всплытия
+// Зупинка спливання
 element.addEventListener('click', (event) => {
   event.stopPropagation();
 });
 ```
 
-## 4. Пользовательские события
+## 4. Користувацькі події
 
-### Создание и отправка событий
+### Створення та відправка подій
 ```javascript
-// Создание события
+// Створення події
 const event = new CustomEvent('myEvent', {
-  detail: { message: 'Привет!' }
+  detail: { message: 'Привіт!' }
 });
 
-// Отправка события
+// Відправка події
 element.dispatchEvent(event);
 
-// Прослушивание пользовательского события
+// Прослуховування користувацької події
 element.addEventListener('myEvent', (event) => {
   console.log(event.detail.message);
 });

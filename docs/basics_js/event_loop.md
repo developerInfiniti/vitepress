@@ -1,23 +1,23 @@
 ---
 title: Event Loop в JavaScript
-description: Подробное объяснение работы Event Loop и асинхронного выполнения кода
+description: Детальне пояснення роботи Event Loop та асинхронного виконання коду
 ---
 
 # Event Loop в JavaScript
 
-## 1. Что такое Event Loop?
+## 1. Що таке Event Loop?
 
-Event Loop (цикл событий) - это механизм, который позволяет JavaScript выполнять неблокирующие операции, несмотря на то, что JavaScript является однопоточным языком.
+Event Loop (цикл подій) - це механізм, який дозволяє JavaScript виконувати неблокуючі операції, незважаючи на те, що JavaScript є однопотоковою мовою.
 
-### Основные компоненты
+### Основні компоненти
 ```javascript
-// Event Loop работает с несколькими ключевыми компонентами:
-// 1. Call Stack (стек вызовов)
-// 2. Web APIs (в браузере) или C++ APIs (в Node.js)
-// 3. Callback Queue (очередь колбэков)
-// 4. Microtask Queue (очередь микрозадач)
+// Event Loop працює з кількома ключовими компонентами:
+// 1. Call Stack (стек викликів)
+// 2. Web APIs (у браузері) або C++ APIs (у Node.js)
+// 3. Callback Queue (черга колбеків)
+// 4. Microtask Queue (черга мікрозадач)
 
-// Пример синхронного кода
+// Приклад синхронного коду
 function main() {
   console.log('1');
   console.log('2');
@@ -25,12 +25,12 @@ function main() {
 }
 
 main();
-// Вывод: 1, 2, 3 (последовательно)
+// Вивід: 1, 2, 3 (послідовно)
 ```
 
 ## 2. Call Stack
 
-### Принцип работы стека вызовов
+### Принцип роботи стеку викликів
 ```javascript
 function multiply(a, b) {
   return a * b;
@@ -46,18 +46,18 @@ function printSquare(n) {
 }
 
 printSquare(4);
-// Call Stack формируется так:
+// Call Stack формується так:
 // 1. printSquare(4)
 // 2. square(4)
 // 3. multiply(4, 4)
 // 4. console.log(16)
 ```
 
-## 3. Макрозадачи (Tasks)
+## 3. Макрозадачі (Tasks)
 
-### setTimeout и setInterval
+### setTimeout і setInterval
 ```javascript
-console.log('Начало');
+console.log('Початок');
 
 setTimeout(() => {
   console.log('Таймер 1');
@@ -67,48 +67,48 @@ setTimeout(() => {
   console.log('Таймер 2');
 }, 0);
 
-console.log('Конец');
+console.log('Кінець');
 
-// Вывод:
-// Начало
-// Конец
+// Вивід:
+// Початок
+// Кінець
 // Таймер 1
 // Таймер 2
 ```
 
-## 4. Микрозадачи (Microtasks)
+## 4. Мікрозадачі (Microtasks)
 
-### Promise и queueMicrotask
+### Promise і queueMicrotask
 ```javascript
-console.log('Начало');
+console.log('Початок');
 
 Promise.resolve().then(() => {
-  console.log('Микрозадача 1');
+  console.log('Мікрозадача 1');
 });
 
 queueMicrotask(() => {
-  console.log('Микрозадача 2');
+  console.log('Мікрозадача 2');
 });
 
 setTimeout(() => {
   console.log('Макрозадача');
 }, 0);
 
-console.log('Конец');
+console.log('Кінець');
 
-// Вывод:
-// Начало
-// Конец
-// Микрозадача 1
-// Микрозадача 2
+// Вивід:
+// Початок
+// Кінець
+// Мікрозадача 1
+// Мікрозадача 2
 // Макрозадача
 ```
 
-## 5. Порядок выполнения
+## 5. Порядок виконання
 
-### Приоритеты задач
+### Пріоритети задач
 ```javascript
-console.log('Скрипт начался');
+console.log('Скрипт почався');
 
 setTimeout(() => {
   console.log('setTimeout 1');
@@ -125,35 +125,35 @@ Promise.resolve()
     console.log('Promise 2');
   });
 
-console.log('Скрипт закончился');
+console.log('Скрипт закінчився');
 
-// Вывод:
-// Скрипт начался
-// Скрипт закончился
+// Вивід:
+// Скрипт почався
+// Скрипт закінчився
 // Promise 1
 // Promise 2
 // setTimeout 1
 // setTimeout 2
 ```
 
-## 6. Практические примеры
+## 6. Практичні приклади
 
-### Обработка событий
+### Обробка подій
 ```javascript
 button.addEventListener('click', () => {
   Promise.resolve().then(() => {
-    console.log('Микрозадача в обработчике события');
+    console.log('Мікрозадача в обробнику події');
   });
   
-  console.log('Обработчик события');
+  console.log('Обробник події');
 });
 
-// При клике:
-// Обработчик события
-// Микрозадача в обработчике события
+// При кліку:
+// Обробник події
+// Мікрозадача в обробнику події
 ```
 
-### Асинхронные операции
+### Асинхронні операції
 ```javascript
 async function example() {
   console.log('1');
@@ -178,7 +178,7 @@ async function example() {
 example();
 console.log('7');
 
-// Вывод:
+// Вивід:
 // 1
 // 7
 // 3
@@ -190,17 +190,17 @@ console.log('7');
 
 ## 7. Node.js Event Loop
 
-### Фазы цикла событий в Node.js
+### Фази циклу подій в Node.js
 ```javascript
 // 1. timers: setTimeout, setInterval
 setTimeout(() => console.log('timer'), 0);
 
-// 2. pending callbacks: I/O операции
+// 2. pending callbacks: I/O операції
 fs.readFile('file.txt', () => console.log('file read'));
 
-// 3. idle, prepare: внутреннее использование
+// 3. idle, prepare: внутрішнє використання
 
-// 4. poll: получение новых I/O событий
+// 4. poll: отримання нових I/O подій
 
 // 5. check: setImmediate
 setImmediate(() => console.log('immediate'));
@@ -208,11 +208,11 @@ setImmediate(() => console.log('immediate'));
 // 6. close callbacks: socket.on('close', ...)
 ```
 
-## 8. Отладка и понимание
+## 8. Відладка та розуміння
 
-### Визуализация Event Loop
+### Візуалізація Event Loop
 ```javascript
-console.log('1'); // Синхронный код
+console.log('1'); // Синхронний код
 
 setTimeout(() => {
   console.log('2'); // Макрозадача
@@ -220,35 +220,35 @@ setTimeout(() => {
 
 Promise.resolve()
   .then(() => {
-    console.log('3'); // Микрозадача
+    console.log('3'); // Мікрозадача
     setTimeout(() => {
-      console.log('4'); // Новая макрозадача
+      console.log('4'); // Нова макрозадача
     }, 0);
   })
   .then(() => {
-    console.log('5'); // Микрозадача
+    console.log('5'); // Мікрозадача
   });
 
-console.log('6'); // Синхронный код
+console.log('6'); // Синхронний код
 
-// Порядок выполнения:
-// 1. Синхронный код: 1, 6
-// 2. Микрозадачи: 3, 5
-// 3. Макрозадачи: 2, 4
+// Порядок виконання:
+// 1. Синхронний код: 1, 6
+// 2. Мікрозадачі: 3, 5
+// 3. Макрозадачі: 2, 4
 ```
 
-## 9. Лучшие практики
+## 9. Найкращі практики
 
-### Оптимизация производительности
+### Оптимізація продуктивності
 ```javascript
-// Плохо: блокировка Event Loop
+// Погано: блокування Event Loop
 function heavyOperation() {
   for (let i = 0; i < 1000000000; i++) {
-    // Тяжелые вычисления
+    // Важкі обчислення
   }
 }
 
-// Хорошо: разбиение на части
+// Добре: розбиття на частини
 function chunkedOperation(start = 0, end = 1000000000, chunk = 1000000) {
   return new Promise(resolve => {
     if (start >= end) {
@@ -258,7 +258,7 @@ function chunkedOperation(start = 0, end = 1000000000, chunk = 1000000) {
     
     setTimeout(() => {
       for (let i = start; i < Math.min(start + chunk, end); i++) {
-        // Часть вычислений
+        // Частина обчислень
       }
       chunkedOperation(start + chunk, end, chunk).then(resolve);
     }, 0);

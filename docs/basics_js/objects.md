@@ -1,66 +1,66 @@
 ---
-title: Объекты в JavaScript
-description: Подробное руководство по работе с объектами в JavaScript
+title: Об'єкти в JavaScript
+description: Детальне керівництво по роботі з об'єктами в JavaScript
 ---
 
-# Шпаргалка по объектам в JavaScript
+# Шпаргалка по об'єктам в JavaScript
 
-## 1. Создание объектов
+## 1. Створення об'єктів
 
-### Литеральная нотация
+### Літеральна нотація
 ```javascript
 const person = {
-  name: "Иван",
+  name: "Іван",
   age: 30,
-  job: "программист"
+  job: "програміст"
 };
 ```
 
 ### Через конструктор Object
 ```javascript
 const person = new Object();
-person.name = "Иван";
+person.name = "Іван";
 person.age = 30;
-person.job = "программист";
+person.job = "програміст";
 ```
 
-### Через конструктор-функцию
+### Через конструктор-функцію
 ```javascript
 function Person(name, age, job) {
   this.name = name;
   this.age = age;
   this.job = job;
 }
-const ivan = new Person("Иван", 30, "программист");
+const ivan = new Person("Іван", 30, "програміст");
 ```
 
 ### Через Object.create()
 ```javascript
 const personProto = {
   greeting: function() {
-    return `Привет, меня зовут ${this.name}`;
+    return `Привіт, мене звати ${this.name}`;
   }
 };
 const ivan = Object.create(personProto);
-ivan.name = "Иван";
+ivan.name = "Іван";
 ```
 
-## 2. Методы объектов
+## 2. Методи об'єктів
 
-### Добавление методов
+### Додавання методів
 ```javascript
 const person = {
-  name: "Иван",
+  name: "Іван",
   sayHello() {
-    return `Привет, я ${this.name}!`;
+    return `Привіт, я ${this.name}!`;
   }
 };
 ```
 
-### Геттеры и сеттеры
+### Геттери та сеттери
 ```javascript
 const person = {
-  firstName: "Иван",
+  firstName: "Іван",
   lastName: "Петров",
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
@@ -71,11 +71,11 @@ const person = {
 };
 ```
 
-## 3. Работа со свойствами
+## 3. Робота з властивостями
 
-### Проверка существования свойства
+### Перевірка існування властивості
 ```javascript
-const person = { name: "Иван" };
+const person = { name: "Іван" };
 
 // Оператор in
 console.log("name" in person); // true
@@ -84,15 +84,15 @@ console.log("name" in person); // true
 console.log(person.hasOwnProperty("name")); // true
 ```
 
-### Удаление свойств
+### Видалення властивостей
 ```javascript
-const person = { name: "Иван", age: 30 };
+const person = { name: "Іван", age: 30 };
 delete person.age;
 ```
 
-### Перебор свойств
+### Перебір властивостей
 ```javascript
-const person = { name: "Иван", age: 30, job: "программист" };
+const person = { name: "Іван", age: 30, job: "програміст" };
 
 // for...in
 for (let key in person) {

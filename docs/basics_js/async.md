@@ -1,17 +1,17 @@
 ---
-title: Асинхронное программирование в JavaScript
-description: Основные концепции Асинхронного программирования в JavaScript
+title: Асинхронне програмування в JavaScript
+description: Основні концепції Асинхронного програмування в JavaScript
 ---
 
-# Асинхронное программирование в JavaScript
+# Асинхронне програмування в JavaScript
 
-## 1. Колбэки (Callbacks)
+## 1. Колбеки (Callbacks)
 
-### Базовое использование
+### Базове використання
 ```javascript
 function fetchData(callback) {
   setTimeout(() => {
-    callback('Данные получены');
+    callback('Дані отримано');
   }, 1000);
 }
 
@@ -20,37 +20,37 @@ fetchData((data) => {
 });
 ```
 
-### Обработка ошибок
+### Обробка помилок
 ```javascript
 function fetchData(success, error) {
   const random = Math.random();
   setTimeout(() => {
     if (random > 0.5) {
-      success('Данные получены');
+      success('Дані отримано');
     } else {
-      error('Ошибка получения данных');
+      error('Помилка отримання даних');
     }
   }, 1000);
 }
 ```
 
-## 2. Промисы (Promises)
+## 2. Проміси (Promises)
 
-### Создание промисов
+### Створення промісів
 ```javascript
 const promise = new Promise((resolve, reject) => {
   const random = Math.random();
   setTimeout(() => {
     if (random > 0.5) {
-      resolve('Успех!');
+      resolve('Успіх!');
     } else {
-      reject('Ошибка!');
+      reject('Помилка!');
     }
   }, 1000);
 });
 ```
 
-### Цепочки промисов
+### Ланцюжки промісів
 ```javascript
 fetchUser(1)
   .then(user => fetchUserPosts(user.id))
@@ -58,10 +58,10 @@ fetchUser(1)
   .catch(error => console.error(error));
 ```
 
-### Методы Promise
+### Методи Promise
 
 #### `Promise.all`
-Выполняет массив промисов параллельно и возвращает массив результатов. Если хотя бы один промис завершится с ошибкой, весь `Promise.all` завершится с этой ошибкой.
+Виконує масив промісів паралельно і повертає масив результатів. Якщо хоча б один проміс завершиться з помилкою, весь `Promise.all` завершиться з цією помилкою.
 
 ```javascript
 const promises = [
@@ -72,15 +72,15 @@ const promises = [
 
 Promise.all(promises)
   .then(([users, posts, comments]) => {
-    console.log('Все данные:', { users, posts, comments });
+    console.log('Всі дані:', { users, posts, comments });
   })
   .catch(error => {
-    console.error('Ошибка в одном из промисов:', error);
+    console.error('Помилка в одному з промісів:', error);
   });
 ```
 
 #### `Promise.race`
-Возвращает результат первого завершенного промиса (независимо от того, успешно он выполнился или с ошибкой).
+Повертає результат першого завершеного промісу (незалежно від того, успішно він виконався чи з помилкою).
 
 ```javascript
 const promises = [
@@ -91,15 +91,15 @@ const promises = [
 
 Promise.race(promises)
   .then(data => {
-    console.log('Первый завершенный промис:', data);
+    console.log('Перший завершений проміс:', data);
   })
   .catch(error => {
-    console.error('Первый завершенный промис с ошибкой:', error);
+    console.error('Перший завершений проміс з помилкою:', error);
   });
 ```
 
 #### `Promise.allSettled`
-Ждет завершения всех промисов и возвращает массив объектов с результатами (как успешными, так и ошибочными).
+Чекає завершення всіх промісів і повертає масив об'єктів з результатами (як успішними, так і помилковими).
 
 ```javascript
 const promises = [
@@ -112,16 +112,16 @@ Promise.allSettled(promises)
   .then(results => {
     results.forEach((result, index) => {
       if (result.status === 'fulfilled') {
-        console.log(`Промис ${index} успешно завершен:`, result.value);
+        console.log(`Проміс ${index} успішно завершено:`, result.value);
       } else {
-        console.error(`Промис ${index} завершен с ошибкой:`, result.reason);
+        console.error(`Проміс ${index} завершено з помилкою:`, result.reason);
       }
     });
   });
 ```
 
 #### `Promise.any`
-Возвращает результат первого успешно завершенного промиса. Если все промисы завершатся с ошибкой, вернется `AggregateError`.
+Повертає результат першого успішно завершеного промісу. Якщо всі проміси завершаться з помилкою, повернеться `AggregateError`.
 
 ```javascript
 const promises = [
@@ -132,16 +132,16 @@ const promises = [
 
 Promise.any(promises)
   .then(data => {
-    console.log('Первый успешный промис:', data);
+    console.log('Перший успішний проміс:', data);
   })
   .catch(error => {
-    console.error('Все промисы завершились с ошибкой:', error);
+    console.error('Всі проміси завершилися з помилкою:', error);
   });
 ```
 
 ## 3. Async/Await
 
-### Основы async/await
+### Основи async/await
 ```javascript
 async function fetchUserData() {
   try {
@@ -149,12 +149,12 @@ async function fetchUserData() {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('Ошибка:', error);
+    console.error('Помилка:', error);
   }
 }
 ```
 
-### Параллельное выполнение
+### Паралельне виконання
 ```javascript
 async function fetchAllData() {
   const [users, posts, comments] = await Promise.all([

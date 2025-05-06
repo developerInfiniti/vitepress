@@ -1,48 +1,48 @@
 ---
-title: Часто задаваемые вопросы на собеседованиях по JavaScript
-description: Подборка популярных вопросов и задач на собеседованиях с подробными ответами и примерами кода
+title: Часто задавані питання на співбесідах по JavaScript
+description: Підбірка популярних питань та завдань на співбесідах з детальними відповідями та прикладами коду
 ---
 
-# Часто задаваемые вопросы на собеседованиях по JavaScript
+# Часто задавані питання на співбесідах по JavaScript
 
-## 1. Типы данных и проверка типов
+## 1. Типи даних та перевірка типів
 
-### Вопрос: В чем разница между `==` и `===`?
+### Питання: У чому різниця між `==` та `===`?
 
 ```javascript
-// Нестрогое сравнение (==)
+// Нестроге порівняння (==)
 console.log(5 == "5");      // true
 console.log(0 == false);    // true
 console.log(null == undefined);  // true
 
-// Строгое сравнение (===)
+// Строге порівняння (===)
 console.log(5 === "5");     // false
 console.log(0 === false);   // false
 console.log(null === undefined);  // false
 ```
 
-**Объяснение**:
-- `==` выполняет приведение типов перед сравнением
-- `===` сравнивает значения без приведения типов
+**Пояснення**:
+- `==` виконує приведення типів перед порівнянням
+- `===` порівнює значення без приведення типів
 
-### Вопрос: Как проверить, является ли переменная массивом?
+### Питання: Як перевірити, чи є змінна масивом?
 
 ```javascript
-// Способ 1: Array.isArray()
+// Спосіб 1: Array.isArray()
 const arr = [1, 2, 3];
 console.log(Array.isArray(arr));  // true
 console.log(Array.isArray({}));   // false
 
-// Способ 2: instanceof
+// Спосіб 2: instanceof
 console.log(arr instanceof Array);  // true
 
-// Способ 3: Object.prototype.toString.call()
+// Спосіб 3: Object.prototype.toString.call()
 console.log(Object.prototype.toString.call(arr) === '[object Array]');  // true
 ```
 
-## 2. Замыкания и область видимости
+## 2. Замикання та область видимості
 
-### Вопрос: Что выведет следующий код?
+### Питання: Що виведе наступний код?
 
 ```javascript
 for (var i = 0; i < 5; i++) {
@@ -51,64 +51,64 @@ for (var i = 0; i < 5; i++) {
     }, 1000);
 }
 
-// Решение с использованием let
+// Рішення з використанням let
 for (let i = 0; i < 5; i++) {
     setTimeout(() => {
-        console.log(i);  // Выведет 0, 1, 2, 3, 4
+        console.log(i);  // Виведе 0, 1, 2, 3, 4
     }, 1000);
 }
 
-// Решение с использованием замыкания
+// Рішення з використанням замикання
 for (var i = 0; i < 5; i++) {
     (function(j) {
         setTimeout(() => {
-            console.log(j);  // Выведет 0, 1, 2, 3, 4
+            console.log(j);  // Виведе 0, 1, 2, 3, 4
         }, 1000);
     })(i);
 }
 ```
 
-**Объяснение**:
-- При использовании `var` все итерации будут ссылаться на последнее значение `i`
-- `let` создает блочную область видимости
-- Немедленно вызываемая функция создает замыкание для каждой итерации
+**Пояснення**:
+- При використанні `var` всі ітерації будуть посилатися на останнє значення `i`
+- `let` створює блочну область видимості
+- Негайно викликана функція створює замикання для кожної ітерації
 
-## 3. Прототипы и наследование
+## 3. Прототипи та наслідування
 
-### Вопрос: Реализуйте наследование без использования `class`
+### Питання: Реалізуйте наслідування без використання `class`
 
 ```javascript
-// Функция-конструктор
+// Функція-конструктор
 function Animal(name) {
     this.name = name;
 }
 
 Animal.prototype.speak = function() {
-    console.log(`${this.name} издает звук`);
+    console.log(`${this.name} видає звук`);
 };
 
-// Наследование
+// Наслідування
 function Dog(name, breed) {
-    Animal.call(this, name);  // Вызов родительского конструктора
+    Animal.call(this, name);  // Виклик батьківського конструктора
     this.breed = breed;
 }
 
-// Установка прототипа
+// Встановлення прототипу
 Dog.prototype = Object.create(Animal.prototype);
 Dog.prototype.constructor = Dog;
 
-// Переопределение метода
+// Перевизначення методу
 Dog.prototype.speak = function() {
-    console.log(`${this.name} лает`);
+    console.log(`${this.name} гавкає`);
 };
 
-const dog = new Dog('Шарик', 'Овчарка');
-dog.speak();  // "Шарик лает"
+const dog = new Dog('Шарик', 'Вівчарка');
+dog.speak();  // "Шарик гавкає"
 ```
 
-## 4. Асинхронное программирование
+## 4. Асинхронне програмування
 
-### Вопрос: Реализуйте функцию последовательного выполнения промисов
+### Питання: Реалізуйте функцію послідовного виконання промісів
 
 ```javascript
 function sequentialPromises(promises) {
@@ -119,7 +119,7 @@ function sequentialPromises(promises) {
     }, Promise.resolve([]));
 }
 
-// Пример использования
+// Приклад використання
 const promise1 = () => new Promise(resolve => setTimeout(() => resolve(1), 1000));
 const promise2 = () => new Promise(resolve => setTimeout(() => resolve(2), 500));
 const promise3 = () => new Promise(resolve => setTimeout(() => resolve(3), 100));
@@ -128,13 +128,13 @@ sequentialPromises([promise1, promise2, promise3])
     .then(console.log);  // [1, 2, 3]
 ```
 
-### Вопрос: Реализуйте функцию `Promise.all` с нуля
+### Питання: Реалізуйте функцію `Promise.all` з нуля
 
 ```javascript
 function customPromiseAll(promises) {
     return new Promise((resolve, reject) => {
         if (!Array.isArray(promises)) {
-            return reject(new TypeError('Аргумент должен быть массивом'));
+            return reject(new TypeError('Аргумент має бути масивом'));
         }
 
         const results = new Array(promises.length);
@@ -159,7 +159,7 @@ function customPromiseAll(promises) {
     });
 }
 
-// Пример использования
+// Приклад використання
 const promises = [
     Promise.resolve(1),
     Promise.resolve(2),
@@ -170,28 +170,28 @@ customPromiseAll(promises)
     .then(console.log);  // [1, 2, 3]
 ```
 
-## 5. Работа с объектами
+## 5. Робота з об'єктами
 
-### Вопрос: Глубокое клонирование объекта
+### Питання: Глибоке клонування об'єкта
 
 ```javascript
 function deepClone(obj) {
-    // Обработка примитивов и null
+    // Обробка примітивів та null
     if (obj === null || typeof obj !== 'object') {
         return obj;
     }
 
-    // Обработка Date
+    // Обробка Date
     if (obj instanceof Date) {
         return new Date(obj.getTime());
     }
 
-    // Обработка массивов
+    // Обробка масивів
     if (Array.isArray(obj)) {
         return obj.map(deepClone);
     }
 
-    // Обработка объектов
+    // Обробка об'єктів
     const clone = {};
     for (let key in obj) {
         if (Object.prototype.hasOwnProperty.call(obj, key)) {
@@ -202,7 +202,7 @@ function deepClone(obj) {
     return clone;
 }
 
-// Пример использования
+// Приклад використання
 const original = {
     a: 1,
     b: [1, 2, 3],
@@ -214,9 +214,9 @@ const cloned = deepClone(original);
 console.log(cloned !== original);  // true
 ```
 
-## 6. Функциональное программирование
+## 6. Функціональне програмування
 
-### Вопрос: Реализуйте каррирование функции
+### Питання: Реалізуйте каррування функції
 
 ```javascript
 function curry(fn) {
@@ -231,7 +231,7 @@ function curry(fn) {
     };
 }
 
-// Пример использования
+// Приклад використання
 function sum(a, b, c) {
     return a + b + c;
 }
@@ -243,9 +243,9 @@ console.log(curriedSum(1)(2, 3));    // 6
 console.log(curriedSum(1, 2, 3));    // 6
 ```
 
-## 7. Производительность и оптимизация
+## 7. Продуктивність та оптимізація
 
-### Вопрос: Напишите функцию мемоизации
+### Питання: Напишіть функцію мемоізації
 
 ```javascript
 function memoize(fn) {
@@ -264,30 +264,30 @@ function memoize(fn) {
     };
 }
 
-// Пример использования
+// Приклад використання
 function fibonacci(n) {
     if (n <= 1) return n;
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 const memoizedFibonacci = memoize(fibonacci);
-console.time('Без мемоизации');
+console.time('Без мемоізації');
 fibonacci(35);
-console.timeEnd('Без мемоизации');
+console.timeEnd('Без мемоізації');
 
-console.time('С мемоизацией');
+console.time('З мемоізацією');
 memoizedFibonacci(35);
-console.timeEnd('С мемоизацией');
+console.timeEnd('З мемоізацією');
 ```
 
-## Заключение
+## Висновок
 
-Советы для подготовки к собеседованию:
-- Изучайте основы языка глубоко
-- Практикуйте решение задач на платформах вроде LeetCode
-- Понимайте, как работают механизмы языка "под капотом"
-- Умейте объяснить свое решение
-- Не бойтесь признаваться, что чего-то не знаете
+Поради для підготовки до співбесіди:
+- Вивчайте основи мови глибоко
+- Практикуйте розв'язання задач на платформах на кшталт LeetCode
+- Розумійте, як працюють механізми мови "під капотом"
+- Вмійте пояснити своє рішення
+- Не бійтеся визнавати, що чогось не знаєте
 
 ---
-Удачи на собеседовании!
+Удачі на співбесіді!
