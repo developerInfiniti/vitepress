@@ -9,9 +9,48 @@ export default defineConfig({
     search: {
       provider: 'algolia',
       options: {
-        appId: 'R2IYF7ETH7',
-        apiKey: '599cec31baffa4868cae4e79f180729b',
-        indexName: 'docsearch'
+        appId: 'SPLFHSTPHL',
+        apiKey: '2c961e98fdc50fd23d0eb64db6fd3e4a',
+        indexName: 'YOUR_INDEX_NAME',
+        placeholder: 'Поиск по документации',
+        translations: {
+          button: {
+            buttonText: 'Поиск',
+            buttonAriaLabel: 'Поиск'
+          },
+          modal: {
+            searchBox: {
+              resetButtonTitle: 'Очистить запрос',
+              resetButtonAriaLabel: 'Очистить запрос',
+              cancelButtonText: 'Отмена',
+              cancelButtonAriaLabel: 'Отмена'
+            },
+            startScreen: {
+              recentSearchesTitle: 'История поиска',
+              noRecentSearchesText: 'Нет истории поиска',
+              saveRecentSearchButtonTitle: 'Сохранить в истории поиска',
+              removeRecentSearchButtonTitle: 'Удалить из истории поиска',
+              favoriteSearchesTitle: 'Избранное',
+              removeFavoriteSearchButtonTitle: 'Удалить из избранного'
+            },
+            errorScreen: {
+              titleText: 'Не удалось получить результаты',
+              helpText: 'Вы можете проверить подключение к сети'
+            },
+            footer: {
+              selectText: 'выбрать',
+              navigateText: 'навигация',
+              closeText: 'закрыть',
+              searchByText: 'Поиск от'
+            },
+            noResultsScreen: {
+              noResultsText: 'Нет результатов по запросу',
+              suggestedQueryText: 'Вы можете попробовать',
+              reportMissingResultsText: 'Считаете, что по этому запросу должны быть результаты?',
+              reportMissingResultsLinkText: 'Сообщить об этом'
+            }
+          }
+        }
       }
     },
     // https://vitepress.dev/reference/default-theme-config
