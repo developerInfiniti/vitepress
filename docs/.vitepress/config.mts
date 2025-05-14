@@ -9,9 +9,9 @@ export default defineConfig({
     search: {
       provider: 'algolia',
       options: {
-        appId: '...',
-        apiKey: '...',
-        indexName: '...'
+        appId: 'R2IYF7ETH7',
+        apiKey: '599cec31baffa4868cae4e79f180729b',
+        indexName: 'docsearch'
       }
     },
     // https://vitepress.dev/reference/default-theme-config
@@ -122,6 +122,24 @@ export default defineConfig({
           {text: 'Vuex 4', link: '/basics_vue/vuex-4'},
           {text: 'Vue 3', link: '/basics_vue/vue-3'},
           {text: 'Vue 2', link: '/basics_vue/vue-2'},
+        ]
+      },
+      {
+        text: 'База React',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group2',
+        items: [
+          {text: 'Components', link: '/basics_react/components'},
+          {text: 'Hooks', link: '/basics_react/hooks'},
+          {text: 'State Management', link: '/basics_react/state-management'},
+          {text: 'Routing', link: '/basics_react/routing'},
+          {text: 'Forms', link: '/basics_react/forms'},
+          {text: 'Context API', link: '/basics_react/context-api'},
+          {text: 'React Router', link: '/basics_react/react-router'},
+          {text: 'Redux', link: '/basics_react/redux'},
+          {text: 'React Testing Library', link: '/basics_react/react-testing-library'},
+          {text: 'React DevTools', link: '/basics_react/react-devtools'},
         ]
       },
       {
