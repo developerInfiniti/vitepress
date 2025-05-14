@@ -78,6 +78,25 @@ export default defineConfig({
         ]
       },
       {
+        text: 'База TS',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group2',
+        items: [
+          {text: 'Types', link: '/basics_ts/types'},
+          {text: 'Interfaces', link: '/basics_ts/interfaces'},
+          {text: 'Classes', link: '/basics_ts/classes'},
+          {text: 'Generics', link: '/basics_ts/generics'},
+          {text: 'Enums', link: '/basics_ts/enums'},
+          {text: 'Decorators', link: '/basics_ts/decorators'},
+          {text: 'Namespaces', link: '/basics_ts/namespaces'},
+          {text: 'Modules', link: '/basics_ts/modules'},
+          {text: 'Type Assertions', link: '/basics_ts/type_assertions'},
+          {text: 'Type Guards', link: '/basics_ts/type_guards'},
+          {text: 'Utility Types', link: '/basics_ts/utility_types'},
+        ]
+      },
+      {
         text: 'База Vue',
         collapsible: true,
         collapsed: true,
@@ -95,6 +114,14 @@ export default defineConfig({
           {text: 'Watch Effect', link: '/basics_vue/watchEffect'},
           {text: 'Slots', link: '/basics_vue/slot'},
           {text: 'Вопросы по Vue - 1', link: '/basics_vue/vue_questions'},
+          {text: 'Vue Router', link: '/basics_vue/vue-router'},
+          {text: 'Vuex', link: '/basics_vue/vuex'},
+          {text: 'Vue CLI', link: '/basics_vue/vue-cli'},
+          {text: 'Vue DevTools', link: '/basics_vue/vue-devtools'},
+          {text: 'Vue Router 4', link: '/basics_vue/vue-router-4'},
+          {text: 'Vuex 4', link: '/basics_vue/vuex-4'},
+          {text: 'Vue 3', link: '/basics_vue/vue-3'},
+          {text: 'Vue 2', link: '/basics_vue/vue-2'},
         ]
       },
       {
@@ -115,7 +142,7 @@ export default defineConfig({
           {text: 'CSS Units', link: '/basics_css/css-units'},
         ]
       },
-        {
+      {
             text: 'База SCSS',
             collapsible: true,
             collapsed: true,
@@ -234,18 +261,18 @@ export default defineConfig({
             {text: 'Nuxt Internationalization', link: '/basics_nuxt/internationalization'},
             {text: 'Nuxt Authentication', link: '/basics_nuxt/authentication'},
             {text: 'Nuxt Error Handling', link: '/basics_nuxt/error-handling'},
-            // {text: 'Nuxt Static Site Generation', link: '/basics_nuxt/static-site-generation'},
-            // {text: 'Nuxt Server-Side Rendering', link: '/basics_nuxt/server-side-rendering'},
-            // {text: 'Nuxt API Routes', link: '/basics_nuxt/api-routes'},
-            // {text: 'Nuxt Content Module', link: '/basics_nuxt/content-module'},
-            // {text: 'Nuxt Image Module', link: '/basics_nuxt/image-module'},
-            // {text: 'Nuxt PWA Module', link: '/basics_nuxt/pwa-module'},
-            // {text: 'Nuxt Sitemap Module', link: '/basics_nuxt/sitemap-module'},
-            // {text: 'Nuxt Auth Module', link: '/basics_nuxt/auth-module'},
-            // {text: 'Nuxt i18n Module', link: '/basics_nuxt/i18n-module'},
-            // {text: 'Nuxt Axios Module', link: '/basics_nuxt/axios-module'},
-            // {text: 'Nuxt Firebase Module', link: '/basics_nuxt/firebase-module'},
-            // {text: 'Nuxt Google Analytics Module', link: '/basics_nuxt/google-analytics-module'},
+            {text: 'Nuxt Static Site Generation', link: '/basics_nuxt/static-site-generation'},
+            {text: 'Nuxt Server-Side Rendering', link: '/basics_nuxt/server-side-rendering'},
+            {text: 'Nuxt API Routes', link: '/basics_nuxt/api-routes'},
+            {text: 'Nuxt Content Module', link: '/basics_nuxt/content-module'},
+            {text: 'Nuxt Image Module', link: '/basics_nuxt/image-module'},
+            {text: 'Nuxt PWA Module', link: '/basics_nuxt/pwa-module'},
+            {text: 'Nuxt Sitemap Module', link: '/basics_nuxt/sitemap-module'},
+            {text: 'Nuxt Auth Module', link: '/basics_nuxt/auth-module'},
+            {text: 'Nuxt i18n Module', link: '/basics_nuxt/i18n-module'},
+            {text: 'Nuxt Axios Module', link: '/basics_nuxt/axios-module'},
+            {text: 'Nuxt Firebase Module', link: '/basics_nuxt/firebase-module'},
+            {text: 'Nuxt Google Analytics Module', link: '/basics_nuxt/google-analytics-module'},
         ]
       },
       {
@@ -264,7 +291,21 @@ export default defineConfig({
         collapsed: true,
         sidebarKey: 'group4',
         items: [          
-          {text: 'Commands in console', link: '/basic_docker/commands_console'}
+          {text: 'Commands in console', link: '/basic_docker/commands_console'},
+          {text: 'Dockerfile', link: '/basic_docker/dockerfile'},
+          {text: 'Docker Compose', link: '/basic_docker/docker_compose'},
+          {text: 'Docker Networking', link: '/basic_docker/docker_networking'},
+          {text: 'Docker Volumes', link: '/basic_docker/docker_volumes'},
+          {text: 'Docker Images', link: '/basic_docker/docker_images'},
+          {text: 'Docker Containers', link: '/basic_docker/docker_containers'},
+          {text: 'Docker Registry', link: '/basic_docker/docker_registry'},
+          {text: 'Docker Swarm', link: '/basic_docker/docker_swarm'},
+          {text: 'Docker Kubernetes', link: '/basic_docker/docker_kubernetes'},
+          {text: 'Docker Security', link: '/basic_docker/docker_security'},
+          {text: 'Docker Monitoring', link: '/basic_docker/docker_monitoring'},
+          {text: 'Docker Logging', link: '/basic_docker/docker_logging'},
+          {text: 'Docker Backup and Restore', link: '/basic_docker/docker_backup_restore'},
+          {text: 'Docker Best Practices', link: '/basic_docker/docker_best_practices'},
         ]
       },
       {
