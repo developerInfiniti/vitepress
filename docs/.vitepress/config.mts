@@ -9,9 +9,10 @@ export default defineConfig({
     search: {
       provider: 'algolia',
       options: {
-        appId: 'SPLFHSTPHL',
-        apiKey: '2c961e98fdc50fd23d0eb64db6fd3e4a',
-        indexName: 'YOUR_INDEX_NAME',
+        appId: 'L16I3J9MGU',
+        apiKey: 'b3b840b1ad5ffcf3a7e94b200aee970c',
+        indexName: 'alexeyzelenkoio',
+        insights: true,
         placeholder: 'Поиск по документации',
         translations: {
           button: {
