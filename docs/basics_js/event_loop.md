@@ -5,6 +5,8 @@ description: Детальне пояснення роботи Event Loop та а
 
 # Event Loop в JavaScript
 
+[Завантажити PDF](./event_loop.pdf)
+
 ## 1. Що таке Event Loop?
 
 Event Loop (цикл подій) - це механізм, який дозволяє JavaScript виконувати неблокуючі операції, незважаючи на те, що JavaScript є однопотоковою мовою.
