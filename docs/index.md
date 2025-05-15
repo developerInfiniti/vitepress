@@ -19,6 +19,18 @@ hero:
     - theme: brand
       text: Руководства
       link: /guide/guide
+    - theme: brand
+      text: Git
+      link: /git
+    - theme: brand
+      text: React
+      link: /basics_react/react_basic
+    - theme: brand
+      text: Docker
+      link: /basic_docker/dockerfile
+    - theme: brand
+      text: Vue
+      link: /basics_vue/vue-3
 
 features:
   - title: Фрагменты кода

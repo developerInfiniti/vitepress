@@ -57,7 +57,24 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Шпаргалки', link: '/markdown-examples' },
+      {
+        text: 'Шпаргалки',
+        link: '/markdown-examples',
+        items: [
+            { text: 'JavaScript', link: '/basics_js/array_methods' },
+            { text: 'TypeScript', link: '/basics_ts/types' },
+            { text: 'Vue', link: '/basics_vue/components' },
+            { text: 'React', link: '/basics_react/components' },
+            { text: 'CSS', link: '/basics_css/flexbox' },
+            { text: 'SCSS', link: '/basics_scss/scss-basics' },
+            { text: 'HTML', link: '/basics_html/html5' },
+            { text: 'MySQL', link: '/basics_mysql/mysql-basics' },
+            { text: 'PHP', link: '/basics_php/php-basics' },
+            { text: 'Node.js', link: '/basics_nodejs/node-basics' },
+            { text: 'NUXT', link: '/basics_nuxt/nuxt-basics' },
+            { text: 'Laravel', link: '/basic_laravel/commands_console' },
+        ]
+      },
       { text: 'Ссылки', link: '/links' },
       { text: 'Разное', link: '/other/' },
       { text: 'Руководства', link: '/guide/guide' }
@@ -355,7 +372,23 @@ export default defineConfig({
         sidebarKey: 'group3',
         items: [          
           {text: 'Commands in console', link: '/basic_laravel/commands_console'},
-          {text: 'Laravel MIX', link: '/basics_vue/laravel_mix'}
+          {text: 'Laravel MIX', link: '/basic_laravel/laravel_mix'}
+        ]
+      },
+      {
+        text: 'База Flutter',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group3',
+        items: [
+            {text: 'Flutter Basics', link: '/basic_flutter/flutter-basics'},
+            {text: 'Flutter Widgets', link: '/basic_flutter/flutter-widgets'},
+            {text: 'Flutter Layouts', link: '/basic_flutter/flutter-layouts'},
+            {text: 'Flutter Navigation', link: '/basic_flutter/flutter-navigation'},
+            {text: 'Flutter State Management', link: '/basic_flutter/flutter-state-management'},
+            {text: 'Flutter Networking', link: '/basic_flutter/flutter-networking'},
+            {text: 'Flutter Database', link: '/basic_flutter/flutter-database'},
+            {text: 'Flutter Testing', link: '/basic_flutter/flutter-testing'},
         ]
       },
       {
