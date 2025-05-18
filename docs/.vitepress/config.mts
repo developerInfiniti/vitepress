@@ -5,7 +5,29 @@ export default defineConfig({
   title: "Шпаргалки по IT",
   description: "Just playing around",
   base: '/vitepress/',
+  
+  // Конфигурация для многоязычности
+  locales: {
+    root: {
+      label: 'Русский',
+      lang: 'ru',
+      title: "Шпаргалки по IT",
+      description: "Ваш быстрый справочник для разработчиков"
+    },
+    uk: {
+      label: 'Українська',
+      lang: 'uk',
+      title: "IT Шпаргалки",
+      description: "Ваш швидкий довідник для розробників"
+    }
+  },
   themeConfig: {
+    // Конфигурация переключателя языков
+    langMenuItems: [
+      { text: 'Русский', link: '/' },
+      { text: 'Українська', link: '/uk/' }
+    ],
+    
     search: {
       provider: 'algolia',
       options: {
