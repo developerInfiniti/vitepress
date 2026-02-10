@@ -54,4 +54,5 @@ title: Содержание
 
 ---
 
+- :memo:&nbsp;&nbsp;[Шпаргалка по Dart](./dart)
 - :memo:&nbsp;&nbsp;[Большая шпаргалка по Rust](./rust)
