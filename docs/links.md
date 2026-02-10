@@ -35,14 +35,77 @@ __Вопросы и задачи__
 
 ## React
 
+- :link:&nbsp;&nbsp; [Официальная документация React](https://react.dev/)
 - :link:&nbsp;&nbsp; [Awesome React Hooks](https://github.com/rehooks/awesome-react-hooks) - большая коллекция кастомных хуков
 - :link:&nbsp;&nbsp; [Curated List of React Components & Libraries](https://github.com/brillout/awesome-react-components) - подборка компонентов и библиотек для `React`
 - :link:&nbsp;&nbsp; [React и TypeScript](https://reactdev.ru/types/)
+- :link:&nbsp;&nbsp; [React Router](https://reactrouter.com/)
+- :link:&nbsp;&nbsp; [TanStack Query](https://tanstack.com/query/latest)
+- :link:&nbsp;&nbsp; [Redux Toolkit](https://redux-toolkit.js.org/)
+- :link:&nbsp;&nbsp; [Zustand](https://zustand-demo.pmnd.rs/)
+- :link:&nbsp;&nbsp; [Testing Library (React)](https://testing-library.com/docs/react-testing-library/intro/)
+- :link:&nbsp;&nbsp; [React Hook Form](https://react-hook-form.com/)
+- :link:&nbsp;&nbsp; [Zod](https://zod.dev/)
+- :link:&nbsp;&nbsp; [Next.js](https://nextjs.org/)
+- :link:&nbsp;&nbsp; [Vite](https://vite.dev/)
+- :link:&nbsp;&nbsp; [Storybook](https://storybook.js.org/)
+- :link:&nbsp;&nbsp; [Material UI](https://mui.com/)
+- :link:&nbsp;&nbsp; [shadcn/ui](https://ui.shadcn.com/)
+- :link:&nbsp;&nbsp; [Tailwind CSS](https://tailwindcss.com/)
+
+## Vue
+
+- :link:&nbsp;&nbsp; [Официальная документация Vue](https://vuejs.org/)
+- :link:&nbsp;&nbsp; [Документация на русском](https://ru.vuejs.org/)
+- :link:&nbsp;&nbsp; [Vite](https://vite.dev/)
+- :link:&nbsp;&nbsp; [Pinia](https://pinia.vuejs.org/)
+- :link:&nbsp;&nbsp; [Vue Router](https://router.vuejs.org/)
+- :link:&nbsp;&nbsp; [Nuxt](https://nuxt.com/)
+- :link:&nbsp;&nbsp; [VueUse](https://vueuse.org/)
+- :link:&nbsp;&nbsp; [Vitest](https://vitest.dev/)
+- :link:&nbsp;&nbsp; [Vue Test Utils](https://test-utils.vuejs.org/)
+- :link:&nbsp;&nbsp; [Storybook](https://storybook.js.org/)
+- :link:&nbsp;&nbsp; [Awesome Vue](https://github.com/vuejs/awesome-vue)
 
 ## TypeScript
 
 - :link:&nbsp;&nbsp; [Рекомендуемый `tsconfig.json`](https://www.npmjs.com/package/@tsconfig/recommended)
 - :link:&nbsp;&nbsp; [Type Challenges](https://github.com/type-challenges/type-challenges) - изучение `TypeScript` на практике
+
+## Dart
+
+- :link:&nbsp;&nbsp; [Видео на YouTube](https://www.youtube.com/watch?v=Na_Qjvx8piI)
+- :link:&nbsp;&nbsp; [Скачать "Основы Dart: Community edition" (Boosty)](https://boosty.to/madteacher/posts/57edff9c-e5d8-42ba-a9c0-5a4bc257046a)
+- :link:&nbsp;&nbsp; [Печатная версия книги "Основы Dart" (Питер)](https://www.piter.com/collection/biblioteka-programmista/product/osnovy-dart)
+- :link:&nbsp;&nbsp; [Репозиторий с исходниками](https://github.com/MADTeacher/dart_basics)
+- :link:&nbsp;&nbsp; [Репозиторий Community edition (ветка)](https://github.com/MADTeacher/dart_basics/tree/%D1%81ommunity_edition)
+- :link:&nbsp;&nbsp; [Официальный сайт Dart](https://dart.dev/)
+
+## Flutter
+
+- :link:&nbsp;&nbsp; [Официальный сайт Flutter](https://flutter.dev/)
+- :link:&nbsp;&nbsp; [Документация Flutter](https://docs.flutter.dev/)
+- :link:&nbsp;&nbsp; [Flutter Cookbook](https://docs.flutter.dev/cookbook)
+- :link:&nbsp;&nbsp; [Виджеты (Widget catalog)](https://docs.flutter.dev/ui/widgets)
+- :link:&nbsp;&nbsp; [Пакеты (pub.dev)](https://pub.dev/)
+- :link:&nbsp;&nbsp; [Flutter YouTube](https://www.youtube.com/@flutterdev)
+- :link:&nbsp;&nbsp; [flutter_bloc (BLoC)](https://pub.dev/packages/flutter_bloc)
+- :link:&nbsp;&nbsp; [Riverpod](https://riverpod.dev/)
+- :link:&nbsp;&nbsp; [Flutter Gems](https://fluttergems.dev/)
+- :link:&nbsp;&nbsp; [Awesome Flutter](https://github.com/Solido/awesome-flutter)
+
+## Laravel
+
+- :link:&nbsp;&nbsp; [Официальная документация](https://laravel.com/docs)
+- :link:&nbsp;&nbsp; [Laravel News](https://laravel-news.com/)
+- :link:&nbsp;&nbsp; [Laracasts](https://laracasts.com/)
+- :link:&nbsp;&nbsp; [Eloquent ORM](https://laravel.com/docs/eloquent)
+- :link:&nbsp;&nbsp; [Blade Templates](https://laravel.com/docs/blade)
+- :link:&nbsp;&nbsp; [Routing](https://laravel.com/docs/routing)
+- :link:&nbsp;&nbsp; [Queues](https://laravel.com/docs/queues)
+- :link:&nbsp;&nbsp; [Horizon](https://laravel.com/docs/horizon)
+- :link:&nbsp;&nbsp; [Sanctum](https://laravel.com/docs/sanctum)
+- :link:&nbsp;&nbsp; [Pint (Laravel code style)](https://laravel.com/docs/pint)
 
 ## Node.js
 

@@ -1,1 +1,10 @@
+node_modules
 .node_modules
+
+docs/.vitepress/cache
+docs/.vitepress/dist
+
+node_modules/.vue-global-types
+
+docs/links.pdf
+docs/cheatsheet/dart.pdf
