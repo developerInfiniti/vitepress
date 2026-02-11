@@ -185,7 +185,12 @@ class CounterScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => BlocProvider.of<CounterCubit>(context).increment(),
-````
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+```
 
 **Переваги:**
 

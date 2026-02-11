@@ -308,6 +308,21 @@ export default defineConfig({
         ]
       },
       {
+        text: 'База MySQL',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group2',
+        items: [
+          {text: 'MySQL Basics', link: '/basics_mysql/mysql-basics'},
+          {text: 'MySQL Functions', link: '/basics_mysql/functions'},
+          {text: 'MySQL Joins', link: '/basics_mysql/joins'},
+          {text: 'MySQL Indexes', link: '/basics_mysql/indexes'},
+          {text: 'MySQL Transactions', link: '/basics_mysql/transactions'},
+          {text: 'MySQL Views', link: '/basics_mysql/views'},
+          {text: 'MySQL Triggers', link: '/basics_mysql/triggers'},
+        ]
+      },
+      {
         text: 'База Git',
         collapsible: true,
         collapsed: true,
@@ -425,7 +440,6 @@ export default defineConfig({
           {text: 'Навигация', link: '/basic_flutter/flutter-navigation'},
           {text: 'Сеть', link: '/basic_flutter/flutter-networking'},
           {text: 'State Management', link: '/basic_flutter/flutter-state-management'},
-          {text: 'BLoC', link: '/basic_flutter/flutter-architecture#bloc-pattern'},
           {text: 'База данных', link: '/basic_flutter/flutter-database'},
           {text: 'Тестирование', link: '/basic_flutter/flutter-testing'},
           {text: 'Анимации', link: '/basic_flutter/flutter-animations'},

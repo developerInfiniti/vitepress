@@ -212,6 +212,98 @@ app.get('/template', (req, res) => {
 
 Для использования стороннего промежуточного ПО его необходимо установить с помощью npm и затем подключить к вашему приложению с помощью `app.use()`.
 
+## Production: безопасность и надежность
+
+Express дает базовый каркас, но “из коробки” не делает приложение безопасным и готовым к продакшену. Обычно добавляют набор практик, которые закрывают самые частые риски.
+
+### Минимальный security baseline
+
+```js
+const express = require('express')
+const app = express()
+
+app.disable('x-powered-by')
+app.use(express.json({ limit: '1mb' }))
+```
+
+Рекомендации:
+- отключайте заголовок `X-Powered-By`;
+- ограничивайте размер тела запроса, особенно для публичных API;
+- аккуратно настраивайте CORS: разрешайте только нужные домены и методы.
+
+### Заголовки безопасности и защита от злоупотреблений
+
+Часто подключают пакеты:
+- `helmet` — безопасные HTTP-заголовки;
+- `express-rate-limit` — ограничение частоты запросов.
+
+```bash
+npm i helmet express-rate-limit
+```
+
+```js
+const helmet = require('helmet')
+const rateLimit = require('express-rate-limit')
+
+app.use(helmet())
+
+app.use(
+  rateLimit({
+    windowMs: 60_000,
+    max: 100
+  })
+)
+```
+
+### Валидация входных данных
+
+Всегда валидируйте:
+- параметры маршрута (`req.params`);
+- query (`req.query`);
+- тело запроса (`req.body`).
+
+Нужно защищаться и от “плохих типов”, и от семантики (пустые значения, слишком длинные строки, невалидные enum-значения).
+
+### Обработка ошибок и async
+
+Сделайте единый обработчик ошибок и старайтесь возвращать единый формат ответа.
+
+```js
+app.use((err, req, res, next) => {
+  const status = err.statusCode ?? 500
+  res.status(status).json({
+    message: err.message ?? 'Internal Server Error'
+  })
+})
+```
+
+Для асинхронных обработчиков удобно использовать обертку, чтобы не писать `try/catch` в каждом маршруте:
+
+```js
+const asyncHandler = (fn) => (req, res, next) =>
+  Promise.resolve(fn(req, res, next)).catch(next)
+
+app.get(
+  '/users',
+  asyncHandler(async (req, res) => {
+    const users = await loadUsers()
+    res.json(users)
+  })
+)
+```
+
+### Graceful shutdown
+
+В продакшене процесс должен корректно завершаться (например, при деплое). Минимально — обработка `SIGTERM`:
+
+```js
+const server = app.listen(3000)
+
+process.on('SIGTERM', () => {
+  server.close(() => process.exit(0))
+})
+```
+
 ## Структура Express-приложения
 
 Нет строгих правил относительно структуры Express-приложения, но обычно рекомендуется разделять код на логические блоки:

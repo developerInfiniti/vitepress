@@ -75,6 +75,50 @@ flutter pub remove http
 flutter pub cache clean
 ```
 
+## Codegen: генерація коду (Freezed, json_serializable, build_runner)
+
+У Flutter/Dart дуже популярний підхід, коли “рутинний” код генерується автоматично: `fromJson/toJson`, `copyWith`, `==/hashCode`, sealed-класи, іммутабельні моделі.
+
+### build_runner
+
+Зазвичай генерація запускається через `build_runner`:
+
+```bash
+flutter pub run build_runner build
+
+# або у watch-режимі
+flutter pub run build_runner watch
+
+# якщо є конфлікти/старі згенеровані файли
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+### json_serializable
+
+Підхід: описуємо модель та анотації, генератор створює `.g.dart`.
+
+```yaml
+dependencies:
+  json_annotation: ^4.9.0
+
+dev_dependencies:
+  build_runner: ^2.4.0
+  json_serializable: ^6.8.0
+```
+
+### Freezed
+
+Freezed корисний для іммутабельних моделей та станів (особливо у BLoC/StateNotifier): зручний `copyWith`, union types, pattern matching.
+
+```yaml
+dependencies:
+  freezed_annotation: ^2.4.0
+
+dev_dependencies:
+  build_runner: ^2.4.0
+  freezed: ^2.5.0
+```
+
 ## Популярні пакети
 
 ### HTTP запити
