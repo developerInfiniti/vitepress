@@ -425,6 +425,7 @@ export default defineConfig({
           {text: 'Навигация', link: '/basic_flutter/flutter-navigation'},
           {text: 'Сеть', link: '/basic_flutter/flutter-networking'},
           {text: 'State Management', link: '/basic_flutter/flutter-state-management'},
+          {text: 'BLoC', link: '/basic_flutter/flutter-architecture#bloc-pattern'},
           {text: 'База данных', link: '/basic_flutter/flutter-database'},
           {text: 'Тестирование', link: '/basic_flutter/flutter-testing'},
           {text: 'Анимации', link: '/basic_flutter/flutter-animations'},
