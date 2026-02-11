@@ -1,12 +1,57 @@
-# Архітектура застосунків Flutter
+# Архитектура приложений Flutter
 
-Правильна архітектура забезпечує масштабованість, тестованість та підтримуваність застосунку. Розглянемо популярні архітектурні патерни для Flutter.
+Правильная архитектура обеспечивает масштабируемость, тестируемость и поддерживаемость приложения. Рассмотрим популярные архитектурные паттерны для Flutter.
 
 ## Clean Architecture
 
-Clean Architecture розділяє код на шари з чіткими залежностями.
+Clean Architecture разделяет код на слои с чёткими зависимостями.
 
-### Структура проєкту
+### Зачем она нужна
+
+Clean Architecture обычно выбирают для средних и больших приложений, где важно, чтобы код:
+
+- было проще тестировать (особенно бизнес-логику без Flutter и без сети)
+- можно было заменять внешние детали (API-клиент, БД, кэш, навигацию) без переписывания ядра
+- оставался понятным при росте команды и количества фич
+
+Если упростить, то Clean Architecture — это способ управлять сложностью: мы заранее договариваемся, где «живут» правила предметной области, где «живёт» инфраструктура, и как они общаются.
+
+### Правило зависимостей (Dependency Rule)
+
+Ключевая идея: зависимости направлены «внутрь», к бизнес-логике. То есть внешний мир (UI, HTTP, БД) может зависеть от домена, но домен не должен зависеть от внешнего мира.
+
+```
+┌───────────────────────────────────────────┐
+│            Presentation (UI)              │  Widgets, Pages, Stores/BLoC
+├───────────────────────────────────────────┤
+│                Domain                      │  Entities, Value Objects, UseCases,
+│                                           │  Contracts (Repository Interfaces)
+├───────────────────────────────────────────┤
+│                 Data                       │  DTO/Models, DataSources, Mappers,
+│                                           │  Repository Implementations
+└───────────────────────────────────────────┘
+```
+
+Практический смысл: бизнес-логика (Domain) остаётся максимально «чистой» и независимой, поэтому её легче покрывать unit-тестами и переносить между проектами.
+
+### Как слои общаются друг с другом
+
+Чтобы слои не «приклеивались» друг к другу, в Clean Architecture используют границы:
+
+- **Use case boundary**: UI не вызывает Data напрямую. UI вызывает UseCase, который описывает сценарий.
+- **Repository boundary**: Domain описывает интерфейс репозитория, а Data предоставляет реализацию.
+- **Mapping boundary**: форматы данных на границах отличаются: API/БД → DTO/Model → Entity → UI-модель.
+
+Отсюда рождается правило: объекты «для внешнего мира» (DTO, JSON, таблицы) не должны протекать в Domain и Presentation.
+
+### Типичные ошибки при внедрении
+
+- Перетаскивать `UserDto` (или `UserModel`) в UI и делать `Text(userDto.email)` напрямую.
+- Зависеть в `domain/` от `package:flutter/*`, `http`, `dio`, `shared_preferences` и т.п.
+- Делать «use case» как тонкую прокладку, а всю логику держать в Store/BLoC или в Repository Impl.
+- Раздувать `core/` до «помойки»: лучше выносить в `core/` только то, что реально переиспользуется между фичами.
+
+### Структура проекта
 
 ```
 lib/
@@ -48,10 +93,84 @@ lib/
 └── injection_container.dart
 ```
 
+### Пример: qovo_flutter (DDD + Clean Architecture)
+
+В проекте `C:\Users\User\PROJECT_IT\qovo_flutter\qovo_flutter` Clean Architecture используется в стиле feature-first (DDD): код группируется по фичам (модулям), и внутри каждой фичи есть слои `data/domain/presentation`. Всё, что относится ко всему приложению, находится в `core/`.
+
+Коротко по ответственности слоёв:
+
+- `domain/` — бизнес-правила: сущности, контракты репозиториев, use cases. Не зависит от Flutter, HTTP и БД.
+- `data/` — работа с данными: DTO/модели, data sources (API/кэш), реализации репозиториев, маппинг DTO ↔ Entity. Зависит от `domain/`.
+- `presentation/` — UI и управление состоянием: страницы/виджеты, а также stores (в `qovo_flutter` используется MobX). Вызывает use cases и не знает деталей API.
+
+```
+lib/
+├── core/
+│   ├── injection/                  # DI (get_it + injectable)
+│   ├── routes/                     # маршрутизация (GoRouter)
+│   ├── services/                   # сервисы (auth state, FCM, location)
+│   ├── theme/                      # тема/стили
+│   ├── ui/                         # дизайн-система/кит
+│   └── utils/                      # утилиты и обработка ошибок
+├── features/
+│   └── auth/
+│       ├── data/                   # Data Layer (DTO, data sources, impl repo, mappers)
+│       ├── domain/                 # Domain Layer (entities, contracts, use cases)
+│       └── presentation/           # Presentation Layer (pages/widgets/stores)
+└── main.dart
+```
+
+Главная идея Clean Architecture — зависимости направлены «внутрь»: `presentation → domain ← data`. Снаружи можно менять UI, сеть, хранилище, не переписывая бизнес-логику.
+
+Поток данных в этой схеме обычно выглядит так:
+
+```
+UI → Store (MobX) → UseCase → Repository (Domain) → Repo Impl (Data) → DataSource → API/DB
+```
+
+### Entity vs DTO/Model vs UI-модель
+
+Одна из самых полезных «теоретических» дисциплин в Clean Architecture — не смешивать модели разных уровней:
+
+- **Entity (Domain)** — объект предметной области. Он существует потому, что он нужен бизнесу (пользователь, заказ, подписка), а не потому что так устроен API.
+- **DTO/Model (Data)** — форма данных для внешних источников: JSON, ответ API, таблица в БД, запись в кэше. DTO удобно сериализовать/десериализовать, но в нём не должно быть бизнес-инвариантов.
+- **UI-модель (Presentation)** — форма данных для конкретного экрана: объединённые поля, форматированные строки, флаги для отображения. Её можно строить из Entity, но UI-модель не должна утекать в Domain.
+
+Почему это важно: как только UI начинает жить на DTO, любая правка контракта API начинает ломать экран и бизнес-логику одновременно.
+
+### Где хранить общие вещи (core)
+
+`core/` обычно содержит общие для всех фич части:
+
+- базовые типы ошибок (например, `Failure`) и правила их отображения
+- DI-конфигурацию (composition root), роутинг, тему, общий UI-kit
+- инфраструктурные сервисы, которые не являются фичей сами по себе (например, FCM, геолокация)
+
+Важно держать `core/` небольшим: если модуль используется только одной фичей — чаще логичнее оставить его внутри фичи.
+
+### Как проектировать Use Cases
+
+Use case — это «сценарий использования» с точки зрения приложения: например, “войти по email”, “загрузить профиль”, “обновить настройки”. Хороший use case:
+
+- принимает простые входные параметры (часто через `Params`-класс)
+- возвращает результат в доменных терминах (Entity/Value Object) или доменную ошибку
+- не знает, откуда пришли данные (сеть/кэш/БД) — это скрывает репозиторий
+
 ### Domain Layer
 
+Domain — это «сердце» приложения: здесь описываются правила предметной области и сценарии, которые не должны зависеть от UI и инфраструктуры. В Flutter-проектах это важно особенно сильно: UI быстро меняется, а бизнес-логика должна оставаться стабильной.
+
+Что обычно находится в Domain:
+
+- **Entities** — объекты с идентичностью (например, `User` с `id`), описывают бизнес-смысл.
+- **Value Objects** — неизменяемые значения с валидацией (например, `Email`, `PhoneNumber`). Они помогают «зашить» инварианты в типы.
+- **Use Cases** — сценарии использования (применение бизнес-правил). Это хороший центр для оркестрации: «получи данные», «проверь условие», «сохрани результат».
+- **Repository interfaces** — контракты доступа к данным. Это «порт» (port): Domain описывает, что ему нужно, а Data предоставляет реализацию.
+
+В примерах ниже используется подход с `Either<Failure, T>`: мы возвращаем не исключения наружу, а явный результат «успех/ошибка». Это делает ошибки частью контракта и упрощает тестирование и UI-обработку.
+
 ```dart
-// Сутність (Entity)
+// Сущность (Entity)
 class User {
   final String id;
   final String name;
@@ -64,7 +183,7 @@ class User {
   });
 }
 
-// Абстрактний репозиторій
+// Абстрактный репозиторий
 abstract class UserRepository {
   Future<Either<Failure, User>> getUser(String id);
   Future<Either<Failure, void>> updateUser(User user);
@@ -96,8 +215,19 @@ class GetUserParams {
 
 ### Data Layer
 
+Data Layer отвечает за получение/сохранение данных и адаптацию внешних форматов под доменные сущности.
+
+Типовые роли в Data:
+
+- **DataSource** — конкретный источник данных (HTTP, БД, кэш). Важно, что DataSource не «знает» про UI.
+- **DTO/Model** — объект для сериализации/десериализации (JSON ↔ объект). Его удобно хранить и передавать по сети.
+- **Mapper** — преобразование DTO ↔ Entity. Это отдельная граница, которая защищает Domain от структуры API.
+- **Repository implementation** — сборка стратегии: откуда взять данные (сеть/кэш), как обработать ошибки и когда синхронизировать.
+
+В примере `UserModel extends User` — это упрощение. В реальных проектах часто полезнее держать DTO отдельно от Entity, чтобы изменения в API не «протекали» в доменную модель и не ломали бизнес-правила.
+
 ```dart
-// Модель даних
+// Модель данных
 class UserModel extends User {
   const UserModel({
     required String id,
@@ -195,8 +325,17 @@ class UserRepositoryImpl implements UserRepository {
 
 ### Presentation Layer (BLoC)
 
+Presentation Layer — это слой экрана: виджеты + управление состоянием. Его задача — превратить доменные сценарии в понятные UI-состояния (загрузка/данные/ошибка) и вызывать use cases.
+
+Если вы используете BLoC, удобно мыслить как конечным автоматом:
+
+- **Event** — действие пользователя или сигнал системы (нажали кнопку, открыли экран).
+- **State** — то, что нужно UI для отрисовки (включая флаги загрузки и данные).
+
+Важно: состояния должны быть ориентированы на UI, а не повторять DTO из API.
+
 ```dart
-// Events
+// События
 abstract class UserEvent {}
 
 class GetUserEvent extends UserEvent {
@@ -209,7 +348,7 @@ class UpdateUserEvent extends UserEvent {
   UpdateUserEvent(this.user);
 }
 
-// States
+// Состояния
 abstract class UserState {}
 
 class UserInitial extends UserState {}
@@ -256,17 +395,26 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   String _mapFailureToMessage(Failure failure) {
     switch (failure.runtimeType) {
       case ServerFailure:
-        return 'Помилка сервера';
+        return 'Ошибка сервера';
       case CacheFailure:
-        return 'Помилка кешу';
+        return 'Ошибка кэша';
       default:
-        return 'Невідома помилка';
+        return 'Неизвестная ошибка';
     }
   }
 }
 ```
 
 ## MVVM (Model-View-ViewModel)
+
+MVVM часто применяют, когда хочется более «простого» отделения UI от логики без строгого разделения слоёв по Clean Architecture. При этом ViewModel выступает прослойкой между UI и сервисами/репозиториями и хранит состояние, удобное для отображения.
+
+Роли в MVVM:
+
+- **View** — виджеты Flutter.
+- **ViewModel** — состояние экрана и команды (методы) для UI.
+- **Model** — данные (не обязательно доменные entities; часто просто модели приложения).
+- **Service** — взаимодействие с сетью/хранилищем.
 
 ### Структура
 
@@ -282,7 +430,7 @@ lib/
     └── user_view.dart
 ```
 
-### Реалізація
+### Реализация
 
 ```dart
 // Model
@@ -380,7 +528,7 @@ class UserView extends StatelessWidget {
           }
 
           if (viewModel.error != null) {
-            return Center(child: Text('Помилка: ${viewModel.error}'));
+            return Center(child: Text('Ошибка: ${viewModel.error}'));
           }
 
           return ListView.builder(
@@ -402,8 +550,16 @@ class UserView extends StatelessWidget {
 
 ## Repository Pattern
 
+Repository Pattern — это способ скрыть детали хранения данных за интерфейсом. Для Clean Architecture репозиторий важен как граница: Domain зависит от интерфейса репозитория, а Data предоставляет реализацию.
+
+Полезные критерии:
+
+- Репозиторий отвечает за **доступ к данным в терминах домена**, а не за детали транспорта.
+- DataSource отвечает за **конкретный источник** (HTTP/SQLite/Preferences).
+- Маппинг DTO ↔ Entity лучше держать рядом с Data или отдельно, но не в UI.
+
 ```dart
-// Абстрактний репозиторій
+// Абстрактный репозиторий
 abstract class Repository<T> {
   Future<List<T>> getAll();
   Future<T?> getById(String id);
@@ -412,7 +568,7 @@ abstract class Repository<T> {
   Future<void> delete(String id);
 }
 
-// Реалізація
+// Реализация
 class UserRepository implements Repository<User> {
   final ApiClient _apiClient;
   final LocalStorage _localStorage;
@@ -426,7 +582,7 @@ class UserRepository implements Repository<User> {
       await _localStorage.saveUsers(users);
       return users;
     } catch (e) {
-      // Повернути кешовані дані при помилці
+      // Вернуть кэшированные данные при ошибке
       return _localStorage.getUsers();
     }
   }
@@ -461,6 +617,13 @@ class UserRepository implements Repository<User> {
 ```
 
 ## Dependency Injection
+
+Dependency Injection (DI) нужен, чтобы «склеить» приложение без жёстких зависимостей на конкретные реализации. В Clean Architecture точка сборки называется composition root: именно там выбирается, какие реализации использовать, и как они создаются.
+
+В Flutter DI часто организуют так:
+
+- **registerFactory** — новый экземпляр при каждом запросе (подходит для BLoC/Store).
+- **registerLazySingleton** — один экземпляр на всё приложение (подходит для репозиториев, клиентов, сервисов).
 
 ### get_it
 
@@ -503,7 +666,7 @@ Future<void> init() async {
   sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(sl()));
 }
 
-// Використання
+// Использование
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await init();
@@ -561,17 +724,19 @@ abstract class RegisterModule {
 
 ## State Management Patterns
 
+Выбор управления состоянием влияет на то, где живёт логика экрана и как UI реагирует на изменения. Какой бы подход вы ни выбрали (BLoC, MobX, Provider, Cubit и т.п.), полезно держать инвариант: UI обращается к Domain через use cases и получает состояния, подходящие для отображения.
+
 ### BLoC Pattern
 
 ```dart
-// Події
+// События
 sealed class CounterEvent {}
 
 class IncrementEvent extends CounterEvent {}
 class DecrementEvent extends CounterEvent {}
 class ResetEvent extends CounterEvent {}
 
-// Стан
+// Состояние
 class CounterState {
   final int count;
   final bool isLoading;
@@ -618,7 +783,7 @@ class CounterCubit extends Cubit<int> {
   void reset() => emit(0);
 }
 
-// Використання
+// Использование
 BlocBuilder<CounterCubit, int>(
   builder: (context, count) {
     return Text('$count');
@@ -628,26 +793,33 @@ BlocBuilder<CounterCubit, int>(
 
 ## Error Handling
 
+В больших приложениях выгодно различать «технические исключения» и «доменные ошибки», которые понимает UI:
+
+- **Exception** — деталь реализации (ошибка сети, парсинга, БД). Обычно возникает в DataSource.
+- **Failure/Result** — то, что можно безопасно показать UI (и протестировать). Обычно формируется на уровне Repository/UseCase.
+
+Так UI не обязан знать про `DioError` или `SocketException`: он работает с `NetworkFailure`, `ServerFailure` и т.п.
+
 ```dart
-// Базовий клас помилки
+// Базовый класс ошибки
 abstract class Failure {
   final String message;
   const Failure(this.message);
 }
 
 class ServerFailure extends Failure {
-  const ServerFailure([String message = 'Помилка сервера']) : super(message);
+  const ServerFailure([String message = 'Ошибка сервера']) : super(message);
 }
 
 class CacheFailure extends Failure {
-  const CacheFailure([String message = 'Помилка кешу']) : super(message);
+  const CacheFailure([String message = 'Ошибка кэша']) : super(message);
 }
 
 class NetworkFailure extends Failure {
-  const NetworkFailure([String message = 'Немає з\'єднання']) : super(message);
+  const NetworkFailure([String message = 'Нет соединения']) : super(message);
 }
 
-// Either для обробки результатів
+// Either для обработки результатов
 import 'package:dartz/dartz.dart';
 
 Future<Either<Failure, User>> getUser(String id) async {
@@ -661,7 +833,7 @@ Future<Either<Failure, User>> getUser(String id) async {
   }
 }
 
-// Обробка в UI
+// Обработка в UI
 result.fold(
   (failure) => showError(failure.message),
   (user) => showUser(user),
@@ -670,11 +842,17 @@ result.fold(
 
 ## Testing Architecture
 
+Преимущество слоистой архитектуры — тесты становятся проще и быстрее:
+
+- **Domain**: unit-тесты на use cases и value objects без Flutter и без моков сети.
+- **Data**: тесты на мапперы, репозитории и data sources (часто с моками клиента/хранилища).
+- **Presentation**: тесты на состояния (BLoC/Store) и widget-тесты на отрисовку при разных состояниях.
+
 ```dart
 // Mock repository
 class MockUserRepository extends Mock implements UserRepository {}
 
-// Unit test для UseCase
+// Unit-тест для UseCase
 void main() {
   late GetUser usecase;
   late MockUserRepository mockRepository;
@@ -686,7 +864,7 @@ void main() {
 
   final tUser = User(id: '1', name: 'Test', email: 'test@test.com');
 
-  test('should get user from repository', () async {
+  test('должен получить пользователя из репозитория', () async {
     // arrange
     when(() => mockRepository.getUser(any()))
         .thenAnswer((_) async => Right(tUser));
@@ -700,7 +878,7 @@ void main() {
   });
 }
 
-// Widget test з BLoC
+// Widget-тест с BLoC
 void main() {
   late UserBloc bloc;
 
@@ -708,7 +886,7 @@ void main() {
     bloc = MockUserBloc();
   });
 
-  testWidgets('shows user when loaded', (tester) async {
+  testWidgets('показывает пользователя после загрузки', (tester) async {
     when(() => bloc.state).thenReturn(UserLoaded(tUser));
 
     await tester.pumpWidget(
@@ -723,18 +901,18 @@ void main() {
 }
 ```
 
-## Найкращі практики
+## Лучшие практики
 
-1. **Розділяйте шари** — Domain не повинен залежати від Data чи Presentation.
+1. **Разделяйте слои** — Domain не должен зависеть от Data или Presentation.
 
-2. **Використовуйте Dependency Injection** — для тестованості та гнучкості.
+2. **Используйте Dependency Injection** — для тестируемости и гибкости.
 
-3. **Обробляйте помилки явно** — використовуйте Either або sealed classes.
+3. **Обрабатывайте ошибки явно** — используйте Either или sealed classes.
 
-4. **Пишіть тести** — для кожного шару окремо.
+4. **Пишите тесты** — отдельно для каждого слоя.
 
-5. **Документуйте архітектурні рішення** — для команди.
+5. **Документируйте архитектурные решения** — для команды.
 
-## Висновок
+## Вывод
 
-Правильна архітектура — це інвестиція в майбутнє проєкту. Clean Architecture, MVVM та інші патерни допомагають створювати масштабовані та підтримувані застосунки. Вибір архітектури залежить від розміру проєкту та вимог команди.
+Правильная архитектура — это инвестиция в будущее проекта. Clean Architecture, MVVM и другие паттерны помогают создавать масштабируемые и поддерживаемые приложения. Выбор архитектуры зависит от размера проекта и требований команды.
