@@ -29,47 +29,51 @@ export default defineConfig({
     ],
     
     search: {
-      provider: 'algolia',
+      provider: 'local',
       options: {
-        appId: 'SPLFHSTPHL',
-        apiKey: '2c961e98fdc50fd23d0eb64db6fd3e4a',
-        indexName: 'vitepress_it_cheatsheets',
-        placeholder: 'Поиск по документации',
         translations: {
           button: {
             buttonText: 'Поиск',
-            buttonAriaLabel: 'Поиск'
+            buttonAriaLabel: 'Поиск по сайту'
           },
           modal: {
-            searchBox: {
-              resetButtonTitle: 'Очистить запрос',
-              resetButtonAriaLabel: 'Очистить запрос',
-              cancelButtonText: 'Отмена',
-              cancelButtonAriaLabel: 'Отмена'
-            },
-            startScreen: {
-              recentSearchesTitle: 'История поиска',
-              noRecentSearchesText: 'Нет истории поиска',
-              saveRecentSearchButtonTitle: 'Сохранить в истории поиска',
-              removeRecentSearchButtonTitle: 'Удалить из истории поиска',
-              favoriteSearchesTitle: 'Избранное',
-              removeFavoriteSearchButtonTitle: 'Удалить из избранного'
-            },
-            errorScreen: {
-              titleText: 'Не удалось получить результаты',
-              helpText: 'Вы можете проверить подключение к сети'
-            },
+            displayDetails: 'Показать подробности',
+            resetButtonTitle: 'Очистить',
+            backButtonTitle: 'Назад',
+            noResultsText: 'Ничего не найдено',
             footer: {
               selectText: 'выбрать',
+              selectKeyAriaLabel: 'enter',
               navigateText: 'навигация',
+              navigateUpKeyAriaLabel: 'стрелка вверх',
+              navigateDownKeyAriaLabel: 'стрелка вниз',
               closeText: 'закрыть',
-              searchByText: 'Поиск от'
-            },
-            noResultsScreen: {
-              noResultsText: 'Нет результатов по запросу',
-              suggestedQueryText: 'Вы можете попробовать',
-              reportMissingResultsText: 'Считаете, что по этому запросу должны быть результаты?',
-              reportMissingResultsLinkText: 'Сообщить об этом'
+              closeKeyAriaLabel: 'escape'
+            }
+          }
+        },
+        locales: {
+          uk: {
+            translations: {
+              button: {
+                buttonText: 'Пошук',
+                buttonAriaLabel: 'Пошук по сайту'
+              },
+              modal: {
+                displayDetails: 'Показати деталі',
+                resetButtonTitle: 'Очистити',
+                backButtonTitle: 'Назад',
+                noResultsText: 'Нічого не знайдено',
+                footer: {
+                  selectText: 'вибрати',
+                  selectKeyAriaLabel: 'enter',
+                  navigateText: 'навігація',
+                  navigateUpKeyAriaLabel: 'стрілка вгору',
+                  navigateDownKeyAriaLabel: 'стрілка вниз',
+                  closeText: 'закрити',
+                  closeKeyAriaLabel: 'escape'
+                }
+              }
             }
           }
         }
