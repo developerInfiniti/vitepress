@@ -93,15 +93,15 @@ lib/
 └── injection_container.dart
 ```
 
-### Пример: qovo_flutter (DDD + Clean Architecture)
+### Пример: (DDD + Clean Architecture)
 
-В проекте `C:\Users\User\PROJECT_IT\qovo_flutter\qovo_flutter` Clean Architecture используется в стиле feature-first (DDD): код группируется по фичам (модулям), и внутри каждой фичи есть слои `data/domain/presentation`. Всё, что относится ко всему приложению, находится в `core/`.
+В проекте Clean Architecture используется в стиле feature-first (DDD): код группируется по фичам (модулям), и внутри каждой фичи есть слои `data/domain/presentation`. Всё, что относится ко всему приложению, находится в `core/`.
 
 Коротко по ответственности слоёв:
 
 - `domain/` — бизнес-правила: сущности, контракты репозиториев, use cases. Не зависит от Flutter, HTTP и БД.
 - `data/` — работа с данными: DTO/модели, data sources (API/кэш), реализации репозиториев, маппинг DTO ↔ Entity. Зависит от `domain/`.
-- `presentation/` — UI и управление состоянием: страницы/виджеты, а также stores (в `qovo_flutter` используется MobX). Вызывает use cases и не знает деталей API.
+- `presentation/` — UI и управление состоянием: страницы/виджеты, а также stores (используется MobX). Вызывает use cases и не знает деталей API.
 
 ```
 lib/
