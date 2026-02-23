@@ -522,6 +522,25 @@ export default defineConfig({
         ]
       },
       {
+        text: 'База Python',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group4',
+        items: [
+          {text: 'Основы', link: '/basics_python/python-basics'},
+          {text: 'Структуры данных', link: '/basics_python/data-structures'},
+          {text: 'Функции', link: '/basics_python/functions'},
+          {text: 'ООП', link: '/basics_python/oop'},
+          {text: 'Модули и пакеты', link: '/basics_python/modules'},
+          {text: 'Работа с файлами', link: '/basics_python/file-handling'},
+          {text: 'Исключения', link: '/basics_python/exceptions'},
+          {text: 'Асинхронность', link: '/basics_python/async'},
+          {text: 'Тестирование', link: '/basics_python/testing'},
+          {text: 'Аннотации типов', link: '/basics_python/type-hints'},
+          {text: 'Веб-фреймворки', link: '/basics_python/web-frameworks'},
+        ]
+      },
+      {
             text: 'API',
             collapsible: true,
             collapsed: true,
