@@ -1,6 +1,6 @@
 # Временное сохранение изменений (Stashing) в Git
 
-[Завантажити PDF](./stashing.pdf)
+[Скачать PDF](./stashing.pdf)
 
 ## Что такое Git Stash?
 

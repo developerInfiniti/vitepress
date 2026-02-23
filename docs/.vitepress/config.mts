@@ -84,6 +84,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Шпаргалки', link: '/markdown-examples' },
       { text: 'Ссылки', link: '/links' },
+      { text: 'Собеседование', link: '/test' },
       { text: 'Разное', link: '/other/' },
       { text: 'Руководства', link: '/guide/guide' }
     ],
@@ -185,6 +186,11 @@ export default defineConfig({
           {text: 'Vue DevTools', link: '/basics_vue/vue-devtools'},
           {text: 'Vue Router 4', link: '/basics_vue/vue-router-4'},
           {text: 'Vuex 4', link: '/basics_vue/vuex-4'},
+          {text: 'Pinia', link: '/basics_vue/pinia'},
+          {text: 'Provide / Inject', link: '/basics_vue/provide-inject'},
+          {text: 'Teleport', link: '/basics_vue/teleport'},
+          {text: 'Директивы', link: '/basics_vue/custom-directives'},
+          {text: 'Transition и анимации', link: '/basics_vue/transitions'},
           {text: 'Vue 3', link: '/basics_vue/vue-3'},
           {text: 'Vue 2', link: '/basics_vue/vue-2'},
         ]
@@ -461,6 +467,10 @@ export default defineConfig({
           {text: 'Отладка и DevTools', link: '/basic_flutter/flutter-debugging'},
           {text: 'Публикация', link: '/basic_flutter/flutter-deployment'},
           {text: 'Доступность (a11y)', link: '/basic_flutter/flutter-accessibility'},
+          {text: 'Platform Channels', link: '/basic_flutter/flutter-platform-channels'},
+          {text: 'Dependency Injection', link: '/basic_flutter/flutter-dependency-injection'},
+          {text: 'Streams и RxDart', link: '/basic_flutter/flutter-streams'},
+          {text: 'Безопасность', link: '/basic_flutter/flutter-security'},
           {
             text: 'Собеседование',
             collapsible: true,

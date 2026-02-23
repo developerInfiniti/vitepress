@@ -1,6 +1,6 @@
 # JavaScript Execution Context
 
-[Завантажити PDF](./execution-context.pdf)
+[Скачать PDF](./execution-context.pdf)
 
 ## Що таке контекст виконання?
 

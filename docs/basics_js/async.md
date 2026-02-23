@@ -5,7 +5,7 @@ description: Основні концепції Асинхронного прог
 
 # Асинхронне програмування в JavaScript
 
-[Завантажити PDF](./async.pdf)
+[Скачать PDF](./async.pdf)
 
 ## 1. Колбеки (Callbacks)
 

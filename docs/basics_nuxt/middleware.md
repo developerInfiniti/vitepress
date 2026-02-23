@@ -1,6 +1,6 @@
 # Middleware в Nuxt.js
 
-[Завантажити PDF](./middleware.pdf)
+[Скачать PDF](./middleware.pdf)
 
 ## Что такое Middleware?
 

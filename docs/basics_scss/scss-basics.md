@@ -1,6 +1,6 @@
 # Основы SCSS
 
-[Завантажити PDF](./scss-basics.pdf)
+[Скачать PDF](./scss-basics.pdf)
 
 ## Что такое SCSS?
 

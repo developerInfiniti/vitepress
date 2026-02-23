@@ -1,6 +1,6 @@
 # Переменные в SCSS
 
-[Завантажити PDF](./scss-variables.pdf)
+[Скачать PDF](./scss-variables.pdf)
 
 ## Что такое переменные в SCSS?
 

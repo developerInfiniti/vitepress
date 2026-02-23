@@ -1,6 +1,6 @@
 # Аутентификация в Nuxt.js
 
-[Завантажити PDF](./authentication.pdf)
+[Скачать PDF](./authentication.pdf)
 
 ## Введение
 

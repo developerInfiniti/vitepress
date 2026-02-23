@@ -1,6 +1,6 @@
 # React Testing Library
 
-[Завантажити PDF](./react-testing-library.pdf)
+[Скачать PDF](./react-testing-library.pdf)
 
 ## Введение в React Testing Library
 

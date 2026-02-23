@@ -1,6 +1,6 @@
 # Компоненты React
 
-[Завантажити PDF](./components.pdf)
+[Скачать PDF](./components.pdf)
 
 ## Введение в компоненты React
 

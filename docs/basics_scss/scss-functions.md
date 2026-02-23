@@ -1,6 +1,6 @@
 # Функции в SCSS
 
-[Завантажити PDF](./scss-functions.pdf)
+[Скачать PDF](./scss-functions.pdf)
 
 ## Что такое функции в SCSS?
 

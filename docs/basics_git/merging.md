@@ -1,6 +1,6 @@
 # Слияние в Git
 
-[Завантажити PDF](./merging.pdf)
+[Скачать PDF](./merging.pdf)
 
 ## Что такое слияние (merge)?
 

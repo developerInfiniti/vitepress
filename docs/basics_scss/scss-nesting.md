@@ -1,6 +1,6 @@
 # Вложенность в SCSS
 
-[Завантажити PDF](./scss-nesting.pdf)
+[Скачать PDF](./scss-nesting.pdf)
 
 ## Что такое вложенность?
 

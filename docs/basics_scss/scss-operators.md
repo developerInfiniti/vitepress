@@ -1,6 +1,6 @@
 # Операторы в SCSS
 
-[Завантажити PDF](./scss-operators.pdf)
+[Скачать PDF](./scss-operators.pdf)
 
 ## Что такое операторы в SCSS?
 

@@ -1,6 +1,6 @@
 # React DevTools
 
-[Завантажити PDF](./react-devtools.pdf)
+[Скачать PDF](./react-devtools.pdf)
 
 ## Введение в React DevTools
 

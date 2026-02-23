@@ -1,6 +1,6 @@
 # Ветвление в Git
 
-[Завантажити PDF](./branching.pdf)
+[Скачать PDF](./branching.pdf)
 
 ## Что такое ветки в Git?
 

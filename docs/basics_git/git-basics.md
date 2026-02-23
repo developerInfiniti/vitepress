@@ -1,6 +1,6 @@
 # Основы Git
 
-[Завантажити PDF](./git-basics.pdf)
+[Скачать PDF](./git-basics.pdf)
 
 ## Что такое Git?
 

@@ -1,6 +1,6 @@
 # Тестирование в Nuxt.js
 
-[Завантажити PDF](./testing.pdf)
+[Скачать PDF](./testing.pdf)
 
 ## Введение
 

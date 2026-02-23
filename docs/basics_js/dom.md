@@ -5,7 +5,7 @@ description: Посібник з маніпуляції DOM в JavaScript
 
 # Робота з DOM в JavaScript
 
-[Завантажити PDF](./dom.pdf)
+[Скачать PDF](./dom.pdf)
 
 ## 1. Вибір елементів
 

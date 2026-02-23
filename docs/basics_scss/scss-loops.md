@@ -1,6 +1,6 @@
 # Циклы в SCSS
 
-[Завантажити PDF](./scss-loops.pdf)
+[Скачать PDF](./scss-loops.pdf)
 
 ## Что такое циклы в SCSS?
 

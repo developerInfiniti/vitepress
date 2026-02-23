@@ -1,6 +1,6 @@
 # Развертывание Nuxt.js
 
-[Завантажити PDF](./deployment.pdf)
+[Скачать PDF](./deployment.pdf)
 
 ## Введение
 

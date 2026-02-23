@@ -1,6 +1,6 @@
 # Обработка ошибок в Nuxt.js
 
-[Завантажити PDF](./error-handling.pdf)
+[Скачать PDF](./error-handling.pdf)
 
 ## Введение
 

@@ -1,6 +1,6 @@
 # Cherry-pick в Git
 
-[Завантажити PDF](./cherry-pick.pdf)
+[Скачать PDF](./cherry-pick.pdf)
 
 ## Что такое Cherry-pick?
 

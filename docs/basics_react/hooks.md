@@ -1,6 +1,6 @@
 # Хуки React
 
-[Завантажити PDF](./hooks.pdf)
+[Скачать PDF](./hooks.pdf)
 
 ## Введение в хуки React
 

@@ -1,6 +1,6 @@
 # Команды Git
 
-[Завантажити PDF](./commands.pdf)
+[Скачать PDF](./commands.pdf)
 
 ## Основные команды
 

@@ -1,6 +1,6 @@
 # Основы Nuxt.js
 
-[Завантажити PDF](./nuxt-basics.pdf)
+[Скачать PDF](./nuxt-basics.pdf)
 
 ## Что такое Nuxt.js?
 

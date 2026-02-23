@@ -1,6 +1,6 @@
 # SEO в Nuxt.js
 
-[Завантажити PDF](./seo.pdf)
+[Скачать PDF](./seo.pdf)
 
 ## Введение в SEO для Nuxt.js
 

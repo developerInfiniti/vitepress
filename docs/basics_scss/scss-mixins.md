@@ -1,6 +1,6 @@
 # Миксины в SCSS
 
-[Завантажити PDF](./scss-mixins.pdf)
+[Скачать PDF](./scss-mixins.pdf)
 
 ## Что такое миксины?
 

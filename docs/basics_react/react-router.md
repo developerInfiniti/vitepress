@@ -1,6 +1,6 @@
 # React Router
 
-[Завантажити PDF](./react-router.pdf)
+[Скачать PDF](./react-router.pdf)
 
 ## Введение в React Router
 

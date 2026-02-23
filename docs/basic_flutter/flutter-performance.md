@@ -381,7 +381,7 @@ class _LazyWidgetState extends State<LazyWidget> {
   @override
   void initState() {
     super.initState();
-    // Завантажити після побудови кадру
+    // Скачать після побудови кадру
     WidgetsBinding.instance.addPostFrameCallback((_) {
       setState(() => _isLoaded = true);
     });

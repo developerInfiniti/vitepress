@@ -1,6 +1,6 @@
 # Производительность в Nuxt.js
 
-[Завантажити PDF](./performance.pdf)
+[Скачать PDF](./performance.pdf)
 
 ## Введение
 

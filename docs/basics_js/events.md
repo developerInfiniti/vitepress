@@ -5,7 +5,7 @@ description: Детальний посібник з роботи з подіям
 
 # Події в JavaScript
 
-[Завантажити PDF](./events.pdf)
+[Скачать PDF](./events.pdf)
 
 ## 1. Типи подій
 

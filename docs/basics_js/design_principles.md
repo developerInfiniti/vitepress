@@ -5,7 +5,7 @@ description: Ключові принципи розробки програмно
 
 # Керівництво з принципів проектування програмного забезпечення
 
-[Завантажити PDF](./design_principles.pdf)
+[Скачать PDF](./design_principles.pdf)
 
 ## 1. DRY (Don't Repeat Yourself) - Не повторюй себе
 

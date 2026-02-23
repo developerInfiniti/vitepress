@@ -6,7 +6,7 @@
 
 ## Типы соединений в MySQL
 
-[Завантажити PDF](./joins.pdf)
+[Скачать PDF](./joins.pdf)
 
 ### INNER JOIN
 

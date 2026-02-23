@@ -1,6 +1,6 @@
 # Redux
 
-[Завантажити PDF](./redux.pdf)
+[Скачать PDF](./redux.pdf)
 
 ## Введение в Redux
 

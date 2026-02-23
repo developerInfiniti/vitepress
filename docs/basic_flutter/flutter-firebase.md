@@ -533,7 +533,7 @@ class _ImageUploadWidgetState extends State<ImageUploadWidget> {
         else
           ElevatedButton(
             onPressed: _uploadImage,
-            child: Text('Завантажити зображення'),
+            child: Text('Скачать зображення'),
           ),
       ],
     );

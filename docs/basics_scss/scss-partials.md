@@ -1,6 +1,6 @@
 # Частичные файлы (Partials) в SCSS
 
-[Завантажити PDF](./scss-partials.pdf)
+[Скачать PDF](./scss-partials.pdf)
 
 ## Что такое частичные файлы?
 

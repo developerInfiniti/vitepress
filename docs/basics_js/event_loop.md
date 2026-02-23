@@ -5,7 +5,7 @@ description: Детальне пояснення роботи Event Loop та а
 
 # Event Loop в JavaScript
 
-[Завантажити PDF](./event_loop.pdf)
+[Скачать PDF](./event_loop.pdf)
 
 ## 1. Що таке Event Loop?
 

@@ -1,6 +1,6 @@
 # Интернационализация в Nuxt.js
 
-[Завантажити PDF](./internationalization.pdf)
+[Скачать PDF](./internationalization.pdf)
 
 ## Введение
 

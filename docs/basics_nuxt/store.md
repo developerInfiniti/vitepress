@@ -1,6 +1,6 @@
 # Хранилище (Store) в Nuxt.js
 
-[Завантажити PDF](./store.pdf)
+[Скачать PDF](./store.pdf)
 
 ## Что такое Store в Nuxt.js?
 

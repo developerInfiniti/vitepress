@@ -1,6 +1,6 @@
 # Context API в React
 
-[Завантажити PDF](./context-api.pdf)
+[Скачать PDF](./context-api.pdf)
 
 ## Введение в Context API
 
