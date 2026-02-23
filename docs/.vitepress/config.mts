@@ -211,6 +211,11 @@ export default defineConfig({
           {text: 'Redux', link: '/basics_react/redux'},
           {text: 'React Testing Library', link: '/basics_react/react-testing-library'},
           {text: 'React DevTools', link: '/basics_react/react-devtools'},
+          {text: 'useReducer', link: '/basics_react/use-reducer'},
+          {text: 'useMemo и useCallback', link: '/basics_react/use-memo-callback'},
+          {text: 'Оптимизация производительности', link: '/basics_react/performance'},
+          {text: 'Custom Hooks', link: '/basics_react/custom-hooks'},
+          {text: 'Error Boundaries', link: '/basics_react/error-boundaries'},
         ]
       },
       {
