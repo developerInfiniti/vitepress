@@ -149,6 +149,7 @@ export default defineConfig({
         collapsed: true,
         sidebarKey: 'group2',
         items: [
+          {text: 'Шпаргалка', link: '/basics_ts/typescript-cheatsheet'},
           {text: 'Types', link: '/basics_ts/types'},
           {text: 'Interfaces', link: '/basics_ts/interfaces'},
           {text: 'Classes', link: '/basics_ts/classes'},
@@ -160,6 +161,7 @@ export default defineConfig({
           {text: 'Type Assertions', link: '/basics_ts/type_assertions'},
           {text: 'Type Guards', link: '/basics_ts/type_guards'},
           {text: 'Utility Types', link: '/basics_ts/utility_types'},
+          {text: 'Вопросы и ответы', link: '/basics_ts/questions'},
         ]
       },
       {
