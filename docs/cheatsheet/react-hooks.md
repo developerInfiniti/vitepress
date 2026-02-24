@@ -1260,3 +1260,320 @@ const ProfileRef = () => {
   )
 }
 ```
+
+## useId
+
+Хук `useId()` предназначен для генерации уникальных идентификаторов, которые остаются стабильными между сервером и клиентом. Это особенно полезно для атрибутов доступности (accessibility), таких как `htmlFor` и `aria-describedby`, где нужно связать элементы по `id`. Не следует использовать `useId()` для генерации ключей в списках.
+
+### Базовый пример
+
+```jsx
+const EmailField = () => {
+  const id = useId()
+
+  return (
+    <>
+      <label htmlFor={id}>Email:</label>
+      <input id={id} type='email' />
+    </>
+  )
+}
+```
+
+### Несколько связанных элементов
+
+```jsx
+const SignUpForm = () => {
+  const id = useId()
+
+  return (
+    <form>
+      <label htmlFor={`${id}-email`}>Email:</label>
+      <input id={`${id}-email`} type='email' />
+
+      <label htmlFor={`${id}-password`}>Пароль:</label>
+      <input
+        id={`${id}-password`}
+        type='password'
+        aria-describedby={`${id}-password-hint`}
+      />
+      <p id={`${id}-password-hint`}>
+        Пароль должен содержать не менее 8 символов.
+      </p>
+    </form>
+  )
+}
+```
+
+## useTransition
+
+Хук `useTransition()` позволяет обновлять состояние без блокировки пользовательского интерфейса. Он возвращает флаг `isPending`, указывающий на незавершённый переход, и функцию `startTransition` для оборачивания обновлений с низким приоритетом. Это полезно для тяжёлых обновлений, которые не должны блокировать ввод пользователя.
+
+### Базовый пример
+
+```jsx
+const TabContainer = () => {
+  const [isPending, startTransition] = useTransition()
+  const [tab, setTab] = useState('about')
+
+  const selectTab = (nextTab) => {
+    startTransition(() => {
+      setTab(nextTab)
+    })
+  }
+
+  return (
+    <>
+      <button onClick={() => selectTab('about')}>О нас</button>
+      <button onClick={() => selectTab('posts')}>Посты</button>
+      <button onClick={() => selectTab('contacts')}>Контакты</button>
+      {isPending ? <p>Загрузка...</p> : <TabContent tab={tab} />}
+    </>
+  )
+}
+
+const TabContent = ({ tab }) => {
+  switch (tab) {
+    case 'about':
+      return <p>Информация о нас</p>
+    case 'posts':
+      return <HeavyPostsList />
+    case 'contacts':
+      return <p>Контактная информация</p>
+  }
+}
+```
+
+### Индикатор загрузки
+
+```jsx
+const SearchResults = () => {
+  const [isPending, startTransition] = useTransition()
+  const [query, setQuery] = useState('')
+  const [results, setResults] = useState([])
+
+  const handleChange = (e) => {
+    const value = e.target.value
+    setQuery(value)
+
+    startTransition(() => {
+      const filtered = heavyFilterFunction(value)
+      setResults(filtered)
+    })
+  }
+
+  return (
+    <>
+      <input
+        type='text'
+        value={query}
+        onChange={handleChange}
+        placeholder='Поиск...'
+      />
+      <div style={{ opacity: isPending ? 0.5 : 1 }}>
+        <ul>
+          {results.map((item) => (
+            <li key={item.id}>{item.name}</li>
+          ))}
+        </ul>
+      </div>
+    </>
+  )
+}
+```
+
+## useDeferredValue
+
+Хук `useDeferredValue()` позволяет отложить обновление части интерфейса. Он принимает значение и возвращает его «отложенную» копию, которая обновляется с задержкой. Это полезно, когда обновление одного элемента (например, поля ввода) вызывает тяжёлый перерендеринг другого элемента.
+
+### Базовый пример
+
+```jsx
+const SearchPage = () => {
+  const [query, setQuery] = useState('')
+  const deferredQuery = useDeferredValue(query)
+
+  return (
+    <>
+      <input
+        type='text'
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder='Введите запрос...'
+      />
+      <SearchResults query={deferredQuery} />
+    </>
+  )
+}
+
+const SearchResults = memo(({ query }) => {
+  const items = filterItems(query) // тяжёлая операция
+
+  return (
+    <ul>
+      {items.map((item) => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  )
+})
+```
+
+### С индикатором устаревших данных
+
+```jsx
+const DeferredList = () => {
+  const [text, setText] = useState('')
+  const deferredText = useDeferredValue(text)
+
+  const isStale = text !== deferredText
+
+  return (
+    <>
+      <input
+        type='text'
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
+      <div style={{ opacity: isStale ? 0.5 : 1 }}>
+        <HeavyList filter={deferredText} />
+      </div>
+    </>
+  )
+}
+```
+
+## useImperativeHandle
+
+Хук `useImperativeHandle()` позволяет настроить значение, которое передаётся родительскому компоненту при использовании `ref`. Этот хук используется совместно с `forwardRef` для того, чтобы предоставить родителю ограниченный набор методов дочернего компонента вместо полного доступа к DOM-элементу.
+
+### Базовый пример
+
+```jsx
+const CustomInput = forwardRef((props, ref) => {
+  const inputRef = useRef()
+
+  useImperativeHandle(ref, () => ({
+    focus: () => {
+      inputRef.current.focus()
+    },
+    clear: () => {
+      inputRef.current.value = ''
+    }
+  }))
+
+  return <input ref={inputRef} {...props} />
+})
+
+const Form = () => {
+  const inputRef = useRef()
+
+  return (
+    <>
+      <CustomInput ref={inputRef} placeholder='Введите текст' />
+      <button onClick={() => inputRef.current.focus()}>
+        Фокус на поле ввода
+      </button>
+      <button onClick={() => inputRef.current.clear()}>
+        Очистить поле
+      </button>
+    </>
+  )
+}
+```
+
+### Более сложный пример
+
+```jsx
+const VideoPlayer = forwardRef((props, ref) => {
+  const videoRef = useRef()
+
+  useImperativeHandle(ref, () => ({
+    play: () => videoRef.current.play(),
+    pause: () => videoRef.current.pause(),
+    restart: () => {
+      videoRef.current.currentTime = 0
+      videoRef.current.play()
+    },
+    getTime: () => videoRef.current.currentTime
+  }))
+
+  return <video ref={videoRef} src={props.src} />
+})
+
+const Player = () => {
+  const playerRef = useRef()
+
+  return (
+    <>
+      <VideoPlayer ref={playerRef} src='/video.mp4' />
+      <button onClick={() => playerRef.current.play()}>
+        Воспроизвести
+      </button>
+      <button onClick={() => playerRef.current.pause()}>
+        Пауза
+      </button>
+      <button onClick={() => playerRef.current.restart()}>
+        Начать сначала
+      </button>
+    </>
+  )
+}
+```
+
+## useDebugValue
+
+Хук `useDebugValue()` используется для отображения метки (label) в React DevTools рядом с пользовательским хуком. Это помогает при отладке, позволяя увидеть текущее значение кастомного хука прямо в инструментах разработчика. Данный хук не влияет на работу приложения и предназначен исключительно для разработки.
+
+### Базовый пример
+
+```jsx
+const useOnlineStatus = () => {
+  const [isOnline, setIsOnline] = useState(navigator.onLine)
+
+  useEffect(() => {
+    const handleOnline = () => setIsOnline(true)
+    const handleOffline = () => setIsOnline(false)
+
+    window.addEventListener('online', handleOnline)
+    window.addEventListener('offline', handleOffline)
+
+    return () => {
+      window.removeEventListener('online', handleOnline)
+      window.removeEventListener('offline', handleOffline)
+    }
+  }, [])
+
+  useDebugValue(isOnline ? 'В сети' : 'Не в сети')
+
+  return isOnline
+}
+
+const StatusBar = () => {
+  const isOnline = useOnlineStatus()
+
+  return <p>{isOnline ? 'Подключено' : 'Отключено'}</p>
+}
+```
+
+### Форматирование значения
+
+```jsx
+const useFormattedDate = (date) => {
+  // Функция форматирования вызывается только при открытии DevTools
+  useDebugValue(date, (d) => d.toLocaleDateString('ru-RU'))
+
+  return date.toLocaleDateString('ru-RU', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+}
+
+const DateDisplay = () => {
+  const formatted = useFormattedDate(new Date())
+
+  return <p>Сегодня: {formatted}</p>
+}
+```
