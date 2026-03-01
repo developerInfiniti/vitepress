@@ -478,6 +478,7 @@ export default defineConfig({
           {text: 'Dependency Injection', link: '/basic_flutter/flutter-dependency-injection'},
           {text: 'Streams и RxDart', link: '/basic_flutter/flutter-streams'},
           {text: 'Безопасность', link: '/basic_flutter/flutter-security'},
+          {text: 'FlutterFlow', link: '/basic_flutter/flutter-flutterflow'},
           {
             text: 'Собеседование',
             collapsible: true,
