@@ -822,3 +822,99 @@ FlutterFlow предоставляет встроенные инструмент
 * **Code Export** — для более сложных проектов экспортируйте код и используйте Git
 * **CI/CD интеграция** — настройте автоматическую сборку и деплой
 * **Документирование** — документируйте структуру проекта и Custom Code для команды
+
+## Интернационализация (i18n)
+
+### Поддержка нескольких языков
+
+FlutterFlow имеет встроенную поддержку интернационализации:
+
+```dart
+// FlutterFlow автоматически генерирует файлы локализации
+// Структура локализации:
+// lib/
+// ├── flutter_flow/
+// │   └── internationalization.dart
+// └── assets/
+//     └── translations/
+//         ├── en.json
+//         ├── ru.json
+//         └── es.json
+
+// Пример использования перевода в коде
+FFLocalizations.of(context).getText('home_title');  // Получить перевод по ключу
+
+// Переключение языка
+FFLocalizations.of(context).languageCode;  // Текущий язык
+setAppLanguage(context, 'ru');             // Сменить на русский
+```
+
+### Настройка в FlutterFlow
+
+1. **Включение** — перейдите в Settings → General → Enable Internationalization
+2. **Добавление языков** — добавьте необходимые языки (en, ru, es и др.)
+3. **Переводы** — для каждого текстового виджета задайте переводы на каждый язык
+4. **Автоопределение** — FlutterFlow может определить язык устройства пользователя
+5. **RTL поддержка** — поддержка языков с направлением письма справа налево (арабский, иврит)
+
+### Лучшие практики i18n
+
+* Не используйте захардкоженные строки — всегда используйте ключи перевода
+* Учитывайте разную длину текста на разных языках при дизайне UI
+* Тестируйте приложение на всех поддерживаемых языках
+* Используйте параметризованные строки для динамических данных
+* Храните переводы в JSON-файлах для удобства обновления
+
+## Интеграция с платёжными системами
+
+### Stripe
+
+FlutterFlow поддерживает интеграцию со Stripe для обработки платежей:
+
+```dart
+// Инициализация Stripe
+Stripe.publishableKey = 'pk_live_xxx';
+
+// Создание Payment Intent (через Cloud Function)
+final paymentIntent = await createPaymentIntent(
+  amount: 1000,       // Сумма в копейках (10.00)
+  currency: 'usd',
+);
+
+// Отображение платёжной формы
+await Stripe.instance.initPaymentSheet(
+  paymentSheetParameters: SetupPaymentSheetParameters(
+    paymentIntentClientSecret: paymentIntent['client_secret'],
+    merchantDisplayName: 'Моё Приложение',
+  ),
+);
+await Stripe.instance.presentPaymentSheet();
+```
+
+### RevenueCat (подписки)
+
+Для управления подписками FlutterFlow интегрируется с RevenueCat:
+
+```dart
+// Инициализация
+await Purchases.configure(PurchasesConfiguration('api_key'));
+
+// Получение доступных подписок
+final offerings = await Purchases.getOfferings();
+final packages = offerings.current?.availablePackages ?? [];
+
+// Покупка подписки
+final purchaserInfo = await Purchases.purchasePackage(packages.first);
+
+// Проверка активной подписки
+final customerInfo = await Purchases.getCustomerInfo();
+final isSubscribed = customerInfo.entitlements.all['premium']?.isActive ?? false;
+```
+
+### Лучшие практики платёжных интеграций
+
+* **Серверная валидация** — всегда проверяйте платежи на сервере (Cloud Functions)
+* **Тестовый режим** — используйте тестовые ключи Stripe при разработке
+* **Обработка ошибок** — обрабатывайте отмену, недостаток средств, сетевые ошибки
+* **Восстановление покупок** — реализуйте функцию восстановления для подписок
+* **Соответствие требованиям** — соблюдайте правила App Store и Google Play для платежей
