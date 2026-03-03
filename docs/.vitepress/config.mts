@@ -236,6 +236,7 @@ export default defineConfig({
           {text: 'CSS Variables', link: '/basics_css/css-variables'},
           {text: 'CSS Functions', link: '/basics_css/css-functions'},
           {text: 'CSS Units', link: '/basics_css/css-units'},
+          {text: 'CSS Selectors', link: '/basics_css/css-selectors'},
         ]
       },
       {
