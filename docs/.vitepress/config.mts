@@ -630,6 +630,18 @@ export default defineConfig({
             ]
       },
       {
+        text: 'REST API Design',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group4',
+        items: [
+          {text: 'HTTP методы и коды', link: '/api_basics/http-methods'},
+          {text: 'REST принципы', link: '/api_basics/rest-principles'},
+          {text: 'Версионирование', link: '/api_basics/versioning'},
+          {text: 'Обработка ошибок', link: '/api_basics/error-handling'},
+        ]
+      },
+      {
         text: 'База GraphQL',
         collapsible: true,
         collapsed: true,
