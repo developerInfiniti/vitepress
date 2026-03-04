@@ -1,82 +1,82 @@
-# 12 Architecture Concepts Every Developer Should Know
+# 12 архитектурных концепций, которые должен знать каждый разработчик
 
-## Overview
+## Обзор
 
-Junior mindset: "Does my API work?"
-Senior mindset: "Will this system survive heavy traffic, failure and scale?"
+Менталитет джуниора: "Работает ли мой API?"
+Менталитет сениора: "Выдержит ли эта система высокие нагрузки, отказы и масштабирование?"
 
-If you start thinking in these 12 directions, you're moving from writing code → to designing production systems 🚀
-
----
-
-## The 12 Architecture Concepts
-
-### 1️⃣ Load Balancing
-Spread traffic across servers to avoid crashes and handle spikes.
-
-### 2️⃣ Caching
-Store data temporarily to reduce DB load and improve speed.
-
-### 3️⃣ CDN
-Deliver content from the nearest location to reduce global latency.
-
-### 4️⃣ Message Queue
-Use async processing to avoid failure chains between services.
-
-### 5️⃣ Publish–Subscribe
-One event, multiple listeners. Keeps services loosely connected.
-
-### 6️⃣ API Gateway
-Single entry point for auth, routing, logging and rate limiting.
-
-### 7️⃣ Circuit Breaker
-Stop calling failing services to prevent system-wide crashes.
-
-### 8️⃣ Service Discovery
-Automatically find running services in dynamic environments.
-
-### 9️⃣ Sharding
-Split large databases when one server is not enough.
-
-### 🔟 Rate Limiting
-Protect systems from abuse, bots and traffic floods.
-
-### 1️⃣1️⃣ Consistent Hashing
-Smart data distribution with minimal reshuffling during scaling.
-
-### 1️⃣2️⃣ Auto Scaling
-Automatically increase/decrease servers based on traffic.
+Если вы начнёте думать в этих 12 направлениях, вы переходите от написания кода → к проектированию production-систем 🚀
 
 ---
 
-## Visual Reference
+## 12 архитектурных концепций
+
+### 1️⃣ Балансировка нагрузки (Load Balancing)
+Распределяйте трафик между серверами, чтобы избежать сбоев и справиться с пиками нагрузки.
+
+### 2️⃣ Кеширование (Caching)
+Сохраняйте данные временно, чтобы снизить нагрузку на БД и улучшить скорость.
+
+### 3️⃣ CDN (Content Delivery Network)
+Доставляйте контент с ближайшего местоположения, чтобы снизить глобальную задержку.
+
+### 4️⃣ Очередь сообщений (Message Queue)
+Используйте асинхронную обработку, чтобы избежать цепочек отказов между сервисами.
+
+### 5️⃣ Publish-Subscribe (Паб-Саб)
+Одно событие, несколько слушателей. Держит сервисы слабо связанными.
+
+### 6️⃣ API Gateway (Шлюз API)
+Единая точка входа для аутентификации, маршрутизации, логирования и ограничения скорости.
+
+### 7️⃣ Circuit Breaker (Выключатель цепи)
+Прекратите вызовы отказавших сервисов, чтобы предотвратить отказ всей системы.
+
+### 8️⃣ Service Discovery (Обнаружение сервисов)
+Автоматически находите работающие сервисы в динамических окружениях.
+
+### 9️⃣ Sharding (Шардирование)
+Разделяйте большие базы данных, когда одного сервера недостаточно.
+
+### 🔟 Rate Limiting (Ограничение скорости)
+Защищайте системы от злоупотребления, ботов и наводнений трафиком.
+
+### 1️⃣1️⃣ Consistent Hashing (Согласованное хеширование)
+Умное распределение данных с минимальной перестановкой при масштабировании.
+
+### 1️⃣2️⃣ Auto Scaling (Автоматическое масштабирование)
+Автоматически увеличивайте/уменьшайте количество серверов в зависимости от трафика.
+
+---
+
+## Визуальный справочник
 
 ![12 Architecture Concepts](./assets/architecture-concepts.gif)
 
 ---
 
-## Resources
+## Ресурсы
 
-### Top Resources for Coding Enthusiasts:
+### Лучшие ресурсы для разработчиков:
 - 🌐 [w3schools.com](https://www.w3schools.com)
 - 💡 JavaScript Mastery
 
 ---
 
-## Community
+## Сообщество
 
-💡 **Join Our Telegram Channel**
-Get daily updates on quizzes and tech insights! 👉 [https://t.me/Newsshiksha](https://t.me/Newsshiksha)
+💡 **Присоединитесь к нашему каналу Telegram**
+Получайте ежедневные обновления викторин и технических идей! 👉 [https://t.me/Newsshiksha](https://t.me/Newsshiksha)
 
-💻 Follow Mohd Shahid Khan for daily tips, programming tricks and development insights.
+💻 Следите за Mohd Shahid Khan для ежедневных советов, трюков программирования и идей по разработке.
 
 ---
 
-## Share & Contribute
+## Делитесь и вносите вклад
 
-- 📤 Share with your network
-- 💬 Comment your thoughts
-- 🔖 Save for future reference
-- 👍 Like if you found it helpful
+- 📤 Поделитесь со своей сетью
+- 💬 Прокомментируйте свои мысли
+- 🔖 Сохраните для справки в будущем
+- 👍 Лайк, если информация оказалась полезной
 
-**Credit:** ByteByteGo
+**Кредит:** ByteByteGo
