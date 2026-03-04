@@ -663,6 +663,21 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Playwright E2E тестирование',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group4',
+        items: [
+          {text: 'Основы Playwright', link: '/basics_playwright/basics'},
+          {text: 'Установка и конфигурация', link: '/basics_playwright/installation'},
+          {text: 'Селекторы и навигация', link: '/basics_playwright/selectors'},
+          {text: 'Действия и взаимодействие', link: '/basics_playwright/actions'},
+          {text: 'Assertions и проверки', link: '/basics_playwright/assertions'},
+          {text: 'Best Practices', link: '/basics_playwright/best-practices'},
+          {text: 'CI/CD интеграция', link: '/basics_playwright/ci-cd'},
+        ]
+      },
+      {
         text: 'Руководства',
         link: '/guide/guide'
       },
