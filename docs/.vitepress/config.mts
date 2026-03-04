@@ -630,6 +630,24 @@ export default defineConfig({
             ]
       },
       {
+        text: 'База GraphQL',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group4',
+        items: [
+          {text: 'Основы', link: '/basics_graphql/graphql-basics'},
+          {text: 'Queries', link: '/basics_graphql/queries'},
+          {text: 'Mutations', link: '/basics_graphql/mutations'},
+          {text: 'Subscriptions', link: '/basics_graphql/subscriptions'},
+          {text: 'Schemas', link: '/basics_graphql/schemas'},
+          {text: 'Resolvers', link: '/basics_graphql/resolvers'},
+          {text: 'Apollo Server', link: '/basics_graphql/apollo-server'},
+          {text: 'Apollo Client', link: '/basics_graphql/apollo-client'},
+          {text: 'Best Practices', link: '/basics_graphql/best-practices'},
+          {text: 'Вопросы на собеседование', link: '/basics_graphql/interview-questions'},
+        ]
+      },
+      {
         text: 'Руководства',
         link: '/guide/guide'
       },
