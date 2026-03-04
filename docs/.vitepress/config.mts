@@ -311,36 +311,6 @@ export default defineConfig({
         ]
       },
       {
-        text: 'База MySQL',
-        collapsible: true,
-        collapsed: true,
-        sidebarKey: 'group2',
-        items: [
-          {text: 'MySQL Basics', link: '/basics_mysql/mysql-basics'},
-          {text: 'MySQL Functions', link: '/basics_mysql/functions'},
-          {text: 'MySQL Joins', link: '/basics_mysql/joins'},
-          {text: 'MySQL Indexes', link: '/basics_mysql/indexes'},
-          {text: 'MySQL Transactions', link: '/basics_mysql/transactions'},
-          {text: 'MySQL Views', link: '/basics_mysql/views'},
-          {text: 'MySQL Triggers', link: '/basics_mysql/triggers'},
-        ]
-      },
-      {
-        text: 'База MySQL',
-        collapsible: true,
-        collapsed: true,
-        sidebarKey: 'group2',
-        items: [
-          {text: 'MySQL Basics', link: '/basics_mysql/mysql-basics'},
-          {text: 'MySQL Functions', link: '/basics_mysql/functions'},
-          {text: 'MySQL Joins', link: '/basics_mysql/joins'},
-          {text: 'MySQL Indexes', link: '/basics_mysql/indexes'},
-          {text: 'MySQL Transactions', link: '/basics_mysql/transactions'},
-          {text: 'MySQL Views', link: '/basics_mysql/views'},
-          {text: 'MySQL Triggers', link: '/basics_mysql/triggers'},
-        ]
-      },
-      {
         text: 'База Git',
         collapsible: true,
         collapsed: true,
