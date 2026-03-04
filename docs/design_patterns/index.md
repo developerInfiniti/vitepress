@@ -11,18 +11,18 @@
 
 1. **[Singleton](/design_patterns/singleton)** — один объект на всё приложение
 2. **[Factory Method](/design_patterns/factory-method)** — создание объектов через фабрику
-3. **Abstract Factory** — семейства взаимосвязанных объектов (скоро)
-4. **Builder** — пошаговое создание сложных объектов (скоро)
-5. **Prototype** — создание копий объектов (скоро)
+3. **[Abstract Factory](/design_patterns/abstract-factory)** — семейства взаимосвязанных объектов
+4. **[Builder](/design_patterns/builder)** — пошаговое создание сложных объектов
+5. **[Prototype](/design_patterns/prototype)** — создание копий объектов
 
 #### 🔗 Структурные паттерны (Structural)
 Решают проблемы композиции объектов.
 
-6. **Adapter** — адаптация несовместимых интерфейсов (скоро)
+6. **[Adapter](/design_patterns/adapter)** — адаптация несовместимых интерфейсов
 7. **Bridge** — отделение абстракции от реализации (скоро)
 8. **Composite** — древовидные структуры (скоро)
-9. **Decorator** — добавление функциональности без наследования (скоро)
-10. **Facade** — единый интерфейс для подсистемы (скоро)
+9. **[Decorator](/design_patterns/decorator)** — добавление функциональности без наследования
+10. **[Facade](/design_patterns/facade)** — единый интерфейс для подсистемы
 11. **Flyweight** — экономия памяти через переиспользование (скоро)
 12. **Proxy** — подмена объекта плацебо (скоро)
 
@@ -35,7 +35,7 @@
 16. **Template Method** — скелет алгоритма в базовом классе (скоро)
 17. **Visitor** — операции над элементами структуры (скоро)
 18. **Iterator** — последовательный доступ к элементам (скоро)
-19. **Command** — инкапсуляция запроса как объекта (скоро)
+19. **[Command](/design_patterns/command)** — инкапсуляция запроса как объекта
 20. **Mediator** — централизованный контроль взаимодействия (скоро)
 21. **Memento** — сохранение и восстановление состояния (скоро)
 22. **Chain of Responsibility** — передача запроса по цепи (скоро)
@@ -43,9 +43,9 @@
 #### 🎪 Архитектурные паттерны
 Используются на уровне всего приложения.
 
-23. **MVC** — Model-View-Controller (скоро)
-24. **MVVM** — Model-View-ViewModel (скоро)
-25. **MVP** — Model-View-Presenter (скоро)
+23. **[MVC](/design_patterns/mvc)** — Model-View-Controller
+24. **[MVVM](/design_patterns/mvvm)** — Model-View-ViewModel
+25. **[MVP](/design_patterns/mvp)** — Model-View-Presenter
 
 ---
 
