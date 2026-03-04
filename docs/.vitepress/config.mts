@@ -636,7 +636,12 @@ export default defineConfig({
       },
       {
         text: 'Разное',
-        link: '/other/'
+        collapsible: true,
+        collapsed: true,
+        link: '/other/',
+        items: [
+          {text: '12 Architecture Concepts', link: '/other/architecture-concepts'},
+        ]
       },
       {
         text: 'Ссылки',
