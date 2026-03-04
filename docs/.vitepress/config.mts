@@ -84,7 +84,6 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Шпаргалки', link: '/markdown-examples' },
       { text: 'Ссылки', link: '/links' },
-      { text: 'Собеседование', link: '/test' },
       { text: 'Разное', link: '/other/' },
       { text: 'Руководства', link: '/guide/guide' }
     ],
