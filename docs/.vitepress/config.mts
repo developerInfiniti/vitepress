@@ -678,6 +678,19 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Паттерны проектирования',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group4',
+        items: [
+          {text: 'Введение', link: '/design_patterns/'},
+          {text: 'Singleton', link: '/design_patterns/singleton'},
+          {text: 'Factory Method', link: '/design_patterns/factory-method'},
+          {text: 'Observer', link: '/design_patterns/observer'},
+          {text: 'Strategy', link: '/design_patterns/strategy'},
+        ]
+      },
+      {
         text: 'Руководства',
         link: '/guide/guide'
       },
