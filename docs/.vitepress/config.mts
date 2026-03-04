@@ -688,6 +688,10 @@ export default defineConfig({
           {text: 'Factory Method', link: '/design_patterns/factory-method'},
           {text: 'Observer', link: '/design_patterns/observer'},
           {text: 'Strategy', link: '/design_patterns/strategy'},
+          {text: 'Adapter', link: '/design_patterns/adapter'},
+          {text: 'Decorator', link: '/design_patterns/decorator'},
+          {text: 'Facade', link: '/design_patterns/facade'},
+          {text: 'Command', link: '/design_patterns/command'},
         ]
       },
       {
