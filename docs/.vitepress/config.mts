@@ -648,6 +648,21 @@ export default defineConfig({
         ]
       },
       {
+        text: 'База Testing',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group4',
+        items: [
+          {text: 'Основы', link: '/basics_testing/testing-basics'},
+          {text: 'Jest', link: '/basics_testing/jest'},
+          {text: 'Vitest', link: '/basics_testing/vitest'},
+          {text: 'Unit Testing', link: '/basics_testing/unit-testing'},
+          {text: 'Mocking', link: '/basics_testing/mocking'},
+          {text: 'Testing React', link: '/basics_testing/testing-react'},
+          {text: 'Best Practices', link: '/basics_testing/best-practices'},
+        ]
+      },
+      {
         text: 'Руководства',
         link: '/guide/guide'
       },
