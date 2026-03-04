@@ -51,7 +51,7 @@ Automatically increase/decrease servers based on traffic.
 
 ## Visual Reference
 
-![12 Architecture Concepts](/assets/architecture-concepts.gif)
+![12 Architecture Concepts](./assets/architecture-concepts.gif)
 
 ---
 
