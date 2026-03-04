@@ -690,6 +690,33 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Алгоритмы и структуры данных',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group4',
+        items: [
+          {text: 'Сложность алгоритмов (Big O)', link: '/algorithms/big-o'},
+          {text: 'Структуры данных', link: '/algorithms/data-structures'},
+          {text: 'Сортировка и поиск', link: '/algorithms/sorting-searching'},
+          {text: 'Рекурсия и динамическое программирование', link: '/algorithms/recursion-dp'},
+          {text: 'Задачи на собеседовании', link: '/algorithms/interview-problems'},
+        ]
+      },
+      {
+        text: 'Системный дизайн',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group4',
+        items: [
+          {text: 'Введение', link: '/system_design/'},
+          {text: 'Масштабирование', link: '/system_design/scaling'},
+          {text: 'Кеширование', link: '/system_design/caching'},
+          {text: 'Базы данных', link: '/system_design/databases'},
+          {text: 'Микросервисы', link: '/system_design/microservices'},
+          {text: 'Разбор задач', link: '/system_design/case-studies'},
+        ]
+      },
+      {
         text: 'Паттерны проектирования',
         collapsible: true,
         collapsed: true,
