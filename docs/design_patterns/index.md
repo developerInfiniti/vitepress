@@ -19,26 +19,26 @@
 Решают проблемы композиции объектов.
 
 6. **[Adapter](/design_patterns/adapter)** — адаптация несовместимых интерфейсов
-7. **Bridge** — отделение абстракции от реализации (скоро)
-8. **Composite** — древовидные структуры (скоро)
+7. **[Bridge](/design_patterns/bridge)** — отделение абстракции от реализации
+8. **[Composite](/design_patterns/composite)** — древовидные структуры
 9. **[Decorator](/design_patterns/decorator)** — добавление функциональности без наследования
 10. **[Facade](/design_patterns/facade)** — единый интерфейс для подсистемы
-11. **Flyweight** — экономия памяти через переиспользование (скоро)
-12. **Proxy** — подмена объекта плацебо (скоро)
+11. **[Flyweight](/design_patterns/flyweight)** — экономия памяти через переиспользование
+12. **[Proxy](/design_patterns/proxy)** — подмена объекта плацебо
 
 #### 🎯 Поведенческие паттерны (Behavioral)
 Решают проблемы коммуникации между объектами.
 
 13. **[Observer](/design_patterns/observer)** — оповещение о событиях
 14. **[Strategy](/design_patterns/strategy)** — выбор алгоритма в runtime
-15. **State** — смена поведения в зависимости от состояния (скоро)
-16. **Template Method** — скелет алгоритма в базовом классе (скоро)
-17. **Visitor** — операции над элементами структуры (скоро)
-18. **Iterator** — последовательный доступ к элементам (скоро)
+15. **[State](/design_patterns/state)** — смена поведения в зависимости от состояния
+16. **[Template Method](/design_patterns/template-method)** — скелет алгоритма в базовом классе
+17. **[Visitor](/design_patterns/visitor)** — операции над элементами структуры
+18. **[Iterator](/design_patterns/iterator)** — последовательный доступ к элементам
 19. **[Command](/design_patterns/command)** — инкапсуляция запроса как объекта
-20. **Mediator** — централизованный контроль взаимодействия (скоро)
-21. **Memento** — сохранение и восстановление состояния (скоро)
-22. **Chain of Responsibility** — передача запроса по цепи (скоро)
+20. **[Mediator](/design_patterns/mediator)** — централизованный контроль взаимодействия
+21. **[Memento](/design_patterns/memento)** — сохранение и восстановление состояния
+22. **[Chain of Responsibility](/design_patterns/chain-of-responsibility)** — передача запроса по цепи
 
 #### 🎪 Архитектурные паттерны
 Используются на уровне всего приложения.
