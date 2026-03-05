@@ -132,11 +132,15 @@ watchEffect(() => {
 <template>
   <div class="lifecycle-demo">
     <div class="demo-header">
-      <h3>Демо: Vue Lifecycle Hooks</h3>
+      <h3>Vue 3 Lifecycle Hooks - Интерактивная песочница</h3>
       <span class="alive-badge">
         Компонент живёт: {{ secondsAlive }} сек.
       </span>
     </div>
+
+    <p class="demo-description">
+      Нажимайте кнопки и наблюдайте, как Vue реагирует на изменения через lifecycle hooks и watchers.
+    </p>
 
     <div class="demo-body">
       <!-- Счётчик -->
@@ -238,6 +242,13 @@ watchEffect(() => {
   font-size: 0.85em;
 }
 
+.demo-description {
+  margin: 0 0 16px 0;
+  color: var(--vp-c-text-2, #666);
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
 .demo-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -298,11 +309,16 @@ watchEffect(() => {
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.95em;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.15s ease;
 }
 
 .btn:hover {
   opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
 }
 
 .btn-plus {
