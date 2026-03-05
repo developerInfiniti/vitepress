@@ -173,6 +173,7 @@ export default defineConfig({
           {text: 'Composables', link: '/basics_vue/composables'},
           {text: 'Composition Api', link: '/basics_vue/composition-api'},
           {text: 'Lifecycle Hooks', link: '/basics_vue/lifecycle_hooks'},
+          {text: 'Lifecycle Component Demo', link: '/basics_vue/vue_lifecycle_component'},
           {text: 'Реактивность', link: '/basics_vue/reactivity'},
           {text: 'Script Setup', link: '/basics_vue/script-setup'},
           {text: 'Suspense', link: '/basics_vue/suspense'},
