@@ -198,6 +198,25 @@ export default defineConfig({
         ]
       },
       {
+        text: 'База Angular',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group2',
+        items: [
+          {text: 'Основы Angular', link: '/basics_angular/angular-basics'},
+          {text: 'Компоненты', link: '/basics_angular/components'},
+          {text: 'Модули (NgModules)', link: '/basics_angular/modules'},
+          {text: 'Сервисы', link: '/basics_angular/services'},
+          {text: 'Dependency Injection', link: '/basics_angular/dependency-injection'},
+          {text: 'HttpClient', link: '/basics_angular/http-client'},
+          {text: 'RxJS Observables', link: '/basics_angular/rxjs-observables'},
+          {text: 'Операторы RxJS', link: '/basics_angular/operators'},
+          {text: 'Unit-тестирование', link: '/basics_angular/unit-testing'},
+          {text: 'E2E-тестирование', link: '/basics_angular/e2e-testing'},
+          {text: 'Best Practices тестирования', link: '/basics_angular/testing-best-practices'},
+        ]
+      },
+      {
         text: 'База React',
         collapsible: true,
         collapsed: true,
@@ -715,6 +734,27 @@ export default defineConfig({
           {text: 'Базы данных', link: '/system_design/databases'},
           {text: 'Микросервисы', link: '/system_design/microservices'},
           {text: 'Разбор задач', link: '/system_design/case-studies'},
+        ]
+      },
+      {
+        text: 'База Angular',
+        collapsible: true,
+        collapsed: true,
+        sidebarKey: 'group2',
+        items: [
+          {text: 'Шаблоны и привязки', link: '/basics_angular/templates'},
+          {text: 'ng-template и ngTemplateOutlet', link: '/basics_angular/template-binding'},
+          {text: 'Директивы', link: '/basics_angular/directives'},
+          {text: 'Reactive Forms', link: '/basics_angular/reactive-forms'},
+          {text: 'Template-driven Forms', link: '/basics_angular/template-forms'},
+          {text: 'Валидация форм', link: '/basics_angular/form-validation'},
+          {text: 'Routing', link: '/basics_angular/routing'},
+          {text: 'Route Guards', link: '/basics_angular/route-guards'},
+          {text: 'Lazy Loading', link: '/basics_angular/lazy-loading'},
+          {text: 'Change Detection', link: '/basics_angular/change-detection'},
+          {text: 'Pipes', link: '/basics_angular/custom-pipes'},
+          {text: 'Custom Directives', link: '/basics_angular/custom-directives'},
+          {text: 'Производительность', link: '/basics_angular/performance'},
         ]
       },
       {
