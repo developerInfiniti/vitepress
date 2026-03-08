@@ -2,11 +2,8 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.4",
     "@vue/test-utils": "^2.4.6",
-    "autoprefixer": "^10.4.21",
     "cross-env": "^7.0.3",
     "jsdom": "^28.1.0",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.4",
     "vitepress": "^2.0.0-alpha.16",
     "vitest": "^4.0.18"
   },
@@ -16,8 +13,5 @@
     "docs:preview": "vitepress preview docs",
     "test": "vitest run --config .config/vitest.config.ts",
     "test:watch": "vitest --config .config/vitest.config.ts"
-  },
-  "dependencies": {
-    "@docsearch/js": "^3.9.0"
   }
 }

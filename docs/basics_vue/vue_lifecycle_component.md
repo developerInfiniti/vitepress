@@ -3,6 +3,10 @@ title: Vue Lifecycle Component - Интерактивная демонстрац
 description: Интерактивный компонент для изучения lifecycle hooks Vue 3 с наглядными логами и примерами кода.
 ---
 
+<script setup>
+import LifecycleDemo from '../.vitepress/components/LifecycleDemo.vue'
+</script>
+
 # Vue Lifecycle Component
 
 Интерактивный компонент, демонстрирующий работу lifecycle hooks, watchers и реактивности Vue 3.
