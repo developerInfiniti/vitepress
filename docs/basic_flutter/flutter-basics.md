@@ -174,7 +174,7 @@ Flutter має вбудовані бібліотеки для виконання
     import 'dart:convert';
 
     Future<Map<String, dynamic>> fetchAlbum() async {
-      final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
+      final response = await http.get(Uri.parse('[https://jsonplaceholder.typicode.com/albums/1](https://jsonplaceholder.typicode.com/albums/1)'));
 
       if (response.statusCode == 200) {
         return jsonDecode(response.body) as Map<String, dynamic>;

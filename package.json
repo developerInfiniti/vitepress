@@ -12,7 +12,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "cross-env NODE_OPTIONS=--max-old-space-size=4096 vitepress build docs",
+    "docs:build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "test": "vitest run --config .config/vitest.config.ts",
     "test:watch": "vitest --config .config/vitest.config.ts"

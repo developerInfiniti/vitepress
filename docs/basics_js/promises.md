@@ -3,7 +3,15 @@ title: Промисы и асинхронность
 description: Работа с асинхронным кодом в JavaScript
 ---
 
+<script setup>
+import PromiseDemo from '../.vitepress/components/PromiseDemo.vue'
+</script>
+
 # Асинхронное программирование в JavaScript
+
+## Интерактивная демонстрация Promise
+
+<PromiseDemo />
 
 ## 1. Промисы (Promises)
 
