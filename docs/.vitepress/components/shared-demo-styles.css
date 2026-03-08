@@ -1,0 +1,306 @@
+/* Shared styles for interactive demo components */
+
+/* === Wrapper === */
+.demo-wrapper {
+  border: 2px solid var(--vp-c-brand-1, #3eaf7c);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  background: var(--vp-c-bg-soft, #f9f9f9);
+}
+
+/* === Header === */
+.demo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.demo-header h3 {
+  margin: 0;
+}
+
+/* === Description === */
+.demo-description {
+  margin: 0 0 16px 0;
+  color: var(--vp-c-text-2, #666);
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+/* === Tabs === */
+.demo-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--vp-c-divider, #e2e2e3);
+  padding-bottom: 0;
+}
+
+.demo-tab-btn {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: var(--vp-c-text-2, #666);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.demo-tab-btn:hover {
+  color: var(--vp-c-brand-1, #3eaf7c);
+}
+
+.demo-tab-btn.active {
+  color: var(--vp-c-brand-1, #3eaf7c);
+  border-bottom-color: var(--vp-c-brand-1, #3eaf7c);
+  font-weight: 600;
+}
+
+/* === Body grid === */
+.demo-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .demo-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Controls === */
+.demo-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.demo-tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.demo-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* === Inputs === */
+.demo-btn-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.demo-input-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.demo-input-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9em;
+}
+
+.demo-input-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9em;
+}
+
+.demo-num-input {
+  width: 60px;
+  padding: 4px 8px;
+  border: 1px solid var(--vp-c-divider, #e2e2e3);
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.demo-text-input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid var(--vp-c-divider, #e2e2e3);
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* === Buttons === */
+.demo-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: opacity 0.2s, transform 0.15s ease;
+}
+
+.demo-btn:hover:not(:disabled) {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.demo-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.demo-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.demo-btn-create { background: #3498db; color: white; }
+.demo-btn-resolve,
+.demo-btn-next { background: #27ae60; color: white; }
+.demo-btn-reject,
+.demo-btn-stop { background: #e74c3c; color: white; }
+.demo-btn-all { background: #8e44ad; color: white; }
+.demo-btn-auto-resolve { background: #2ecc71; color: white; }
+.demo-btn-auto-reject,
+.demo-btn-forin { background: #e67e22; color: white; }
+.demo-btn-reset { background: #95a5a6; color: white; }
+.demo-btn-auto { background: #3498db; color: white; }
+.demo-btn-key { background: #27ae60; color: white; }
+.demo-btn-plus { background: #3eaf7c; color: white; }
+.demo-btn-minus { background: #e74c3c; color: white; }
+
+.demo-btn-small {
+  padding: 4px 10px;
+  font-size: 0.8em;
+  background: #bdc3c7;
+  color: #333;
+}
+
+/* === Values display === */
+.demo-values {
+  padding: 12px;
+  background: var(--vp-c-bg, white);
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  word-break: break-all;
+}
+
+/* === Result display === */
+.demo-result {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.95em;
+}
+
+.demo-result-success {
+  background: rgba(39, 174, 96, 0.1);
+  border: 1px solid #27ae60;
+  color: #27ae60;
+}
+
+.demo-result-error {
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+}
+
+/* === Badges === */
+.demo-badge-done {
+  display: inline-block;
+  background: #27ae60;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75em;
+  margin-left: 8px;
+  font-family: sans-serif;
+}
+
+.demo-badge-pending {
+  display: inline-block;
+  background: #f39c12;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75em;
+  margin-left: 8px;
+  font-family: sans-serif;
+  animation: demo-pulse 1.5s ease-in-out infinite;
+}
+
+.demo-state-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: white;
+}
+
+.demo-state-idle { background: #95a5a6; }
+.demo-state-pending {
+  background: #f39c12;
+  animation: demo-pulse 1.5s ease-in-out infinite;
+}
+.demo-state-fulfilled { background: #27ae60; }
+.demo-state-rejected { background: #e74c3c; }
+
+/* === Logs === */
+.demo-logs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.demo-logs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.demo-logs-container {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border-radius: 8px;
+  padding: 12px;
+  max-height: 320px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8em;
+  line-height: 1.6;
+}
+
+.demo-log-entry {
+  padding: 2px 0;
+  border-bottom: 1px solid #333;
+}
+
+.demo-log-info { color: #9cdcfe; }
+.demo-log-success,
+.demo-log-value { color: #4ec9b0; }
+.demo-log-error { color: #f48771; }
+.demo-log-done,
+.demo-log-pending { color: #dcdcaa; }
+.demo-log-lifecycle { color: #c586c0; }
+.demo-log-watch { color: #4ec9b0; }
+.demo-log-effect { color: #dcdcaa; }
+.demo-log-action { color: #9cdcfe; }
+
+.demo-log-empty {
+  color: #666;
+  font-style: italic;
+}
+
+/* === Animations === */
+@keyframes demo-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
