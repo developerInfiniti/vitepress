@@ -1,3 +1,7 @@
+---
+description: "Git cherry-pick: выборочный перенос коммитов между ветками — точечное применение изменений с примерами"
+---
+
 # Cherry-pick в Git
 
 [Скачать PDF](./cherry-pick.pdf)

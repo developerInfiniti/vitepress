@@ -1,3 +1,7 @@
+---
+description: "Контекст выполнения JavaScript: call stack, scope chain, this — глубокое понимание работы движка JS"
+---
+
 # JavaScript Execution Context
 
 [Скачать PDF](./execution-context.pdf)

@@ -1,3 +1,7 @@
+---
+description: "Pattern matching в Dart 3: switch expressions, guards, деструктуризация — современный подход к данным"
+---
+
 # Pattern matching (Dart 3)
 
 ## `switch` expression

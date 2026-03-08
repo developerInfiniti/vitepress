@@ -1,3 +1,7 @@
+---
+description: "JOIN в MySQL: INNER, LEFT, RIGHT, CROSS, SELF — объединение таблиц с примерами SQL запросов"
+---
+
 # Соединения (Joins) в MySQL
 
 ## Что такое соединения (Joins)?

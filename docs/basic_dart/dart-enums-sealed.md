@@ -1,3 +1,7 @@
+---
+description: "Перечисления и sealed классы в Dart: enum с методами, sealed class для pattern matching и проверок"
+---
+
 # Enum, sealed и ADT-подход (Dart 3)
 
 ## Enum

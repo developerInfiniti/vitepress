@@ -1,3 +1,7 @@
+---
+description: "Artisan команды Laravel: make, migrate, serve, tinker — консольные инструменты для разработки проекта"
+---
+
 ## Docker Commands
 
 ### Управление контейнерами

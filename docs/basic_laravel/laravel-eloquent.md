@@ -1,3 +1,7 @@
+---
+description: "Laravel Eloquent ORM: модели, отношения, запросы, scopes — работа с базой данных через ORM"
+---
+
 # Eloquent ORM в Laravel
 
 Eloquent — это ORM (Object-Relational Mapping) для работы с базой данных.

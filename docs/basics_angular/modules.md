@@ -1,3 +1,7 @@
+---
+description: "Модули Angular: NgModule, feature modules, shared modules — организация и структура приложения"
+---
+
 # Модули Angular (NgModules)
 
 ## Что такое NgModule

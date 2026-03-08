@@ -1,3 +1,7 @@
+---
+description: "Playwright в CI/CD: GitHub Actions, Docker, параллельные тесты — автоматизация E2E в пайплайне"
+---
+
 # Интеграция Playwright с CI/CD
 
 Автоматизация запуска тестов при каждом commit. Рассмотрим популярные CI/CD платформы.

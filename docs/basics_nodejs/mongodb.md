@@ -1,3 +1,7 @@
+---
+description: "MongoDB с Node.js: подключение, CRUD операции, Mongoose ODM — работа с NoSQL базой данных"
+---
+
 # Работа с MongoDB в Node.js
 
 Для взаимодействия с MongoDB из Node.js необходимо использовать официальный драйвер MongoDB Node.js. Этот драйвер предоставляет API для подключения к серверам MongoDB, выполнения операций CRUD (Create, Read, Update, Delete) и многого другого.

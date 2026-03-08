@@ -1,3 +1,7 @@
+---
+description: "Условия в SCSS: @if, @else, @else if — условная логика в стилях для гибкой генерации CSS правил"
+---
+
 # SCSS Условные Операторы (@if, @else if, @else)
 
 [Скачать PDF](./scss-conditionals.pdf)

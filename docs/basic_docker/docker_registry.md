@@ -1,3 +1,7 @@
+---
+description: "Docker Registry: Docker Hub, приватные реестры, push/pull образов — управление хранилищем Docker образов"
+---
+
 # Основы Docker: Реестр образов (Registry)
 
 **Docker Registry** — это сервис для хранения и распространения Docker-образов. Он работает по аналогии с репозиториями пакетов (например, npm для Node.js или PyPI для Python), но предназначен для Docker-образов.

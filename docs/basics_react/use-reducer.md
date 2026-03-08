@@ -1,3 +1,7 @@
+---
+description: "useReducer в React: сложное состояние, dispatch, actions — альтернатива useState для комплексной логики"
+---
+
 # useReducer в React
 
 ## Введение в useReducer

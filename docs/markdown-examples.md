@@ -1,4 +1,5 @@
 ---
+description: "Примеры Markdown: форматирование, код, таблицы, ссылки — справочник синтаксиса для документации"
 sidebar_position: 1
 id: intro-cheatsheet
 title: Содержание

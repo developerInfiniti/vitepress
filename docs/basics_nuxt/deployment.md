@@ -1,3 +1,7 @@
+---
+description: "Деплой Nuxt.js: Vercel, Netlify, Docker, Node.js сервер — развёртывание приложения в продакшен"
+---
+
 # Развертывание Nuxt.js
 
 [Скачать PDF](./deployment.pdf)

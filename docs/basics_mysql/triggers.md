@@ -1,3 +1,7 @@
+---
+description: "Триггеры MySQL: BEFORE, AFTER, INSERT, UPDATE, DELETE — автоматизация действий в базе данных"
+---
+
 # Триггеры в MySQL
 
 ## Что такое триггеры?

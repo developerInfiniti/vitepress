@@ -1,3 +1,7 @@
+---
+description: "RxJS операторы в Angular: map, filter, switchMap, mergeMap — трансформация и комбинирование потоков"
+---
+
 # Операторы RxJS
 
 ## Что такое оператор

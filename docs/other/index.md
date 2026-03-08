@@ -1,4 +1,5 @@
 ---
+description: "Дополнительные материалы: сниппеты, вопросы, best practices — полезные ресурсы для веб-разработчиков"
 sidebar_position: 1
 id: intro-other
 title: Содержание

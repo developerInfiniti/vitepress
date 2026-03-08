@@ -1,3 +1,7 @@
+---
+description: "Platform channels во Flutter: MethodChannel, EventChannel — интеграция нативного кода iOS и Android"
+---
+
 # Platform Channels у Flutter
 
 Platform Channels — це механізм для зв'язку між Dart-кодом Flutter та нативним кодом платформи (Android/iOS). Вони дозволяють викликати платформо-специфічні API, яких немає у Flutter.

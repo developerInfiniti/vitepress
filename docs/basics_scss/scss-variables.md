@@ -1,3 +1,7 @@
+---
+description: "Переменные SCSS: $variable, scope, !default, !global — управление значениями стилей в одном месте"
+---
+
 # Переменные в SCSS
 
 [Скачать PDF](./scss-variables.pdf)

@@ -1,3 +1,7 @@
+---
+description: "Компоненты React: функциональные, props, children, композиция — основы построения UI приложений"
+---
+
 # Компоненты React
 
 [Скачать PDF](./components.pdf)

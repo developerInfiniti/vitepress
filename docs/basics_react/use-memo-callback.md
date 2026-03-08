@@ -1,3 +1,7 @@
+---
+description: "useMemo и useCallback в React: мемоизация вычислений и функций — оптимизация производительности"
+---
+
 # useMemo и useCallback в React
 
 ## Введение

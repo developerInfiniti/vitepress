@@ -1,3 +1,7 @@
+---
+description: "Firebase во Flutter: Authentication, Firestore, Cloud Functions — интеграция серверных сервисов Google"
+---
+
 # Firebase у Flutter
 
 Firebase — це платформа від Google, яка надає різноманітні сервіси для мобільних та веб-застосунків: аутентифікацію, бази даних, хмарні функції, аналітику тощо.

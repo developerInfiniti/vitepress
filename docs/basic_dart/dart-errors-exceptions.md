@@ -1,3 +1,7 @@
+---
+description: "Обработка ошибок и исключений в Dart: try-catch-finally, custom exceptions, Error vs Exception"
+---
+
 # Ошибки и исключения
 
 ## `Exception` vs `Error`

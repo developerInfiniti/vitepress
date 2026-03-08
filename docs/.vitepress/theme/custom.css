@@ -1,0 +1,65 @@
+/* === Dark mode smooth transition === */
+::view-transition {
+  /* Disable default view transition for color scheme changes */
+}
+
+html {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+html.dark {
+  /* VitePress handles the dark class automatically */
+}
+
+/* Smooth transition for all themed elements */
+body,
+.VPNav,
+.VPSidebar,
+.VPContent,
+.VPDoc,
+.VPFooter,
+.vp-doc,
+.demo-wrapper,
+.demo-logs-container,
+.demo-values,
+.demo-result {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* === Demo components: dark mode adjustments === */
+
+/* Buttons: slightly softer in dark mode */
+.dark .demo-btn-small {
+  background: #4a5568;
+  color: #e2e8f0;
+}
+
+/* Log container: already dark, but adjust border in light mode */
+.demo-logs-container {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .demo-log-entry {
+  border-bottom-color: #444;
+}
+
+/* Result blocks: adjust for dark mode readability */
+.dark .demo-result-success {
+  background: rgba(39, 174, 96, 0.15);
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.dark .demo-result-error {
+  background: rgba(231, 76, 60, 0.15);
+  border-color: #e74c3c;
+  color: #f48771;
+}
+
+/* Inputs: dark mode styling */
+.dark .demo-num-input,
+.dark .demo-text-input {
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
+}

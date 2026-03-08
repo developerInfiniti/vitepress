@@ -1,3 +1,7 @@
+---
+description: "Git rebase: перебазирование коммитов, interactive rebase — линейная история и чистка коммитов"
+---
+
 # Перебазирование (Rebase) в Git
 
 [Скачать PDF](./rebase.pdf)

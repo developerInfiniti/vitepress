@@ -1,3 +1,7 @@
+---
+description: "Деплой Flutter приложений: сборка для Android, iOS, Web — публикация в Google Play и App Store"
+---
+
 # Публікація Flutter застосунків
 
 Публікація застосунку — це фінальний етап розробки. Розглянемо процес підготовки та публікації для Android (Google Play) та iOS (App Store).

@@ -1,3 +1,7 @@
+---
+description: "Типы данных и null safety в Dart: nullable типы, late, required — безопасная работа с null значениями"
+---
+
 # Типы и null safety
 
 ## Примитивные типы

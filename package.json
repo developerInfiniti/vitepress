@@ -1,9 +1,11 @@
 {
   "devDependencies": {
+    "@lhci/cli": "^0.15.1",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vue/test-utils": "^2.4.6",
     "cross-env": "^7.0.3",
     "jsdom": "^28.1.0",
+    "linkinator": "^7.6.1",
     "vitepress": "^2.0.0-alpha.16",
     "vitest": "^4.0.18"
   },
@@ -12,6 +14,8 @@
     "docs:build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "test": "vitest run --config .config/vitest.config.ts",
-    "test:watch": "vitest --config .config/vitest.config.ts"
+    "test:watch": "vitest --config .config/vitest.config.ts",
+    "links:check": "linkinator docs/.vitepress/dist --recurse --config .linkinator.config.json",
+    "lighthouse": "lhci autorun"
   }
 }

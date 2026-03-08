@@ -1,3 +1,7 @@
+---
+description: "Context API React: createContext, useContext, Provider — передача данных без props drilling"
+---
+
 # Context API в React
 
 [Скачать PDF](./context-api.pdf)

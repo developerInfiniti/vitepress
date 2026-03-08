@@ -1,3 +1,7 @@
+---
+description: "Вопросы для собеседования по асинхронному Dart: Future, Stream, Isolate — подготовка к техническому интервью"
+---
+
 # Dart: вопросы на собеседовании (Async)
 
 Для примеров с microtask и `StreamController` нужен импорт:

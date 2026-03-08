@@ -1,3 +1,7 @@
+---
+description: "CSS анимации: @keyframes, animation свойства, timing functions — создание плавных анимаций на чистом CSS"
+---
+
 # CSS Animations (Анимации)
 
 [Скачать PDF](./animations.pdf)

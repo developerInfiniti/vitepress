@@ -1,3 +1,7 @@
+---
+description: "Принципы REST архитектуры: stateless, HATEOAS, ресурсы, коды ответов — проектирование RESTful API"
+---
+
 # Принципы REST API дизайна
 
 ## Введение

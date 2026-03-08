@@ -1,3 +1,7 @@
+---
+description: "HttpClient в Angular: GET, POST запросы, interceptors, обработка ошибок — взаимодействие с REST API"
+---
+
 # HttpClient в Angular
 
 ## Настройка HttpClient

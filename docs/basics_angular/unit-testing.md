@@ -1,3 +1,7 @@
+---
+description: "Unit тестирование Angular: TestBed, ComponentFixture, jasmine — тестирование компонентов и сервисов"
+---
+
 # Unit-тестирование в Angular
 
 ## Инструменты

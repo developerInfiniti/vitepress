@@ -1,3 +1,7 @@
+---
+description: "Формы в React: controlled/uncontrolled компоненты, валидация — обработка пользовательского ввода"
+---
+
 # Формы в React
 
 [Скачать PDF](./forms.pdf)

@@ -1,3 +1,7 @@
+---
+description: "React DevTools: инспекция компонентов, профайлер, отладка — инструменты для разработки и оптимизации"
+---
+
 # React DevTools
 
 [Скачать PDF](./react-devtools.pdf)

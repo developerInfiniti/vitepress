@@ -1,3 +1,7 @@
+---
+description: "Команды Git: полный справочник основных команд — add, commit, push, pull, merge, rebase и другие"
+---
+
 # Команды Git
 
 [Скачать PDF](./commands.pdf)

@@ -1,3 +1,7 @@
+---
+description: "Maps в SCSS: map-get, map-merge, map-keys — структурированное хранение данных в стилях проекта"
+---
+
 
 # SCSS Maps (Ассоциативные Массивы)
 

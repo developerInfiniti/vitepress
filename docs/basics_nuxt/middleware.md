@@ -1,3 +1,7 @@
+---
+description: "Middleware в Nuxt.js: route middleware, server middleware — перехват запросов и навигации в приложении"
+---
+
 # Middleware в Nuxt.js
 
 [Скачать PDF](./middleware.pdf)

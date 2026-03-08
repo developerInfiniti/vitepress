@@ -1,3 +1,7 @@
+---
+description: "Слоты Vue.js: default, named, scoped slots — передача шаблонов в дочерние компоненты с примерами"
+---
+
 # Слоты {#slots}
 
 ## Содержимое слота и точка выхода {#slot-content-and-outlet}

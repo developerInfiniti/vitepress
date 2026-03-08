@@ -1,3 +1,7 @@
+---
+description: "SEO в Nuxt.js: мета-теги, Open Graph, sitemap, structured data — оптимизация для поисковых систем"
+---
+
 # SEO в Nuxt.js
 
 [Скачать PDF](./seo.pdf)

@@ -1,3 +1,7 @@
+---
+description: "CSS Media Queries: адаптивные breakpoints, условия, стратегии — создание отзывчивых веб-страниц"
+---
+
 # Media Queries (Медиа-запросы)
 
 [Скачать PDF](./media-queries.pdf)

@@ -1,3 +1,7 @@
+---
+description: "Адаптивный веб-дизайн: mobile-first, fluid grids, responsive images — создание страниц для всех устройств"
+---
+
 # Адаптивный дизайн (Responsive Design)
 
 [Скачать PDF](./responsive-design.pdf)

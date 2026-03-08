@@ -1,3 +1,7 @@
+---
+description: "Dependency Injection в Angular: провайдеры, инжекторы, токены — паттерн управления зависимостями"
+---
+
 # Dependency Injection в Angular
 
 ## Что такое Dependency Injection

@@ -1,4 +1,5 @@
 ---
+description: "IT документация для разработчиков: JavaScript, TypeScript, Vue, React, Node.js — справочник и руководства"
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 

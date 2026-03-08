@@ -1,3 +1,7 @@
+---
+description: "CSS переходы: transition свойства, timing functions, hover эффекты — плавные изменения стилей элементов"
+---
+
 # CSS Transitions (Переходы)
 
 [Скачать PDF](./transitions.pdf)

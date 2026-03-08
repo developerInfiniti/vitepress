@@ -1,3 +1,7 @@
+---
+description: "Apollo Client: кэширование, запросы, мутации, подписки — интеграция GraphQL в React приложения"
+---
+
 # Apollo Client
 
 ## Что такое Apollo Client?

@@ -1,3 +1,7 @@
+---
+description: "CSS переменные (custom properties): объявление, наследование, темы — динамическое управление стилями"
+---
+
 # CSS Variables (Переменные CSS)
 
 [Скачать PDF](./css-variables.pdf)

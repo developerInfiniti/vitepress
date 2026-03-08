@@ -1,3 +1,7 @@
+---
+description: "Dependency injection во Flutter: get_it, injectable, Provider — управление зависимостями в приложении"
+---
+
 # Dependency Injection у Flutter
 
 Dependency Injection (DI) — це патерн проєктування, який дозволяє передавати залежності ззовні, замість того, щоб створювати їх усередині класу. Це підвищує тестованість, гнучкість та модульність коду.

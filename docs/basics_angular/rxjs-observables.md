@@ -1,3 +1,7 @@
+---
+description: "RxJS и Observables в Angular: подписки, Subject, BehaviorSubject — реактивное программирование"
+---
+
 # RxJS Observables в Angular
 
 ## Что такое RxJS

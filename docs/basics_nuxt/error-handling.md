@@ -1,3 +1,7 @@
+---
+description: "Обработка ошибок Nuxt.js: error pages, NuxtErrorBoundary, try/catch — надёжная обработка исключений"
+---
+
 # Обработка ошибок в Nuxt.js
 
 [Скачать PDF](./error-handling.pdf)

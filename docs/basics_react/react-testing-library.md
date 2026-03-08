@@ -1,3 +1,7 @@
+---
+description: "React Testing Library: рендеринг, запросы, events, waitFor — тестирование компонентов по поведению"
+---
+
 # React Testing Library
 
 [Скачать PDF](./react-testing-library.pdf)

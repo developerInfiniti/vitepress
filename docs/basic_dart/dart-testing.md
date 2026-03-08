@@ -1,3 +1,7 @@
+---
+description: "Тестирование в Dart: unit тесты, group, setUp/tearDown, моки — написание надёжных тестов с примерами"
+---
+
 # Тестирование в Dart
 
 ## Юнит-тесты (package:test)

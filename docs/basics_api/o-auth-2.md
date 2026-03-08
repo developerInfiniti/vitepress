@@ -1,3 +1,7 @@
+---
+description: "OAuth 2.0: authorization code, implicit, client credentials — протокол авторизации сторонних сервисов"
+---
+
 ### 🛡️ OAuth 2 (Open Authorization 2.0): Стандарт авторизації для безпечного доступу
 
 **Що це?**

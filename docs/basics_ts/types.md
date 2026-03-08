@@ -1,3 +1,7 @@
+---
+description: "Типы TypeScript: примитивы, union, intersection, literal types — система типов для надёжного JavaScript"
+---
+
 # Основы TypeScript: Типы
 
 TypeScript предоставляет богатую систему типов, которая включает в себя как примитивные типы, так и более сложные структуры.

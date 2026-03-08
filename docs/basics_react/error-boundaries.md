@@ -1,3 +1,7 @@
+---
+description: "Error Boundaries React: обработка ошибок рендеринга, fallback UI — устойчивость приложения к сбоям"
+---
+
 # Error Boundaries в React
 
 ## Введение

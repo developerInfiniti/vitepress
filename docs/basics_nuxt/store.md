@@ -1,3 +1,7 @@
+---
+description: "Хранилище Nuxt.js: Vuex, Pinia, useState — управление глобальным состоянием приложения с примерами"
+---
+
 # Хранилище (Store) в Nuxt.js
 
 [Скачать PDF](./store.pdf)

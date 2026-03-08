@@ -1,3 +1,7 @@
+---
+description: "Playwright Assertions: expect, toBeVisible, toHaveText — проверка состояния элементов в E2E тестах"
+---
+
 # Assertions в Playwright
 
 Assertions (утверждения/проверки) — ключевая часть любого теста. Playwright предоставляет мощный набор встроенных matchers.

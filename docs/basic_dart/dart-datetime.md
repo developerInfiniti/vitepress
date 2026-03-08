@@ -1,3 +1,7 @@
+---
+description: "Работа с датой и временем в Dart: DateTime, Duration, форматирование и парсинг дат с примерами кода"
+---
+
 # DateTime и Duration
 
 ## DateTime: создание

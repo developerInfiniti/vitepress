@@ -1,3 +1,7 @@
+---
+description: "React Hooks: useState, useEffect, useRef, useMemo — управление состоянием и побочными эффектами"
+---
+
 # Хуки React
 
 [Скачать PDF](./hooks.pdf)

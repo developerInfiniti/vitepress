@@ -1,3 +1,7 @@
+---
+description: "Laravel Mix: компиляция CSS и JavaScript, Webpack обёртка — настройка сборки фронтенда в проекте"
+---
+
 Вот готовый **Markdown-файл** с основными командами Laravel Mix для работы с фронтенд-сборкой в Laravel:
 
 ```markdown

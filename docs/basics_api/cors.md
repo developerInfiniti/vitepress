@@ -1,3 +1,7 @@
+---
+description: "CORS: Cross-Origin Resource Sharing, preflight запросы, настройка заголовков — решение типичных проблем"
+---
+
 ### 🌐 CORS (Cross-Origin Resource Sharing): Контроль міждоменних запитів у браузері
 
 **Що це?**

@@ -1,3 +1,7 @@
+---
+description: "Управление состоянием React: useState, Redux, Zustand, Recoil — сравнение подходов и выбор решения"
+---
+
 # Управление состоянием в React
 
 [Скачать PDF](./state-management.pdf)

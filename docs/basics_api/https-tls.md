@@ -1,3 +1,7 @@
+---
+description: "HTTPS и TLS: SSL сертификаты, шифрование, TLS handshake — обеспечение безопасности передачи данных"
+---
+
 ### 🔒 HTTPS/TLS (HTTP Secure/Transport Layer Security): Забезпечення безпечної передачі даних
 
 **Що це?**

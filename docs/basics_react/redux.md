@@ -1,3 +1,7 @@
+---
+description: "Redux: store, actions, reducers, middleware — централизованное управление состоянием React приложения"
+---
+
 # Redux
 
 [Скачать PDF](./redux.pdf)

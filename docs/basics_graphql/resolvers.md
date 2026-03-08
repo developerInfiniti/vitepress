@@ -1,3 +1,7 @@
+---
+description: "GraphQL резолверы: обработка запросов, контекст, data sources — серверная логика получения данных"
+---
+
 # GraphQL Resolvers (Резолверы)
 
 ## Что такое Resolver?

@@ -1,3 +1,7 @@
+---
+description: "Отношения в Laravel Eloquent: hasOne, hasMany, belongsTo, many-to-many — связи между моделями"
+---
+
 # Связи Eloquent в Laravel
 
 Связи позволяют работать со связанными данными в базе данных.

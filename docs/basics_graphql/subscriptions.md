@@ -1,3 +1,7 @@
+---
+description: "GraphQL подписки: real-time обновления через WebSocket — реактивное получение данных с сервера"
+---
+
 # GraphQL Subscriptions (Подписки)
 
 ## Что такое Subscription?

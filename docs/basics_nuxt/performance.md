@@ -1,3 +1,7 @@
+---
+description: "Производительность Nuxt.js: lazy loading, code splitting, кэширование — оптимизация скорости загрузки"
+---
+
 # Производительность в Nuxt.js
 
 [Скачать PDF](./performance.pdf)

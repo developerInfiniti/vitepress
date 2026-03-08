@@ -3,9 +3,106 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Шпаргалки по IT",
-  description: "Just playing around",
+  description: "Ваш быстрый справочник для разработчиков",
   base: '/vitepress/',
-  
+  appearance: true,
+
+  head: [
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Шпаргалки по IT' }],
+    ['meta', { property: 'og:locale', content: 'ru_RU' }],
+    ['meta', { property: 'og:url', content: 'https://alexeyzelenko.github.io/vitepress/' }],
+    ['meta', { property: 'og:title', content: 'Шпаргалки по IT' }],
+    ['meta', { property: 'og:description', content: 'Ваш быстрый справочник для разработчиков' }],
+  ],
+
+  transformPageData(pageData) {
+    const siteUrl = 'https://alexeyzelenko.github.io/vitepress';
+    const canonicalUrl = `${siteUrl}/${pageData.relativePath}`
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '.html');
+
+    const ogTitle = pageData.frontmatter.title || pageData.title || 'Шпаргалки по IT';
+    const ogDescription = pageData.frontmatter.description || pageData.description || 'Ваш быстрый справочник для разработчиков';
+
+    pageData.frontmatter.head ??= [];
+
+    // OpenGraph tags
+    pageData.frontmatter.head.push(
+      ['meta', { property: 'og:title', content: ogTitle }],
+      ['meta', { property: 'og:description', content: ogDescription }],
+      ['meta', { property: 'og:url', content: canonicalUrl }],
+      ['link', { rel: 'canonical', href: canonicalUrl }],
+    );
+
+    // JSON-LD: WebSite schema (главная страница)
+    const isHome = pageData.relativePath === 'index.md';
+    if (isHome) {
+      pageData.frontmatter.head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Шпаргалки по IT',
+          description: 'Ваш быстрый справочник для разработчиков',
+          url: siteUrl,
+          inLanguage: 'ru',
+        }),
+      ]);
+    }
+
+    // JSON-LD: BreadcrumbList (для всех страниц кроме главной)
+    if (!isHome) {
+      const pathParts = pageData.relativePath.replace(/\.md$/, '').split('/');
+      const breadcrumbItems = [
+        { '@type': 'ListItem', position: 1, name: 'Главная', item: siteUrl },
+      ];
+
+      let currentPath = siteUrl;
+      pathParts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        breadcrumbItems.push({
+          '@type': 'ListItem',
+          position: index + 2,
+          name: index === pathParts.length - 1 ? ogTitle : part,
+          item: index === pathParts.length - 1 ? canonicalUrl : `${currentPath}.html`,
+        });
+      });
+
+      pageData.frontmatter.head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: breadcrumbItems,
+        }),
+      ]);
+    }
+
+    // JSON-LD: Article schema (для страниц документации)
+    if (!isHome && ogTitle) {
+      pageData.frontmatter.head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: ogTitle,
+          description: ogDescription,
+          url: canonicalUrl,
+          inLanguage: 'ru',
+          publisher: {
+            '@type': 'Organization',
+            name: 'Шпаргалки по IT',
+            url: siteUrl,
+          },
+        }),
+      ]);
+    }
+  },
+
   // Конфигурация для многоязычности
   locales: {
     root: {
@@ -141,6 +238,12 @@ export default defineConfig({
           {text: 'Modules', link: '/basics_js/modules'},
           {text: 'Numbers', link: '/basics_js/numbers'},
           {text: 'Strings', link: '/basics_js/strings'},
+          {text: 'RegExp', link: '/basics_js/regex'},
+          {text: 'Fetch API', link: '/basics_js/fetch-api'},
+          {text: 'Error Handling', link: '/basics_js/error-handling'},
+          {text: 'Web Storage', link: '/basics_js/web-storage'},
+          {text: 'Memory Management', link: '/basics_js/memory-management'},
+          {text: 'WebSockets', link: '/basics_js/websockets'},
           {text: 'Часто задаваемые вопросы', link: '/basics_js/questions_1'},
           {text: 'Основные принципы ООП', link: '/basics_js/solid'},
           {text: 'WCAG', link: '/basics_js/WCAG'},

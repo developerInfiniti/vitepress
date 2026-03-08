@@ -1,3 +1,7 @@
+---
+description: "Firebase модуль Nuxt.js: интеграция Firestore, Auth, Storage — серверные сервисы Google в приложении"
+---
+
 # Модуль `@nuxtjs/firebase` в Nuxt
 
 Модуль `@nuxtjs/firebase` упрощает интеграцию Firebase сервисов (таких как Authentication, Firestore, Realtime Database, Storage, Functions и др.) в ваши Nuxt 3 приложения. Он предоставляет удобный способ инициализации Firebase и доступа к его SDK из любой части вашего приложения.

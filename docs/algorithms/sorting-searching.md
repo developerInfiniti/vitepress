@@ -1,4 +1,14 @@
+---
+description: "Алгоритмы сортировки и поиска: quicksort, mergesort, binary search — сравнение производительности и реализация"
+---
+
+<script setup>
+import AlgorithmVisualizer from '../.vitepress/components/AlgorithmVisualizer.vue'
+</script>
+
 # Алгоритмы сортировки и поиска
+
+<AlgorithmVisualizer />
 
 ## Почему это важно?
 

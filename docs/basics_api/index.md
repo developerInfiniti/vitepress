@@ -1,3 +1,7 @@
+---
+description: "Основы API: архитектура, протоколы, REST, аутентификация — полное руководство для начинающих разработчиков"
+---
+
 # Візуальний гайд: Як опанувати розробку API
 
 [![API Visual Guide](./assets/img/api_learn.gif)](./assets/img/api_learn.gif)

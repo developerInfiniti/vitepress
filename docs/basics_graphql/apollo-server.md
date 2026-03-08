@@ -1,3 +1,7 @@
+---
+description: "Apollo Server: настройка, резолверы, контекст, middleware — создание GraphQL сервера на Node.js"
+---
+
 # Apollo Server
 
 ## Что такое Apollo Server?

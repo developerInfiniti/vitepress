@@ -1,3 +1,7 @@
+---
+description: "Rate Limiting API: ограничение запросов, throttling, token bucket — защита API от перегрузки и DDoS"
+---
+
 ### 🚦 Rate Limiting (Обмеження швидкості): Захист API від зловживання та перевантаження
 
 **Що це?**

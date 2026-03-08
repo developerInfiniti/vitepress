@@ -1,3 +1,7 @@
+---
+description: "CSS позиционирование: static, relative, absolute, fixed, sticky — управление расположением элементов"
+---
+
 # Position в CSS
 
 [Скачать PDF](./position.pdf)

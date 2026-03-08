@@ -1,3 +1,7 @@
+---
+description: "API в Laravel: маршруты, ресурсы, токены, версионирование — создание RESTful API с примерами"
+---
+
 # API в Laravel
 
 Создание RESTful API с Laravel.

@@ -1,3 +1,7 @@
+---
+description: "Асинхронное программирование в Dart: Future, async/await, Stream — обработка асинхронных операций и примеры кода"
+---
+
 # Асинхронность: Future и Stream
 
 ## async / await и Future

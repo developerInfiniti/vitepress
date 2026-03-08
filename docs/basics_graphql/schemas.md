@@ -1,3 +1,7 @@
+---
+description: "GraphQL схемы: типы, интерфейсы, unions, enums — проектирование типизированного API с примерами"
+---
+
 # GraphQL Schemas и Типы
 
 ## Что такое Schema?

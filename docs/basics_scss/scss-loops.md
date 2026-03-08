@@ -1,3 +1,7 @@
+---
+description: "Циклы в SCSS: @for, @each, @while — автоматическая генерация повторяющихся CSS правил и классов"
+---
+
 # Циклы в SCSS
 
 [Скачать PDF](./scss-loops.pdf)

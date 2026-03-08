@@ -1,3 +1,7 @@
+---
+description: "Partial файлы SCSS: модульная структура стилей, подчёркивание — архитектура CSS проекта"
+---
+
 # Частичные файлы (Partials) в SCSS
 
 [Скачать PDF](./scss-partials.pdf)
