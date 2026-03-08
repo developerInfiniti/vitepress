@@ -112,20 +112,20 @@ myObject = { name: 'Иван', age: 25, role: 'admin' };
 
 ### Таблица встроенных pipes
 
-| Pipe | Назначение | Пример |
-|------|-----------|--------|
-| `date` | Форматирование даты | `{{ d \| date:'dd.MM.yyyy' }}` |
-| `currency` | Форматирование валюты | `{{ p \| currency:'RUB' }}` |
-| `number` | Форматирование числа | `{{ n \| number:'1.0-2' }}` |
-| `percent` | Проценты | `{{ n \| percent }}` |
-| `uppercase` | Верхний регистр | `{{ s \| uppercase }}` |
-| `lowercase` | Нижний регистр | `{{ s \| lowercase }}` |
-| `titlecase` | Заглавные буквы | `{{ s \| titlecase }}` |
-| `slice` | Подстрока / часть массива | `{{ s \| slice:0:5 }}` |
-| `json` | JSON строка | `{{ obj \| json }}` |
-| `async` | Подписка на Observable/Promise | `{{ obs$ \| async }}` |
-| `keyvalue` | Объект в массив пар | `{{ obj \| keyvalue }}` |
-| `i18nPlural` | Склонение по числу | `{{ count \| i18nPlural:mapping }}` |
+| Pipe | Назначение |
+|------|-----------|
+| `date` | Форматирование даты |
+| `currency` | Форматирование валюты |
+| `number` | Форматирование числа |
+| `percent` | Проценты |
+| `uppercase` | Верхний регистр |
+| `lowercase` | Нижний регистр |
+| `titlecase` | Заглавные буквы |
+| `slice` | Подстрока / часть массива |
+| `json` | JSON строка |
+| `async` | Подписка на Observable/Promise |
+| `keyvalue` | Объект в массив пар |
+| `i18nPlural` | Склонение по числу |
 
 ## 2. Цепочки Pipes
 
