@@ -125,6 +125,7 @@ export default defineConfig({
               { text: 'База', link: '/basics_js/async' },
               { text: 'Промисы', link: '/basics_js/promises' },
               { text: 'Async/Await', link: '/basics_js/async-await' },
+              { text: 'Generators', link: '/basics_js/generators' },
             ]
           },
           {text: 'Event Loop', link: '/basics_js/event_loop'},
