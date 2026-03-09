@@ -2,6 +2,9 @@
   "ci": {
     "collect": {
       "staticDistDir": "docs/.vitepress/dist",
+      "autodiscoverUrlBlocklist": [
+        "http://localhost/404.html"
+      ],
       "numberOfRuns": 3,
       "settings": {
         "preset": "desktop"
