@@ -116,7 +116,13 @@ export function wrapCodeForExecution(code: string): string {
  * Console calls are streamed via __onOutput callback for real-time display.
  */
 export function wrapCodeForAsyncExecution(code: string, useStreaming: boolean): string {
-  const preamble = buildSandboxPreamble()
+  // Build sandbox preamble WITHOUT 'use strict' to avoid conflicts with user code
+  // using arguments, eval, etc. in user-submitted code
+  const shadows = BLOCKED_GLOBALS
+    .map(name => `${name} = undefined`)
+    .join(', ')
+  const preamble = `let ${shadows};`
+
   const outputMethod = useStreaming
     ? `__onOutput(entry)`
     : `__output.push(entry)`
