@@ -98,11 +98,8 @@ const slice = numbers.slice(1, 3);  // [2, 3]
 import CodePlayground from '../.vitepress/components/CodePlayground.vue'
 import Quiz from '../.vitepress/components/Quiz.vue'
 import arraysQuiz from '../.vitepress/data/quiz/arrays.json'
-</script>
 
-<CodePlayground
-  title="Массивы — Playground"
-  :initial-code="`// Попробуйте методы массивов
+const arraysCode = `// Попробуйте методы массивов
 const numbers = [5, 3, 8, 1, 9, 2, 7];
 console.log('Исходный:', numbers);
 
@@ -124,7 +121,12 @@ console.log('find(>5):', found);
 
 // sort — сортировка по возрастанию
 const sorted = [...numbers].sort((a, b) => a - b);
-console.log('sort:', sorted);`"
+console.log('sort:', sorted);`
+</script>
+
+<CodePlayground
+  title="Массивы — Playground"
+  :initial-code="arraysCode"
   language="javascript"
   editor-height="300px"
 />
