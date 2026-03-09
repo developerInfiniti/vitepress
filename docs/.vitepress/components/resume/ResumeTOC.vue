@@ -68,7 +68,7 @@ onUnmounted(() => {
 <style scoped>
 .resume-toc {
   position: fixed;
-  right: calc((100vw - 800px) / 2 + 20px);
+  right: max(20px, calc(50vw - 580px));
   top: calc(var(--vp-nav-height) + 40px);
   width: 160px;
   z-index: 10;
