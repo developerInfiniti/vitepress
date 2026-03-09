@@ -139,6 +139,7 @@ const tocItems = computed(() => {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px 0;
+  padding-right: 200px;
 }
 
 .resume-actions {
