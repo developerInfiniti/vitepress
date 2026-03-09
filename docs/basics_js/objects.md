@@ -130,8 +130,8 @@ console.log('Ключи:', Object.keys(user));
 console.log('Значения:', Object.values(user));
 
 // Деструктуризация
-const { name, age } = user;
-console.log('Деструктуризация:', name, age);
+const { name: userName, age: userAge } = user;
+console.log('Деструктуризация:', userName, userAge);
 
 // Spread-оператор
 const updated = { ...user, age: 31, city: 'Киев' };
@@ -139,7 +139,11 @@ console.log('Spread:', updated);
 
 // Object.freeze
 const frozen = Object.freeze({ x: 1 });
-frozen.x = 2; // не изменится
+try {
+  frozen.x = 2; // не изменится
+} catch (e) {
+  // ignored
+}
 console.log('Frozen:', frozen.x);`
 </script>
 
