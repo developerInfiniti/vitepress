@@ -90,11 +90,8 @@ console.log(person.greet.apply({ name: "Пётр" }, ["Добрый день"]))
 import CodePlayground from '../.vitepress/components/CodePlayground.vue'
 import Quiz from '../.vitepress/components/Quiz.vue'
 import functionsQuiz from '../.vitepress/data/quiz/functions.json'
-</script>
 
-<CodePlayground
-  title="Функции — Playground"
-  :initial-code="`// Типы функций
+const functionsCode = `// Типы функций
 // 1. Function Declaration
 function greet(name) {
   return 'Привет, ' + name + '!';
@@ -123,7 +120,12 @@ console.log('sum(1,2,3,4):', sum(1, 2, 3, 4));
 
 // 5. IIFE
 const result = (function(x) { return x * x; })(7);
-console.log('IIFE(7):', result);`"
+console.log('IIFE(7):', result);`
+</script>
+
+<CodePlayground
+  title="Функции — Playground"
+  :initial-code="functionsCode"
   language="javascript"
   editor-height="320px"
 />

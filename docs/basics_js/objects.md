@@ -113,11 +113,8 @@ Object.keys(person).forEach(key => {
 import CodePlayground from '../.vitepress/components/CodePlayground.vue'
 import Quiz from '../.vitepress/components/Quiz.vue'
 import objectsQuiz from '../.vitepress/data/quiz/objects.json'
-</script>
 
-<CodePlayground
-  title="Объекты — Playground"
-  :initial-code="`// Работа с объектами
+const objectsCode = `// Работа с объектами
 const user = {
   name: 'Иван',
   age: 30,
@@ -143,7 +140,12 @@ console.log('Spread:', updated);
 // Object.freeze
 const frozen = Object.freeze({ x: 1 });
 frozen.x = 2; // не изменится
-console.log('Frozen:', frozen.x);`"
+console.log('Frozen:', frozen.x);`
+</script>
+
+<CodePlayground
+  title="Объекты — Playground"
+  :initial-code="objectsCode"
   language="javascript"
   editor-height="320px"
 />

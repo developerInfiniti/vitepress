@@ -191,6 +191,33 @@ items.forEach(async (item) => {
 
 <script setup>
 import AsyncAwaitDemo from '../.vitepress/components/AsyncAwaitDemo.vue'
+import CodePlayground from '../.vitepress/components/CodePlayground.vue'
+import Quiz from '../.vitepress/components/Quiz.vue'
+import asyncQuiz from '../.vitepress/data/quiz/async-await.json'
+
+const asyncCode = `// Попробуйте async/await
+async function fetchData() {
+  console.log('Начало загрузки...');
+
+  // Имитация задержки
+  const result = await new Promise(resolve => {
+    setTimeout(() => resolve('Данные получены!'), 1000);
+  });
+
+  console.log(result);
+  return result;
+}
+
+// Параллельное выполнение
+async function parallel() {
+  const [a, b] = await Promise.all([
+    new Promise(r => setTimeout(() => r('A'), 500)),
+    new Promise(r => setTimeout(() => r('B'), 300)),
+  ]);
+  console.log('Параллельно:', a, b);
+}
+
+fetchData().then(() => parallel());`
 </script>
 
 <AsyncAwaitDemo />
@@ -265,37 +292,9 @@ async function risky() {
 
 Попробуйте async/await в действии:
 
-<script setup>
-import CodePlayground from '../.vitepress/components/CodePlayground.vue'
-import Quiz from '../.vitepress/components/Quiz.vue'
-import asyncQuiz from '../.vitepress/data/quiz/async-await.json'
-</script>
-
 <CodePlayground
   title="Async/Await Playground"
-  :initial-code="`// Попробуйте async/await
-async function fetchData() {
-  console.log('Начало загрузки...');
-
-  // Имитация задержки
-  const result = await new Promise(resolve => {
-    setTimeout(() => resolve('Данные получены!'), 1000);
-  });
-
-  console.log(result);
-  return result;
-}
-
-// Параллельное выполнение
-async function parallel() {
-  const [a, b] = await Promise.all([
-    new Promise(r => setTimeout(() => r('A'), 500)),
-    new Promise(r => setTimeout(() => r('B'), 300)),
-  ]);
-  console.log('Параллельно:', a, b);
-}
-
-fetchData().then(() => parallel());`"
+  :initial-code="asyncCode"
   language="javascript"
   editor-height="350px"
 />
