@@ -87,17 +87,14 @@ async function executeCode(id: string, code: string, config: PlaygroundConfig) {
     const wrappedCode = wrapCodeForAsyncExecution(code, true)
 
     // Build the execution function with streaming callbacks injected
-    // We use Function constructor here intentionally for sandbox isolation —
-    // the security layer has already validated the code and shadowed dangerous globals
-    // Remove trailing }); from wrappedCode to avoid syntax error
-    const fnBody = wrappedCode.endsWith('});')
-      ? wrappedCode.slice(0, -2)
-      : wrappedCode
-
+    // We use Function constructor with explicit variable declarations
+    // This allows the wrapped code to access __onOutput and __setTimeout
     const executorFn = new Function(
-      '__onOutput',
-      '__setTimeout',
-      `return (${fnBody})(__onOutput, __setTimeout)`
+      `
+      const __onOutput = arguments[0];
+      const __setTimeout = arguments[1];
+      return ${wrappedCode};
+      `
     )
 
     const result = await executorFn(onOutput, safeSetTimeout)

@@ -106,7 +106,7 @@ export function wrapCodeForExecution(code: string): string {
       }
     };
   }
-});
+})();
 `
 }
 
@@ -172,6 +172,6 @@ export function wrapCodeForAsyncExecution(code: string, useStreaming: boolean): 
       }
     };
   }
-});
+})();
 `
 }
