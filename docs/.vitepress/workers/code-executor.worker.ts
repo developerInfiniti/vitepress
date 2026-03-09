@@ -92,7 +92,7 @@ async function executeCode(id: string, code: string, config: PlaygroundConfig) {
     const executorFn = new Function(
       '__onOutput',
       '__setTimeout',
-      `return ${wrappedCode}`
+      `return (${wrappedCode})(__onOutput, __setTimeout)`
     )
 
     const result = await executorFn(onOutput, safeSetTimeout)

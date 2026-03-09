@@ -106,7 +106,7 @@ export function wrapCodeForExecution(code: string): string {
       }
     };
   }
-})();
+});
 `
 }
 
@@ -128,7 +128,7 @@ export function wrapCodeForAsyncExecution(code: string, useStreaming: boolean): 
     : `__output.push(entry)`
 
   return `
-(async function() {
+(async function(__onOutput, __setTimeout) {
   ${preamble}
   const __output = [];
   function __emit(type, args) {
@@ -172,6 +172,6 @@ export function wrapCodeForAsyncExecution(code: string, useStreaming: boolean): 
       }
     };
   }
-})();
+});
 `
 }
