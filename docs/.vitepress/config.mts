@@ -3,6 +3,9 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   vite: {
+    optimizeDeps: {
+      include: ['monaco-editor'],
+    },
     build: {
       // Split heavy demo components into separate chunks
       rollupOptions: {
@@ -36,6 +39,15 @@ export default defineConfig({
     ['meta', { property: 'og:title', content: 'Справочник по IT' }],
     ['meta', { property: 'og:description', content: 'Ваш быстрый справочник для разработчиков' }],
   ],
+
+  transformIndexHtml: (html) => {
+    // Инжектируем явную ссылку на app.css если её нет
+    if (!html.includes('app.') || !html.includes('.css')) {
+      const linkTag = '<link rel="stylesheet" href="/vitepress/assets/app.css" />';
+      return html.replace('<script type="module" src="/vitepress/assets/app.', linkTag + '\n    <script type="module" src="/vitepress/assets/app.');
+    }
+    return html;
+  },
 
   transformPageData(pageData) {
     const siteUrl = 'https://alexeyzelenko.github.io/vitepress';

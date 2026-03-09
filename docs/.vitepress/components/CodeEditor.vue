@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch, shallowRef, nextTick } from 'vue'
 import { useData } from 'vitepress'
+import type { PlaygroundLanguage } from '../types/playground'
 import './shared-demo-styles.css'
 
 interface CodeEditorProps {
   modelValue?: string
-  language?: 'javascript' | 'typescript'
+  language?: PlaygroundLanguage
   height?: string
   readOnly?: boolean
   minimap?: boolean
