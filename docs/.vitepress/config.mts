@@ -7,6 +7,10 @@ export default defineConfig({
   base: '/vitepress/',
   appearance: true,
 
+  markdown: {
+    codeCopyButtonTitle: 'Копировать код',
+  },
+
   head: [
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Шпаргалки по IT' }],
@@ -916,6 +920,11 @@ export default defineConfig({
         link: '/links/'
       }
     ],
+
+    outline: {
+      level: [2, 3],
+      label: 'Содержание',
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/AlexeyZelenko/vitepress' }

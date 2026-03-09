@@ -1,3 +1,33 @@
+/* === Copy button: Russian tooltip === */
+:root {
+  --vp-code-copy-copied-text-content: 'Скопировано!';
+}
+
+/* === Smooth scrolling === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === TOC (Outline) enhancements === */
+.VPDocAsideOutline {
+  position: sticky;
+  top: calc(var(--vp-nav-height) + 16px);
+}
+
+.VPDocAsideOutline .outline-link {
+  transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+}
+
+/* Outline marker — active section indicator */
+.VPDocAsideOutline .outline-marker {
+  transition: top 0.25s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.25s ease;
+}
+
 /* === Dark mode smooth transition === */
 ::view-transition {
   /* Disable default view transition for color scheme changes */

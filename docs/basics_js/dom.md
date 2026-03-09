@@ -3,7 +3,13 @@ title: Робота з DOM
 description: Посібник з маніпуляції DOM в JavaScript
 ---
 
+<script setup>
+import DOMPlayground from '../.vitepress/components/DOMPlayground.vue'
+</script>
+
 # Робота з DOM в JavaScript
+
+<DOMPlayground />
 
 [Скачать PDF](./dom.pdf)
 

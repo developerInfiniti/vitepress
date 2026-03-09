@@ -2,7 +2,13 @@
 description: "CSS Flexbox: контейнер, элементы, выравнивание, порядок — построение гибких одномерных макетов страниц"
 ---
 
+<script setup>
+import CSSPlayground from '../.vitepress/components/CSSPlayground.vue'
+</script>
+
 # Flexbox
+
+<CSSPlayground />
 
 Flexbox - это модуль CSS, который предоставляет эффективный способ для выравнивания, распределения пространства между элементами в контейнере, даже когда их размер неизвестен или динамический.
 

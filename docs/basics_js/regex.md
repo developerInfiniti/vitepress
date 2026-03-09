@@ -3,7 +3,13 @@ title: Регулярные выражения в JavaScript
 description: Полное руководство по RegExp — синтаксис, флаги, методы, классы символов, квантификаторы, группы и практические примеры
 ---
 
+<script setup>
+import RegExpTester from '../.vitepress/components/RegExpTester.vue'
+</script>
+
 # Регулярные выражения (RegExp) в JavaScript
+
+<RegExpTester />
 
 ## 1. Основы — синтаксис и создание
 
