@@ -7,6 +7,7 @@ export interface ResumeData {
   skills: SkillGroup[]
   projects: ProjectItem[]
   languages: LanguageItem[]
+  expertise?: string[]
   certifications?: CertificationItem[]
 }
 

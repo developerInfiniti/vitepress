@@ -23,9 +23,9 @@ onMounted(load)
 watch(locale, load)
 
 const labels: Record<string, Record<string, string>> = {
-  ru: { download: 'Скачать PDF', experience: 'Опыт работы', education: 'Образование', skills: 'Навыки', projects: 'Проекты', languages: 'Языки', certs: 'Сертификаты' },
-  uk: { download: 'Завантажити PDF', experience: 'Досвід роботи', education: 'Освіта', skills: 'Навички', projects: 'Проєкти', languages: 'Мови', certs: 'Сертифікати' },
-  en: { download: 'Download PDF', experience: 'Experience', education: 'Education', skills: 'Skills', projects: 'Projects', languages: 'Languages', certs: 'Certifications' },
+  ru: { download: 'Скачать PDF', experience: 'Опыт работы', education: 'Образование', skills: 'Навыки', projects: 'Проекты', languages: 'Языки', certs: 'Сертификаты', expertise: 'Области экспертизы' },
+  uk: { download: 'Завантажити PDF', experience: 'Досвід роботи', education: 'Освіта', skills: 'Навички', projects: 'Проєкти', languages: 'Мови', certs: 'Сертифікати', expertise: 'Області експертизи' },
+  en: { download: 'Download PDF', experience: 'Experience', education: 'Education', skills: 'Skills', projects: 'Projects', languages: 'Languages', certs: 'Certifications', expertise: 'Areas of Expertise' },
 }
 </script>
 
@@ -49,6 +49,17 @@ const labels: Record<string, Record<string, string>> = {
       :title="labels[locale].skills"
       :groups="data.skills"
     />
+
+    <ResumeSection
+      v-if="data.expertise?.length"
+      :title="labels[locale].expertise"
+    >
+      <div class="resume-expertise">
+        <span v-for="item in data.expertise" :key="item" class="resume-expertise-badge">
+          {{ item }}
+        </span>
+      </div>
+    </ResumeSection>
 
     <ResumeProjects
       :title="labels[locale].projects"
@@ -132,6 +143,22 @@ const labels: Record<string, Record<string, string>> = {
   border-radius: 16px;
   font-size: 0.9em;
   color: var(--vp-c-text-1);
+}
+
+.resume-expertise {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.resume-expertise-badge {
+  padding: 6px 14px;
+  background: var(--vp-c-brand-soft);
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 16px;
+  font-size: 0.85em;
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
 }
 
 .resume-certs-list {
