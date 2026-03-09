@@ -3,7 +3,8 @@ description: "Алгоритмы сортировки и поиска: quicksort
 ---
 
 <script setup>
-import AlgorithmVisualizer from '../.vitepress/components/AlgorithmVisualizer.vue'
+import { useLazyComponent } from '../.vitepress/composables/useLazyComponent'
+const AlgorithmVisualizer = useLazyComponent(() => import('../.vitepress/components/AlgorithmVisualizer.vue'))
 </script>
 
 # Алгоритмы сортировки и поиска

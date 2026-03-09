@@ -4,7 +4,8 @@ description: Полное руководство по Fetch API — запрос
 ---
 
 <script setup>
-import FetchAPIDemo from '../.vitepress/components/FetchAPIDemo.vue'
+import { useLazyComponent } from '../.vitepress/composables/useLazyComponent'
+const FetchAPIDemo = useLazyComponent(() => import('../.vitepress/components/FetchAPIDemo.vue'))
 </script>
 
 # Fetch API в JavaScript

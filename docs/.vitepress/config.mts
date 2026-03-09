@@ -2,6 +2,23 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    build: {
+      // Split heavy demo components into separate chunks
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('/components/') && id.match(/Demo\.vue|Playground\.vue|Visualizer\.vue|Tester\.vue/)) {
+              return 'demo-components'
+            }
+          },
+        },
+      },
+      cssCodeSplit: true,
+      chunkSizeWarningLimit: 800,
+    },
+  },
+
   title: "Справочник по IT",
   description: "Ваш быстрый справочник для разработчиков",
   base: '/vitepress/',
@@ -259,6 +276,7 @@ export default defineConfig({
           {text: 'Часто задаваемые вопросы', link: '/basics_js/questions_1'},
           {text: 'Основные принципы ООП', link: '/basics_js/solid'},
           {text: 'WCAG', link: '/basics_js/WCAG'},
+          {text: 'Тест: JavaScript', link: '/basics_js/quiz'},
         ]
       },
       {
@@ -280,6 +298,7 @@ export default defineConfig({
           {text: 'Type Guards', link: '/basics_ts/type_guards'},
           {text: 'Utility Types', link: '/basics_ts/utility_types'},
           {text: 'Вопросы и ответы', link: '/basics_ts/questions'},
+          {text: 'Тест: TypeScript', link: '/basics_ts/quiz'},
         ]
       },
       {

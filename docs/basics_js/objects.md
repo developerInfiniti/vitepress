@@ -106,3 +106,48 @@ Object.keys(person).forEach(key => {
   console.log(`${key}: ${person[key]}`);
 });
 ```
+
+## Интерактивная песочница
+
+<script setup>
+import CodePlayground from '../.vitepress/components/CodePlayground.vue'
+import Quiz from '../.vitepress/components/Quiz.vue'
+import objectsQuiz from '../.vitepress/data/quiz/objects.json'
+</script>
+
+<CodePlayground
+  title="Объекты — Playground"
+  :initial-code="`// Работа с объектами
+const user = {
+  name: 'Иван',
+  age: 30,
+  skills: ['JavaScript', 'Vue', 'TypeScript'],
+};
+
+// Доступ к свойствам
+console.log('Имя:', user.name);
+console.log('Навыки:', user.skills.join(', '));
+
+// Object.keys / values / entries
+console.log('Ключи:', Object.keys(user));
+console.log('Значения:', Object.values(user));
+
+// Деструктуризация
+const { name, age } = user;
+console.log('Деструктуризация:', name, age);
+
+// Spread-оператор
+const updated = { ...user, age: 31, city: 'Киев' };
+console.log('Spread:', updated);
+
+// Object.freeze
+const frozen = Object.freeze({ x: 1 });
+frozen.x = 2; // не изменится
+console.log('Frozen:', frozen.x);`"
+  language="javascript"
+  editor-height="320px"
+/>
+
+## Тест: Объекты
+
+<Quiz :data="objectsQuiz" />

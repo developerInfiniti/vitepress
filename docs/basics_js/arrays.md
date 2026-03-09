@@ -91,3 +91,44 @@ const combined = arr1.concat(arr2);  // [1, 2, 3, 4]
 const numbers = [1, 2, 3, 4, 5];
 const slice = numbers.slice(1, 3);  // [2, 3]
 ```
+
+## Интерактивная песочница
+
+<script setup>
+import CodePlayground from '../.vitepress/components/CodePlayground.vue'
+import Quiz from '../.vitepress/components/Quiz.vue'
+import arraysQuiz from '../.vitepress/data/quiz/arrays.json'
+</script>
+
+<CodePlayground
+  title="Массивы — Playground"
+  :initial-code="`// Попробуйте методы массивов
+const numbers = [5, 3, 8, 1, 9, 2, 7];
+console.log('Исходный:', numbers);
+
+// map — умножить каждый на 2
+const doubled = numbers.map(n => n * 2);
+console.log('map(x*2):', doubled);
+
+// filter — только чётные
+const even = numbers.filter(n => n % 2 === 0);
+console.log('filter(чётные):', even);
+
+// reduce — сумма
+const sum = numbers.reduce((acc, n) => acc + n, 0);
+console.log('reduce(сумма):', sum);
+
+// find — первый больше 5
+const found = numbers.find(n => n > 5);
+console.log('find(>5):', found);
+
+// sort — сортировка по возрастанию
+const sorted = [...numbers].sort((a, b) => a - b);
+console.log('sort:', sorted);`"
+  language="javascript"
+  editor-height="300px"
+/>
+
+## Тест: Массивы
+
+<Quiz :data="arraysQuiz" />

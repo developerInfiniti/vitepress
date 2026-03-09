@@ -1,0 +1,67 @@
+{
+  "id": "js-async-await",
+  "title": "Async/Await JavaScript",
+  "description": "Проверьте знания асинхронного программирования с async/await",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Что всегда возвращает async функция?",
+      "options": [
+        "undefined",
+        "Promise",
+        "callback",
+        "Observable"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Async функция всегда возвращает Promise. Если функция возвращает значение, оно автоматически оборачивается в Promise.resolve()."
+    },
+    {
+      "id": 2,
+      "text": "Что произойдёт при ошибке внутри async функции без try/catch?",
+      "options": [
+        "Ошибка будет молча проигнорирована",
+        "Программа остановится",
+        "Вернётся rejected Promise",
+        "Вернётся undefined"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Необработанная ошибка в async функции приводит к возврату rejected Promise. Это может вызвать UnhandledPromiseRejection, если промис не обработан."
+    },
+    {
+      "id": 3,
+      "text": "Как запустить несколько async операций параллельно?",
+      "options": [
+        "Использовать несколько await подряд",
+        "Использовать Promise.all()",
+        "Использовать for...of цикл",
+        "Это невозможно"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Promise.all() запускает промисы параллельно и ждёт завершения всех. Последовательные await блокируют выполнение до завершения каждой операции."
+    },
+    {
+      "id": 4,
+      "text": "Где можно использовать await?",
+      "options": [
+        "В любом месте кода",
+        "Только внутри async функции или на верхнем уровне модуля",
+        "Только в callback функциях",
+        "Только в классах"
+      ],
+      "correctAnswer": 1,
+      "explanation": "await можно использовать только внутри async функции. Начиная с ES2022 также поддерживается top-level await в ES модулях."
+    },
+    {
+      "id": 5,
+      "text": "Чем `Promise.allSettled()` отличается от `Promise.all()`?",
+      "options": [
+        "Ничем не отличается",
+        "allSettled() ждёт все промисы, даже rejected; all() отклоняется при первой ошибке",
+        "all() быстрее",
+        "allSettled() возвращает только fulfilled результаты"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Promise.all() отклоняется при первом rejected промисе. Promise.allSettled() ждёт завершения всех промисов и возвращает массив с результатами (status: 'fulfilled' | 'rejected')."
+    }
+  ]
+}

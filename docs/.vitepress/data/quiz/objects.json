@@ -1,0 +1,67 @@
+{
+  "id": "js-objects",
+  "title": "Объекты JavaScript",
+  "description": "Проверьте знания работы с объектами в JavaScript",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Как проверить, есть ли свойство `name` у объекта `obj`?",
+      "options": [
+        "obj.name !== null",
+        "obj.has('name')",
+        "'name' in obj",
+        "obj.contains('name')"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Оператор `in` проверяет наличие свойства в объекте и его прототипной цепочке. Также можно использовать obj.hasOwnProperty('name') для проверки собственных свойств."
+    },
+    {
+      "id": 2,
+      "text": "Что вернёт `Object.keys({a: 1, b: 2, c: 3})`?",
+      "options": [
+        "[1, 2, 3]",
+        "['a', 'b', 'c']",
+        "[['a', 1], ['b', 2], ['c', 3]]",
+        "{a: 1, b: 2, c: 3}"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Object.keys() возвращает массив строковых ключей (собственных перечислимых свойств) объекта."
+    },
+    {
+      "id": 3,
+      "text": "Что произойдёт при `const obj = {a: 1}; obj.b = 2;`?",
+      "options": [
+        "Ошибка, т.к. obj объявлен через const",
+        "Свойство b будет добавлено",
+        "Ничего не произойдёт",
+        "obj станет undefined"
+      ],
+      "correctAnswer": 1,
+      "explanation": "const запрещает переприсвоение переменной, но не запрещает изменение свойств объекта. Объект мутабелен."
+    },
+    {
+      "id": 4,
+      "text": "Как создать глубокую копию объекта?",
+      "options": [
+        "Object.assign({}, obj)",
+        "{ ...obj }",
+        "structuredClone(obj)",
+        "obj.clone()"
+      ],
+      "correctAnswer": 2,
+      "explanation": "structuredClone() создаёт глубокую копию. Object.assign и spread-оператор создают только поверхностную копию (shallow copy)."
+    },
+    {
+      "id": 5,
+      "text": "Что делает `Object.freeze(obj)`?",
+      "options": [
+        "Удаляет все свойства объекта",
+        "Запрещает добавление, удаление и изменение свойств",
+        "Делает объект null",
+        "Запрещает только добавление свойств"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Object.freeze() делает объект неизменяемым: нельзя добавлять, удалять или изменять свойства (shallow freeze)."
+    }
+  ]
+}

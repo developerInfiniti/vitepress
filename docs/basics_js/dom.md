@@ -4,7 +4,8 @@ description: Посібник з маніпуляції DOM в JavaScript
 ---
 
 <script setup>
-import DOMPlayground from '../.vitepress/components/DOMPlayground.vue'
+import { useLazyComponent } from '../.vitepress/composables/useLazyComponent'
+const DOMPlayground = useLazyComponent(() => import('../.vitepress/components/DOMPlayground.vue'))
 </script>
 
 # Робота з DOM в JavaScript

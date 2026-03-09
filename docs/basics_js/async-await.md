@@ -260,3 +260,46 @@ async function risky() {
 
 // Всегда оборачивайте в try/catch или обрабатывайте .catch() у вызывающего кода
 ```
+
+## Интерактивная песочница
+
+Попробуйте async/await в действии:
+
+<script setup>
+import CodePlayground from '../.vitepress/components/CodePlayground.vue'
+import Quiz from '../.vitepress/components/Quiz.vue'
+import asyncQuiz from '../.vitepress/data/quiz/async-await.json'
+</script>
+
+<CodePlayground
+  title="Async/Await Playground"
+  :initial-code="`// Попробуйте async/await
+async function fetchData() {
+  console.log('Начало загрузки...');
+
+  // Имитация задержки
+  const result = await new Promise(resolve => {
+    setTimeout(() => resolve('Данные получены!'), 1000);
+  });
+
+  console.log(result);
+  return result;
+}
+
+// Параллельное выполнение
+async function parallel() {
+  const [a, b] = await Promise.all([
+    new Promise(r => setTimeout(() => r('A'), 500)),
+    new Promise(r => setTimeout(() => r('B'), 300)),
+  ]);
+  console.log('Параллельно:', a, b);
+}
+
+fetchData().then(() => parallel());`"
+  language="javascript"
+  editor-height="350px"
+/>
+
+## Тест: Async/Await
+
+<Quiz :data="asyncQuiz" />

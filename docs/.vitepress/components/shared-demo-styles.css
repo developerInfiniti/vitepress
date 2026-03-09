@@ -162,20 +162,26 @@
   cursor: not-allowed;
 }
 
-.demo-btn-create { background: #3498db; color: white; }
+/* Button colors — grouped by color to reduce duplication */
+.demo-btn-create,
+.demo-btn-auto { background: #3498db; color: white; }
+
 .demo-btn-resolve,
-.demo-btn-next { background: #27ae60; color: white; }
+.demo-btn-next,
+.demo-btn-key { background: #27ae60; color: white; }
+
 .demo-btn-reject,
-.demo-btn-stop { background: #e74c3c; color: white; }
+.demo-btn-stop,
+.demo-btn-minus { background: #e74c3c; color: white; }
+
 .demo-btn-all { background: #8e44ad; color: white; }
 .demo-btn-auto-resolve { background: #2ecc71; color: white; }
+
 .demo-btn-auto-reject,
 .demo-btn-forin { background: #e67e22; color: white; }
+
 .demo-btn-reset { background: #95a5a6; color: white; }
-.demo-btn-auto { background: #3498db; color: white; }
-.demo-btn-key { background: #27ae60; color: white; }
 .demo-btn-plus { background: #3eaf7c; color: white; }
-.demo-btn-minus { background: #e74c3c; color: white; }
 
 .demo-btn-small {
   padding: 4px 10px;

@@ -83,3 +83,51 @@ console.log(person.greet.call({ name: "Мария" }, "Здравствуйте"
 // Использование apply
 console.log(person.greet.apply({ name: "Пётр" }, ["Добрый день"]));
 ```
+
+## Интерактивная песочница
+
+<script setup>
+import CodePlayground from '../.vitepress/components/CodePlayground.vue'
+import Quiz from '../.vitepress/components/Quiz.vue'
+import functionsQuiz from '../.vitepress/data/quiz/functions.json'
+</script>
+
+<CodePlayground
+  title="Функции — Playground"
+  :initial-code="`// Типы функций
+// 1. Function Declaration
+function greet(name) {
+  return 'Привет, ' + name + '!';
+}
+console.log(greet('Мир'));
+
+// 2. Arrow Function
+const double = x => x * 2;
+console.log('double(5):', double(5));
+
+// 3. Замыкание
+function createCounter() {
+  let count = 0;
+  return () => ++count;
+}
+const counter = createCounter();
+console.log('counter():', counter());
+console.log('counter():', counter());
+console.log('counter():', counter());
+
+// 4. Rest-параметры
+function sum(...nums) {
+  return nums.reduce((a, b) => a + b, 0);
+}
+console.log('sum(1,2,3,4):', sum(1, 2, 3, 4));
+
+// 5. IIFE
+const result = (function(x) { return x * x; })(7);
+console.log('IIFE(7):', result);`"
+  language="javascript"
+  editor-height="320px"
+/>
+
+## Тест: Функции
+
+<Quiz :data="functionsQuiz" />
