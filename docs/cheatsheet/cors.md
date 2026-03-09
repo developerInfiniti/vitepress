@@ -1,9 +1,9 @@
 ---
 sidebar_position: 22
-title: Шпаргалка по Cors
-description: Шпаргалка по Cors
-keywords: ['javascript', 'js', 'node.js', 'nodejs', 'node', 'cors', 'cross-origin resource sharing', 'npm', 'registry', 'package', 'cheatsheet', 'шпаргалка', 'реестр', 'библиотека', 'пакет', 'распределение ресурсов между источниками']
-tags: ['javascript', 'js', 'node.js', 'nodejs', 'node', 'cors', 'cross-origin resource sharing', 'npm', 'registry', 'package', 'cheatsheet', 'шпаргалка', 'реестр', 'библиотека', 'пакет', 'распределение ресурсов между источниками']
+title: Справочник по Cors
+description: Справочник по Cors
+keywords: ['javascript', 'js', 'node.js', 'nodejs', 'node', 'cors', 'cross-origin resource sharing', 'npm', 'registry', 'package', 'cheatsheet', 'справочник', 'реестр', 'библиотека', 'пакет', 'распределение ресурсов между источниками']
+tags: ['javascript', 'js', 'node.js', 'nodejs', 'node', 'cors', 'cross-origin resource sharing', 'npm', 'registry', 'package', 'cheatsheet', 'справочник', 'реестр', 'библиотека', 'пакет', 'распределение ресурсов между источниками']
 ---
 
 # Cors

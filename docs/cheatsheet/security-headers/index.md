@@ -1,9 +1,9 @@
 ---
 sidebar_position: 5
-title: Шпаргалка по HTTP-заголовкам, связанным с безопасностью
-description: Шпаргалка по HTTP-заголовкам, связанным с безопасностью
-keywords: ['javascript', 'js', 'http headers', 'security headers', 'cheatsheet', 'шпаргалка', 'http-заголовки', 'заголовки безопасности']
-tags: ['javascript', 'js', 'http headers', 'security headers', 'cheatsheet', 'шпаргалка', 'http-заголовки', 'заголовки безопасности']
+title: Справочник по HTTP-заголовкам, связанным с безопасностью
+description: Справочник по HTTP-заголовкам, связанным с безопасностью
+keywords: ['javascript', 'js', 'http headers', 'security headers', 'cheatsheet', 'справочник', 'http-заголовки', 'заголовки безопасности']
+tags: ['javascript', 'js', 'http headers', 'security headers', 'cheatsheet', 'справочник', 'http-заголовки', 'заголовки безопасности']
 ---
 
 # Security Headers
@@ -14,7 +14,7 @@ tags: ['javascript', 'js', 'http headers', 'security headers', 'cheatsheet', 'ш
 
 Исходный код приложений находится <a href="https://github.com/harryheman/Blog-Posts/tree/master/security-headers">здесь</a>.
 
-Основными источниками истины при подготовке шпаргалки для меня послужили следующие ресурсы:
+Основными источниками истины при подготовке справочники для меня послужили следующие ресурсы:
 
 - <a href="https://web.dev/security-headers/">Security headers quick reference - Google Developers</a>
 - <a href="https://owasp.org/www-project-secure-headers/">OWASP Secure Headers Project</a>
@@ -845,9 +845,9 @@ yarn add -D nodemon open-cli
 
 Приступаем к реализации сервера.
 
-Справедливости ради следует отметить, что в экосистеме `Node.js` имеется специальная утилита для установки HTTP-заголовков, связанных с безопасностью веб-приложений — <a href="https://helmetjs.github.io/">`Helmet`</a>. Шпаргалку по работе с этой утилитой вы найдете <a href="https://github.com/harryheman/React-Total/blob/main/md/helmet.md">здесь</a>.
+Справедливости ради следует отметить, что в экосистеме `Node.js` имеется специальная утилита для установки HTTP-заголовков, связанных с безопасностью веб-приложений — <a href="https://helmetjs.github.io/">`Helmet`</a>. Справочник по работе с этой утилитой вы найдете <a href="https://github.com/harryheman/React-Total/blob/main/md/helmet.md">здесь</a>.
 
-Также существует специальная утилита для работы с `CORS` — <a href="https://www.npmjs.com/package/cors">`Cors`</a>. Шпаргалку по работе с этой утилитой вы найдете <a href="https://github.com/harryheman/React-Total/blob/main/md/cors.md">здесь</a>.
+Также существует специальная утилита для работы с `CORS` — <a href="https://www.npmjs.com/package/cors">`Cors`</a>. Справочник по работе с этой утилитой вы найдете <a href="https://github.com/harryheman/React-Total/blob/main/md/cors.md">здесь</a>.
 
 Большинство заголовков можно определить сразу:
 

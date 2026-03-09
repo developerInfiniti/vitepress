@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-title: Шпаргалка по тегам HTML5
-description: Шпаргалка по тегам HTML5
-keywords: ['html5', 'html', 'tags', 'tag', 'cheatsheet', 'шпаргалка', 'теги', 'тег']
-tags: ['html5', 'html', 'tags', 'tag', 'cheatsheet', 'шпаргалка', 'теги', 'тег']
+title: Справочник по тегам HTML5
+description: Справочник по тегам HTML5
+keywords: ['html5', 'html', 'tags', 'tag', 'cheatsheet', 'справочник', 'теги', 'тег']
+tags: ['html5', 'html', 'tags', 'tag', 'cheatsheet', 'справочник', 'теги', 'тег']
 ---
 
 # HTML5

@@ -588,7 +588,7 @@ chat.onMessage = (msg) => {
 chat.sendMessage('Всем привет!');
 ```
 
-## Шпаргалка
+## Справочник
 
 ```javascript
 // Создание

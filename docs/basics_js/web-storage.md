@@ -459,7 +459,7 @@ request.onsuccess = (event) => {
 };
 ```
 
-## Шпаргалка
+## Справочник
 
 ```javascript
 // localStorage

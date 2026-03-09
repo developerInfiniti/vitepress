@@ -1,9 +1,9 @@
 ---
 sidebar_position: 12
-title: Шпаргалка по Styled Components
-description: Шпаргалка по Styled Components
-keywords: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'styled components', 'css-in-js', 'cheatsheet', 'шпаргалка', 'стилизованные компоненты', 'css в js']
-tags: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'styled components', 'css-in-js', 'cheatsheet', 'шпаргалка', 'стилизованные компоненты', 'css в js']
+title: Справочник по Styled Components
+description: Справочник по Styled Components
+keywords: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'styled components', 'css-in-js', 'cheatsheet', 'справочник', 'стилизованные компоненты', 'css в js']
+tags: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'styled components', 'css-in-js', 'cheatsheet', 'справочник', 'стилизованные компоненты', 'css в js']
 ---
 
 # Styled Components

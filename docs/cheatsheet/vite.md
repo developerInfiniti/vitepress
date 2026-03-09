@@ -1,9 +1,9 @@
 ---
 sidebar_position: 29
-title: Шпаргалка по Vite
-description: Шпаргалка по Vite
-keywords: ['javascript', 'js', 'vite', 'bundler', 'cheatsheet', 'шпаргалка', 'сборщик модулей']
-tags: ['javascript', 'js', 'vite', 'bundler', 'cheatsheet', 'шпаргалка', 'сборщик модулей']
+title: Справочник по Vite
+description: Справочник по Vite
+keywords: ['javascript', 'js', 'vite', 'bundler', 'cheatsheet', 'справочник', 'сборщик модулей']
+tags: ['javascript', 'js', 'vite', 'bundler', 'cheatsheet', 'справочник', 'сборщик модулей']
 ---
 
 # Vite

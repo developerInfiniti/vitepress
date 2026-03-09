@@ -39,7 +39,8 @@ const sectionNames: Record<string, string> = {
   api_basics: 'REST API',
   guide: 'Руководства',
   other: 'Разное',
-  cheatsheet: 'Шпаргалки',
+  cheatsheet: 'Справочники',
+  resume: 'Резюме',
 }
 
 const breadcrumbs = computed<BreadcrumbItem[]>(() => {

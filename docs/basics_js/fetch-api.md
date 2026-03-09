@@ -689,7 +689,7 @@ function uploadWithProgress(url, file, onProgress) {
 }
 ```
 
-## Шпаргалка
+## Справочник
 
 ```javascript
 // GET

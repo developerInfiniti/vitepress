@@ -14,7 +14,7 @@ Hello world!
 
 Материалы для дальнейшего изучения Rust:
 
-- [Большая шпаргалка по Rust](https://my-js.org/docs/cheatsheet/rust/) (на русском языке)
+- [Большой справочник по Rust](https://my-js.org/docs/cheatsheet/rust/) (на русском языке)
 - [Книга/учебник по Rust](https://doc.rust-lang.ru/book) (на русском)
 - [rustlings](https://github.com/rust-lang/rustlings)
 - [Rust на примерах](https://doc.rust-lang.ru/stable/rust-by-example/) (на русском)

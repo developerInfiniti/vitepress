@@ -1,5 +1,5 @@
 ---
-description: "Основные команды Docker CLI: run, build, ps, logs, exec — шпаргалка для ежедневной работы с контейнерами"
+description: "Основные команды Docker CLI: run, build, ps, logs, exec — справочник для ежедневной работы с контейнерами"
 ---
 
 ## Docker Commands

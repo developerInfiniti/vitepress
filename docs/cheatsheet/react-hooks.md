@@ -1,9 +1,9 @@
 ---
 sidebar_position: 10
-title: Шпаргалка по хукам React
-description: Шпаргалка по хукам React
-keywords: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'hooks', 'cheatsheet', 'шпаргалка', 'хуки']
-tags: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'hooks', 'cheatsheet', 'шпаргалка', 'хуки']
+title: Справочник по хукам React
+description: Справочник по хукам React
+keywords: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'hooks', 'cheatsheet', 'справочник', 'хуки']
+tags: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'hooks', 'cheatsheet', 'справочник', 'хуки']
 ---
 
 # React Hooks

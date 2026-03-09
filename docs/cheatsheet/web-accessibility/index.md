@@ -1,14 +1,14 @@
 ---
 sidebar_position: 6
-title: Шпаргалка по доступности веб-приложений
-description: Шпаргалка по доступности веб-приложений
-keywords: ['javascript', 'js', 'web accessibility', 'accessibility', 'wai-aria', 'cheatsheet', 'шпаргалка', 'доступность веба', 'доступность']
-tags: ['javascript', 'js', 'web accessibility', 'accessibility', 'wai-aria', 'cheatsheet', 'шпаргалка', 'доступность веба', 'доступность']
+title: Справочник по доступности веб-приложений
+description: Справочник по доступности веб-приложений
+keywords: ['javascript', 'js', 'web accessibility', 'accessibility', 'wai-aria', 'cheatsheet', 'справочник', 'доступность веба', 'доступность']
+tags: ['javascript', 'js', 'web accessibility', 'accessibility', 'wai-aria', 'cheatsheet', 'справочник', 'доступность веба', 'доступность']
 ---
 
 # Web Accessibility
 
-Данная шпаргалка представляет собой выдержки из <a href="https://dev.to/inhuofficial/101-digital-accessibility-tips-and-tricks-4728#document-structure">этой замечательной статьи</a>.
+Данная справочник представляет собой выдержки из <a href="https://dev.to/inhuofficial/101-digital-accessibility-tips-and-tricks-4728#document-structure">этой замечательной статьи</a>.
 
 Официальные ресурсы по доступности:
 
@@ -496,7 +496,7 @@ _Обратите внимание_ на 2 вещи:
 
 Для визуального скрытия текста, несмотря на наличие специального атрибута `aria-label`, лучше использовать старый-добрый `span` с соответствующими стилями, поскольку `WAI-ARIA` имеет разную поддержку в браузерах.
 
-Пример таких стилей уже приводился в начале шпаргалки, но, как известно, повторенье..., so:
+Пример таких стилей уже приводился в начале справочники, но, как известно, повторенье..., so:
 
 ```css
 .visually-hidden {

@@ -7,8 +7,8 @@ title: Содержание
 
 # Содержание
 
-- :memo:&nbsp;&nbsp;[Шпаргалка по методам массивов](./basics_js/array_methods)
-- :memo:&nbsp;&nbsp;[Шпаргалка по массивам](./basics_js/arrays)
+- :memo:&nbsp;&nbsp;[Справочник по методам массивов](./basics_js/array_methods)
+- :memo:&nbsp;&nbsp;[Справочник по массивам](./basics_js/arrays)
 - :memo:&nbsp;&nbsp;[Асинхронное программирование в JavaScript](./basics_js/async)
 - :memo:&nbsp;&nbsp;[Паттерны проектирования](./basics_js/design_patterns)
 - :memo:&nbsp;&nbsp;[Принципы проектирования ПО](./basics_js/design_principles)
@@ -40,4 +40,4 @@ title: Содержание
 
 ---
 
-- :memo:&nbsp;&nbsp;[Шпаргалка по Dart](./cheatsheet/dart)
+- :memo:&nbsp;&nbsp;[Справочник по Dart](./cheatsheet/dart)

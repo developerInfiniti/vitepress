@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-title: Шпаргалка по методам JavaScript для работы с DOM
-description: Шпаргалка по методам JavaScript для работы с DOM
-keywords: ['javascript', 'js', 'document object model', 'dom', 'methods', 'cheatsheet', 'шпаргалка', 'объектная модель документа', 'методы']
-tags: ['javascript', 'js', 'document object model', 'dom', 'methods', 'cheatsheet', 'шпаргалка', 'объектная модель документа', 'методы']
+title: Справочник по методам JavaScript для работы с DOM
+description: Справочник по методам JavaScript для работы с DOM
+keywords: ['javascript', 'js', 'document object model', 'dom', 'methods', 'cheatsheet', 'справочник', 'объектная модель документа', 'методы']
+tags: ['javascript', 'js', 'document object model', 'dom', 'methods', 'cheatsheet', 'справочник', 'объектная модель документа', 'методы']
 ---
 
 # JavaScript DOM
@@ -25,7 +25,7 @@ tags: ['javascript', 'js', 'document object model', 'dom', 'methods', 'cheatshee
 
 Сильно погружаться в теорию мы не будем. Вместо этого, мы сосредоточимся на практической составляющей.
 
-Для того, чтобы получить максимальную пользу от данной шпаргалки, пишите код вместе со мной и внимательно следите за тем, что происходит в консоли инструментов разработчика и на странице.
+Для того, чтобы получить максимальную пользу от данного справочника, пишите код вместе со мной и внимательно следите за тем, что происходит в консоли инструментов разработчика и на странице.
 
 Вот как будет выглядеть наша начальная разметка:
 

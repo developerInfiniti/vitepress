@@ -1,14 +1,14 @@
 ---
 sidebar_position: 3
-title: Шпаргалка по работе с медиа в браузере
-description: Шпаргалка по работе с медиа в браузере
-keywords: [javascript, js, media devices, media capture, screen capture, image capture, web speech api, web speech, cheatsheet, медиа устройства, захват медиа, захват экрана, захват изображения, шпаргалка]
-tags: [javascript, js, media devices, media capture, screen capture, image capture, web speech api, web speech, cheatsheet, медиа устройства, захват медиа, захват экрана, захват изображения, шпаргалка]
+title: Справочник по работе с медиа в браузере
+description: Справочник по работе с медиа в браузере
+keywords: [javascript, js, media devices, media capture, screen capture, image capture, web speech api, web speech, cheatsheet, медиа устройства, захват медиа, захват экрана, захват изображения, справочник]
+tags: [javascript, js, media devices, media capture, screen capture, image capture, web speech api, web speech, cheatsheet, медиа устройства, захват медиа, захват экрана, захват изображения, справочник]
 ---
 
-# Шпаргалка по работе с медиа в браузере
+# Справочник по работе с медиа в браузере
 
-В данной шпаргалке представлены все основные интерфейсы и методы по работе с медиа в браузере, описываемые в следующих спецификациях:
+В данном справочнике представлены все основные интерфейсы и методы по работе с медиа в браузере, описываемые в следующих спецификациях:
 
 - [Media Capture and Streams](https://w3c.github.io/mediacapture-main/)
 - [Screen Capture](https://w3c.github.io/mediacapture-screen-share/)
@@ -17,7 +17,7 @@ tags: [javascript, js, media devices, media capture, screen capture, image captu
 - [MediaStream Recording](https://www.w3.org/TR/mediastream-recording/)
 - [Web Speech API](https://wicg.github.io/speech-api/)
 
-Шпаргалка представлена в форме вопрос-ответ.
+Справочник представлена в форме вопрос-ответ.
 
 - [Репозиторий с кодом всех сниппетов](https://github.com/harryheman/Blog-Posts/tree/master/web-media)
 - [Песочница](https://stackblitz.com/edit/js-pfyter?file=index.html)
@@ -1228,7 +1228,7 @@ abortRecognitionBtn.onclick = () => {
 
 ## 11. Как определить поддержку возможностей по работе с медиа браузером?
 
-_Функция для определения возможностей браузера по работе с медиа_, рассмотренных в данной шпаргалке:
+_Функция для определения возможностей браузера по работе с медиа_, рассмотренных в данном справочнике:
 
 ```javascript
 export function verifySupport() {
@@ -1273,7 +1273,7 @@ if (unsupportedFeatures.length) {
 }
 ```
 
-Таким образом, мы рассмотрели все основные интерфейсы и методы по работе с медиа, описываемые в указанных в начале шпаргалки спецификациях.
+Таким образом, мы рассмотрели все основные интерфейсы и методы по работе с медиа, описываемые в указанных в начале справочники спецификациях.
 
 Следует отметить, что существует еще два интерфейса, предоставляемых браузером для работы с медиа, которые мы оставили без внимания в силу их сложности и специфичности:
 

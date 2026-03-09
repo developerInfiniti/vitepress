@@ -1,9 +1,9 @@
 ---
 sidebar_position: 21
-title: Шпаргалка по JSONWebToken
-description: Шпаргалка по JSONWebToken
-keywords: ['javascript', 'js', 'node.js', 'nodejs', 'node', 'jsonwebtoken', 'token', 'npm', 'registry', 'package', 'cheatsheet', 'шпаргалка', 'реестр', 'библиотека', 'пакет', 'токен']
-tags: ['javascript', 'js', 'node.js', 'nodejs', 'node', 'jsonwebtoken', 'token', 'npm', 'registry', 'package', 'cheatsheet', 'шпаргалка', 'реестр', 'библиотека', 'пакет', 'токен']
+title: Справочник по JSONWebToken
+description: Справочник по JSONWebToken
+keywords: ['javascript', 'js', 'node.js', 'nodejs', 'node', 'jsonwebtoken', 'token', 'npm', 'registry', 'package', 'cheatsheet', 'справочник', 'реестр', 'библиотека', 'пакет', 'токен']
+tags: ['javascript', 'js', 'node.js', 'nodejs', 'node', 'jsonwebtoken', 'token', 'npm', 'registry', 'package', 'cheatsheet', 'справочник', 'реестр', 'библиотека', 'пакет', 'токен']
 ---
 
 # JSONWebToken

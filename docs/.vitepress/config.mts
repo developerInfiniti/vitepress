@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Шпаргалки по IT",
+  title: "Справочник по IT",
   description: "Ваш быстрый справочник для разработчиков",
   base: '/vitepress/',
   appearance: true,
@@ -13,10 +13,10 @@ export default defineConfig({
 
   head: [
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: 'Шпаргалки по IT' }],
+    ['meta', { property: 'og:site_name', content: 'Справочник по IT' }],
     ['meta', { property: 'og:locale', content: 'ru_RU' }],
     ['meta', { property: 'og:url', content: 'https://alexeyzelenko.github.io/vitepress/' }],
-    ['meta', { property: 'og:title', content: 'Шпаргалки по IT' }],
+    ['meta', { property: 'og:title', content: 'Справочник по IT' }],
     ['meta', { property: 'og:description', content: 'Ваш быстрый справочник для разработчиков' }],
   ],
 
@@ -26,7 +26,7 @@ export default defineConfig({
       .replace(/index\.md$/, '')
       .replace(/\.md$/, '.html');
 
-    const ogTitle = pageData.frontmatter.title || pageData.title || 'Шпаргалки по IT';
+    const ogTitle = pageData.frontmatter.title || pageData.title || 'Справочник по IT';
     const ogDescription = pageData.frontmatter.description || pageData.description || 'Ваш быстрый справочник для разработчиков';
 
     pageData.frontmatter.head ??= [];
@@ -48,7 +48,7 @@ export default defineConfig({
         JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: 'Шпаргалки по IT',
+          name: 'Справочник по IT',
           description: 'Ваш быстрый справочник для разработчиков',
           url: siteUrl,
           inLanguage: 'ru',
@@ -99,7 +99,7 @@ export default defineConfig({
           inLanguage: 'ru',
           publisher: {
             '@type': 'Organization',
-            name: 'Шпаргалки по IT',
+            name: 'Справочник по IT',
             url: siteUrl,
           },
         }),
@@ -112,21 +112,28 @@ export default defineConfig({
     root: {
       label: 'Русский',
       lang: 'ru',
-      title: "Шпаргалки по IT",
+      title: "Справочник по IT",
       description: "Ваш быстрый справочник для разработчиков"
     },
     uk: {
       label: 'Українська',
       lang: 'uk',
-      title: "IT Шпаргалки",
+      title: "IT Довідник",
       description: "Ваш швидкий довідник для розробників"
+    },
+    en: {
+      label: 'English',
+      lang: 'en',
+      title: "IT Reference",
+      description: "Your quick reference for developers"
     }
   },
   themeConfig: {
     // Конфигурация переключателя языков
     langMenuItems: [
       { text: 'Русский', link: '/' },
-      { text: 'Українська', link: '/uk/' }
+      { text: 'Українська', link: '/uk/' },
+      { text: 'English', link: '/en/' }
     ],
     
     search: {
@@ -186,7 +193,8 @@ export default defineConfig({
       { text: 'Справочник', link: '/markdown-examples' },
       { text: 'Ссылки', link: '/links' },
       { text: 'Разное', link: '/other/' },
-      { text: 'Руководства', link: '/guide/guide' }
+      { text: 'Руководства', link: '/guide/guide' },
+      { text: 'Резюме', link: '/resume/' }
     ],
 
     sidebar: [
@@ -259,7 +267,7 @@ export default defineConfig({
         collapsed: true,
         sidebarKey: 'group2',
         items: [
-          {text: 'Шпаргалка', link: '/basics_ts/typescript-cheatsheet'},
+          {text: 'Справочник', link: '/basics_ts/typescript-cheatsheet'},
           {text: 'Types', link: '/basics_ts/types'},
           {text: 'Interfaces', link: '/basics_ts/interfaces'},
           {text: 'Classes', link: '/basics_ts/classes'},
@@ -601,7 +609,7 @@ export default defineConfig({
         collapsed: true,
         sidebarKey: 'group4',
         items: [
-          {text: 'Шпаргалка', link: '/cheatsheet/dart'},
+          {text: 'Справочник', link: '/cheatsheet/dart'},
           {text: 'Основы', link: '/basic_dart/dart-basics'},
           {text: 'Импорты и пакеты', link: '/basic_dart/dart-imports-packages'},
           {text: 'Типы и null safety', link: '/basic_dart/dart-types-null-safety'},

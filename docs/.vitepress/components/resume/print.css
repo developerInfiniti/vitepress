@@ -1,0 +1,63 @@
+@media print {
+  .VPNav,
+  .VPSidebar,
+  .VPFooter,
+  .VPLocalNav,
+  .VPDocAside,
+  .no-print,
+  .resume-actions {
+    display: none !important;
+  }
+
+  .VPContent .VPDoc {
+    padding: 0 !important;
+  }
+
+  .VPDoc .container {
+    max-width: 100% !important;
+  }
+
+  .VPDoc .content-container {
+    max-width: 100% !important;
+  }
+
+  .resume-page {
+    font-size: 11pt;
+    color: #000 !important;
+    background: #fff !important;
+    max-width: 210mm;
+    margin: 0 auto;
+  }
+
+  .resume-section {
+    break-inside: avoid;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  .skill-bar-fill {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .project-card {
+    border-color: #ccc !important;
+    background: #fff !important;
+  }
+
+  .stack-tag {
+    border-color: #ccc !important;
+    background: #f5f5f5 !important;
+    color: #333 !important;
+  }
+}
+
+body.resume-printing .VPNav,
+body.resume-printing .VPSidebar,
+body.resume-printing .VPFooter {
+  display: none !important;
+}

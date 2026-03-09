@@ -1,9 +1,9 @@
 ---
 sidebar_position: 7
-title: Шпаргалка по Web Speech API
-description: Шпаргалка по Web Speech API
-keywords: ['javascript', 'js', 'web speech api', 'speech to text', 'text to speech', 'cheatsheet', 'шпаргалка', 'мова в текст', 'текст в мову']
-tags: ['javascript', 'js', 'web speech api', 'speech to text', 'text to speech', 'cheatsheet', 'шпаргалка', 'мова в текст', 'текст в мову']
+title: Справочник по Web Speech API
+description: Справочник по Web Speech API
+keywords: ['javascript', 'js', 'web speech api', 'speech to text', 'text to speech', 'cheatsheet', 'справочник', 'мова в текст', 'текст в мову']
+tags: ['javascript', 'js', 'web speech api', 'speech to text', 'text to speech', 'cheatsheet', 'справочник', 'мова в текст', 'текст в мову']
 ---
 
 # Web Speech API

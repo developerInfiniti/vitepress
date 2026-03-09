@@ -1,9 +1,9 @@
 ---
 sidebar_position: 18
-title: Шпаргалка по Express API
-description: Шпаргалка по Express API
-keywords: ['javascript', 'js', 'node.js', 'nodesj', 'node', 'express.js', 'expressjs', 'express', 'cheatsheet', 'шпаргалка', 'фреймворк для разработки веб-серверов']
-tags: ['javascript', 'js', 'node.js', 'nodesj', 'node', 'express.js', 'expressjs', 'express', 'cheatsheet', 'шпаргалка', 'фреймворк для разработки веб-серверов']
+title: Справочник по Express API
+description: Справочник по Express API
+keywords: ['javascript', 'js', 'node.js', 'nodesj', 'node', 'express.js', 'expressjs', 'express', 'cheatsheet', 'справочник', 'фреймворк для разработки веб-серверов']
+tags: ['javascript', 'js', 'node.js', 'nodesj', 'node', 'express.js', 'expressjs', 'express', 'cheatsheet', 'справочник', 'фреймворк для разработки веб-серверов']
 ---
 
 # Express API

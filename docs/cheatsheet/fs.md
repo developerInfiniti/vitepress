@@ -1,7 +1,7 @@
 ---
 sidebar_position: 32
-title: Шпаргалка по модулю FS
-description: Шпаргалка по модулю FS
+title: Справочник по модулю FS
+description: Справочник по модулю FS
 keywords: ['node.js', 'nodejs', 'node', 'file system', 'fs', 'файловая система', 'работа с файловой системой']
 tags: ['node.js', 'nodejs', 'node', 'file system', 'fs', 'файловая система', 'работа с файловой системой']
 ---

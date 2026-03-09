@@ -1,7 +1,7 @@
 ---
 sidebar_position: 11
-title: Шпаргалка по Create React App
-description: Шпаргалка по Create React App
+title: Справочник по Create React App
+description: Справочник по Create React App
 keywords: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'create react app', 'cra', 'cli', 'cheatsheet', 'интерфейс командной строки']
 tags: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'create react app', 'cra', 'cli', 'cheatsheet', 'интерфейс командной строки']
 ---
@@ -153,7 +153,7 @@ export default function Button() {
 }
 ```
 
-Для стилизации также можно использовать специальные библиотеки, например, <a href="https://www.npmjs.com/package/styled-components">styled-components</a>. Шпаргалку по работе с данной библиотекой смотрите [здесь](styled-components.md).
+Для стилизации также можно использовать специальные библиотеки, например, <a href="https://www.npmjs.com/package/styled-components">styled-components</a>. Справочник по работе с данной библиотекой смотрите [здесь](styled-components.md).
 
 Для сброса стилей в `index.css` нужно добавить строку `@import-normalize;`.
 

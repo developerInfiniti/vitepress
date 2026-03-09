@@ -2,8 +2,8 @@
 sidebar_position: 15
 title: Примеры кастомных хуков React
 description: Примеры кастомных хуков React
-keywords: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'custom hooks', 'hooks', 'cheatsheet', 'шпаргалка', 'кастомные хуки', 'пользовательские хуки', 'хуки']
-tags: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'custom hooks', 'hooks', 'cheatsheet', 'шпаргалка', 'кастомные хуки', 'пользовательские хуки', 'хуки']
+keywords: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'custom hooks', 'hooks', 'cheatsheet', 'справочник', 'кастомные хуки', 'пользовательские хуки', 'хуки']
+tags: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'custom hooks', 'hooks', 'cheatsheet', 'справочник', 'кастомные хуки', 'пользовательские хуки', 'хуки']
 ---
 
 # React Custom Hooks

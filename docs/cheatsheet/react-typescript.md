@@ -1,9 +1,9 @@
 ---
 sidebar_position: 13
-title: Шпаргалка по React + Typescript
-description: Шпаргалка по React + Typescript
-keywords: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'typescript', 'ts', 'cheatsheet', 'шпаргалка']
-tags: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'typescript', 'ts', 'cheatsheet', 'шпаргалка']
+title: Справочник по React + Typescript
+description: Справочник по React + Typescript
+keywords: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'typescript', 'ts', 'cheatsheet', 'справочник']
+tags: ['javascript', 'js', 'react.js', 'reactjs', 'react', 'typescript', 'ts', 'cheatsheet', 'справочник']
 ---
 
 # React + Typescript

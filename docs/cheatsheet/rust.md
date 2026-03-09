@@ -1,9 +1,9 @@
 ---
 sidebar_position: 35
-title: Большая шпаргалка по Rust
-description: Большая шпаргалка по Rust
-keywords: [rust, cheatsheet, шпаргалка]
-tags: [rust, cheatsheet, шпаргалка]
+title: Большой справочник по Rust
+description: Большой справочник по Rust
+keywords: [rust, cheatsheet, справочник]
+tags: [rust, cheatsheet, справочник]
 ---
 
 > [Источник](https://learning-rust.github.io/).

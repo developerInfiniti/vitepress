@@ -15,7 +15,7 @@ tags: ['javascript', 'js', 'typescript', 'ts', 'internals']
 _Обратите внимание_: предполагается, что вы имеете некоторый опыт работы с `TypeScript`. Если нет, рекомендую начать с:
 
 - [Карманной книги по TypeScript](https://my-js.org/docs/guide/ts) или
-- [Шпаргалки по TypeScript](https://my-js.org/docs/cheatsheet/ts).
+- [Справочники по TypeScript](https://my-js.org/docs/cheatsheet/ts).
 
 ## `T`, `K` и `V` в дженериках / Generics
 

@@ -123,7 +123,7 @@ __Вопросы и задачи__
 
 - :link:&nbsp;&nbsp; [Developer Roadmap](https://github.com/kamranahmedse/developer-roadmap) - "дорожная карта" веб-разработчика
 - :link:&nbsp;&nbsp; [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line) - искусство командной строки
-- :link:&nbsp;&nbsp; [Bash Guide](https://github.com/Idnan/bash-guide) - краткое руководство/шпаргалка по `Bash`
+- :link:&nbsp;&nbsp; [Bash Guide](https://github.com/Idnan/bash-guide) - краткое руководство/справочник по `Bash`
 - :link:&nbsp;&nbsp; [Mockaroo](https://www.mockaroo.com/) - сервис для генерации фиктивных данных, в том числе, в формате `SQL`
 - :link:&nbsp;&nbsp; [Команды SQL (PostgreSQL)](https://postgrespro.ru/docs/postgresql/13/sql-commands)
 - :link:&nbsp;&nbsp; [Команды psql (PostgreSQL)](https://postgrespro.ru/docs/postgresql/13/app-psql)

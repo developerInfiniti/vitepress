@@ -1,9 +1,9 @@
 ---
 sidebar_position: 36
-title: Шпаргалка по Dart
-description: Шпаргалка по Dart
-keywords: ['dart', 'flutter', 'cheatsheet', 'шпаргалка']
-tags: ['dart', 'flutter', 'cheatsheet', 'шпаргалка']
+title: Справочник по Dart
+description: Справочник по Dart
+keywords: ['dart', 'flutter', 'cheatsheet', 'справочник']
+tags: ['dart', 'flutter', 'cheatsheet', 'справочник']
 ---
 
 # Dart

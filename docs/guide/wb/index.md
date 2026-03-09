@@ -3074,7 +3074,7 @@ module.exports = {
 }
 ```
 
-<a href="https://github.com/harryheman/React-Total/blob/main/md/webpack.md">Здесь</a> вы найдете шпаргалку по настройке Webpack. Пример полной конфигурации Webpack для JS/React/TS-проектов можно посмотреть <a href="https://github.com/harryheman/Webpack5-Max">здесь</a>.
+<a href="https://github.com/harryheman/React-Total/blob/main/md/webpack.md">Здесь</a> вы найдете справочник по настройке Webpack. Пример полной конфигурации Webpack для JS/React/TS-проектов можно посмотреть <a href="https://github.com/harryheman/Webpack5-Max">здесь</a>.
 
 ### React PWA
 

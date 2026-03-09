@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: "IT Шпаргалки"
+  name: "IT Справочник"
   text: "Ваш швидкий довідник для розробників"
   tagline: Миттєво знаходьте потрібні фрагменти коду та команди.
   actions:
     - theme: brand
-      text: Шпаргалки
+      text: Справочники
       link: /uk/markdown-examples
     - theme: brand
       text: Посилання

@@ -3,7 +3,7 @@ title: Об'єкти в JavaScript
 description: Детальне керівництво по роботі з об'єктами в JavaScript
 ---
 
-# Шпаргалка по об'єктам в JavaScript
+# Справочник по об'єктам в JavaScript
 
 [Скачать PDF](./objects.pdf)
 

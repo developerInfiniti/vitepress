@@ -1,8 +1,8 @@
 ---
-description: "TypeScript шпаргалка: типы, интерфейсы, generics, utility types — краткий справочник для разработчиков"
+description: "TypeScript справочник: типы, интерфейсы, generics, utility types — краткий справочник для разработчиков"
 ---
 
-# Шпаргалка по TypeScript
+# Справочник по TypeScript
 
 Краткий справочник по основным возможностям TypeScript -- от базовых типов до продвинутых паттернов.
 

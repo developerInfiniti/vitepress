@@ -1,12 +1,12 @@
 ---
 sidebar_position: 17.1
-title: Шпаргалка по TypeScript
-description: Шпаргалка по TypeScript
-keywords: ['javascript', 'js', 'typescript', 'ts', 'cheatsheet', 'шпаргалка']
-tags: ['javascript', 'js', 'typescript', 'ts', 'cheatsheet', 'шпаргалка']
+title: Справочник по TypeScript
+description: Справочник по TypeScript
+keywords: ['javascript', 'js', 'typescript', 'ts', 'cheatsheet', 'справочник']
+tags: ['javascript', 'js', 'typescript', 'ts', 'cheatsheet', 'справочник']
 ---
 
-# Шпаргалка по TypeScript
+# Справочник по TypeScript
 
 > [Источник](https://www.sitepen.com/blog/typescript-cheat-sheet).
 

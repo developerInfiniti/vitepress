@@ -14,7 +14,7 @@ title: Содержание
 ---
 
 - :memo:&nbsp;&nbsp;[Вопросы по React. Версия 1](./react-questions)
-- :memo:&nbsp;&nbsp;[Шпаргалки по React, Jest, Redux и лучшие практики по React](./best-practices)
+- :memo:&nbsp;&nbsp;[Справочники по React, Jest, Redux и лучшие практики по React](./best-practices)
 - :page_facing_up:&nbsp;&nbsp;[Размышления о React](./react-philosophies)
 
 ---

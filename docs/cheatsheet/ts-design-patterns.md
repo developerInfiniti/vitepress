@@ -15,7 +15,7 @@ tags: [javascript, js, typescript, ts, design patterns, patterns, паттерн
 _Обратите внимание_: предполагается, что вы имеете некоторый опыт работы с `TypeScript`. Если нет, рекомендую начать с:
 
 - [Карманной книги по TypeScript](https://my-js.org/docs/guide/ts) или
-- [Шпаргалки по TypeScript](https://my-js.org/docs/cheatsheet/ts).
+- [Справочники по TypeScript](https://my-js.org/docs/cheatsheet/ts).
 
 Паттерны (или шаблоны) проектирования (design patterns) описывают типичные способы решения часто встречающихся проблем при проектировании программ.
 

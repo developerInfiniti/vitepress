@@ -1174,7 +1174,7 @@ const nextConfig = {
 module.exports = nextConfig
 ```
 
-- [Шпаргалка по заголовкам безопасности](https://my-js.org/docs/cheatsheet/security-headers).
+- [Справочник по заголовкам безопасности](https://my-js.org/docs/cheatsheet/security-headers).
 
 ## Клиент
 
