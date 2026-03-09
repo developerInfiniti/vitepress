@@ -40,15 +40,6 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: 'Ваш быстрый справочник для разработчиков' }],
   ],
 
-  transformIndexHtml: (html) => {
-    // Инжектируем явную ссылку на app.css если её нет
-    if (!html.includes('app.') || !html.includes('.css')) {
-      const linkTag = '<link rel="stylesheet" href="/vitepress/assets/app.css" />';
-      return html.replace('<script type="module" src="/vitepress/assets/app.', linkTag + '\n    <script type="module" src="/vitepress/assets/app.');
-    }
-    return html;
-  },
-
   transformPageData(pageData) {
     const siteUrl = 'https://alexeyzelenko.github.io/vitepress';
     const canonicalUrl = `${siteUrl}/${pageData.relativePath}`

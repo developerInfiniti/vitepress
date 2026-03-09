@@ -11,8 +11,8 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vitepress build docs",
-    "docs:build:profile": "cross-env NODE_OPTIONS=--max-old-space-size=8192 VITE_PROFILE=true vitepress build docs 2>&1 | tee build-profile.log",
+    "docs:build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vitepress build docs && node scripts/inject-app-css.js",
+    "docs:build:profile": "cross-env NODE_OPTIONS=--max-old-space-size=8192 VITE_PROFILE=true vitepress build docs 2>&1 | tee build-profile.log && node scripts/inject-app-css.js",
     "docs:preview": "vitepress preview docs",
     "test": "vitest run --config .config/vitest.config.ts",
     "test:watch": "vitest --config .config/vitest.config.ts",
