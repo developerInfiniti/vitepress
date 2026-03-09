@@ -128,7 +128,7 @@ export function wrapCodeForAsyncExecution(code: string, useStreaming: boolean): 
     : `__output.push(entry)`
 
   return `
-(async function(__onOutput, __setTimeout) {
+(async function() {
   ${preamble}
   const __output = [];
   function __emit(type, args) {
