@@ -101,15 +101,18 @@ async function executeCode(id: string, code: string, config: PlaygroundConfig) {
     // Check if this execution was aborted while running
     if (activeExecutionId !== id) return
 
-    if (result.error) {
+    // Default result structure if undefined
+    const safeResult = result || { output: collectedOutput, error: null }
+
+    if (safeResult.error) {
       sendResult(id, {
         status: 'error',
         output: collectedOutput,
         error: {
-          message: result.error.message,
-          line: result.error.line,
-          column: result.error.column,
-          stack: result.error.stack,
+          message: safeResult.error.message,
+          line: safeResult.error.line,
+          column: safeResult.error.column,
+          stack: safeResult.error.stack,
         },
         duration,
       })
