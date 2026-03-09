@@ -4,12 +4,12 @@ description: "IT документация для разработчиков: Jav
 layout: home
 
 hero:
-  name: "Шпаргалки по IT"
+  name: "Справочник по IT"
   text: "Ваш быстрый справочник для разработчиков"
   tagline: Мгновенно находите нужные фрагменты кода и команды.
   actions:
     - theme: brand
-      text: Шпаргалки
+      text: Справочник
       link: /markdown-examples
     - theme: brand
       text: Ссылки

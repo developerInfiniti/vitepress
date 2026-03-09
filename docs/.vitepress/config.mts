@@ -183,7 +183,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Шпаргалки', link: '/markdown-examples' },
+      { text: 'Справочник', link: '/markdown-examples' },
       { text: 'Ссылки', link: '/links' },
       { text: 'Разное', link: '/other/' },
       { text: 'Руководства', link: '/guide/guide' }
