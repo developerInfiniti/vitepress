@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useResume } from '../composables/useResume'
 import type { ResumeData } from '../data/resume/types'
 import ResumeHeader from './resume/ResumeHeader.vue'
@@ -7,6 +7,7 @@ import ResumeSection from './resume/ResumeSection.vue'
 import ResumeSkills from './resume/ResumeSkills.vue'
 import ResumeTimeline from './resume/ResumeTimeline.vue'
 import ResumeProjects from './resume/ResumeProjects.vue'
+import ResumeTOC from './resume/ResumeTOC.vue'
 import './resume/print.css'
 
 const { locale, loadResumeData, exportPDF } = useResume()
@@ -23,78 +24,109 @@ onMounted(load)
 watch(locale, load)
 
 const labels: Record<string, Record<string, string>> = {
-  ru: { download: 'Скачать PDF', experience: 'Опыт работы', education: 'Образование', skills: 'Навыки', projects: 'Проекты', languages: 'Языки', certs: 'Сертификаты', expertise: 'Области экспертизы' },
-  uk: { download: 'Завантажити PDF', experience: 'Досвід роботи', education: 'Освіта', skills: 'Навички', projects: 'Проєкти', languages: 'Мови', certs: 'Сертифікати', expertise: 'Області експертизи' },
-  en: { download: 'Download PDF', experience: 'Experience', education: 'Education', skills: 'Skills', projects: 'Projects', languages: 'Languages', certs: 'Certifications', expertise: 'Areas of Expertise' },
+  ru: { download: 'Скачать PDF', experience: 'Опыт работы', education: 'Образование', skills: 'Навыки', projects: 'Проекты', languages: 'Языки', certs: 'Сертификаты', expertise: 'Области экспертизы', profile: 'Профиль' },
+  uk: { download: 'Завантажити PDF', experience: 'Досвід роботи', education: 'Освіта', skills: 'Навички', projects: 'Проєкти', languages: 'Мови', certs: 'Сертифікати', expertise: 'Області експертизи', profile: 'Профіль' },
+  en: { download: 'Download PDF', experience: 'Experience', education: 'Education', skills: 'Skills', projects: 'Projects', languages: 'Languages', certs: 'Certifications', expertise: 'Areas of Expertise', profile: 'Profile' },
 }
+
+const tocItems = computed(() => {
+  if (!data.value) return []
+  const l = labels[locale.value] || labels.ru
+  const items = [
+    { id: 'resume-profile', label: l.profile },
+    { id: 'resume-experience', label: l.experience },
+    { id: 'resume-skills', label: l.skills },
+  ]
+  if (data.value.expertise?.length) {
+    items.push({ id: 'resume-expertise', label: l.expertise })
+  }
+  items.push({ id: 'resume-projects', label: l.projects })
+  items.push({ id: 'resume-education', label: l.education })
+  if (data.value.languages?.length) {
+    items.push({ id: 'resume-languages', label: l.languages })
+  }
+  if (data.value.certifications?.length) {
+    items.push({ id: 'resume-certs', label: l.certs })
+  }
+  return items
+})
 </script>
 
 <template>
   <div class="resume-page" v-if="data">
+    <ResumeTOC :items="tocItems" />
+
     <div class="resume-actions no-print">
       <button class="resume-pdf-btn" @click="exportPDF">
         {{ labels[locale].download }}
       </button>
     </div>
 
-    <ResumeHeader :header="data.header" :summary="data.summary" />
+    <div id="resume-profile">
+      <ResumeHeader :header="data.header" :summary="data.summary" />
+    </div>
 
-    <ResumeTimeline
-      :title="labels[locale].experience"
-      :items="data.experience"
-      type="experience"
-    />
+    <div id="resume-experience">
+      <ResumeTimeline
+        :title="labels[locale].experience"
+        :items="data.experience"
+        type="experience"
+      />
+    </div>
 
-    <ResumeSkills
-      :title="labels[locale].skills"
-      :groups="data.skills"
-    />
+    <div id="resume-skills">
+      <ResumeSkills
+        :title="labels[locale].skills"
+        :groups="data.skills"
+      />
+    </div>
 
-    <ResumeSection
-      v-if="data.expertise?.length"
-      :title="labels[locale].expertise"
-    >
-      <div class="resume-expertise">
-        <span v-for="item in data.expertise" :key="item" class="resume-expertise-badge">
-          {{ item }}
-        </span>
-      </div>
-    </ResumeSection>
+    <div id="resume-expertise" v-if="data.expertise?.length">
+      <ResumeSection :title="labels[locale].expertise">
+        <div class="resume-expertise">
+          <span v-for="item in data.expertise" :key="item" class="resume-expertise-badge">
+            {{ item }}
+          </span>
+        </div>
+      </ResumeSection>
+    </div>
 
-    <ResumeProjects
-      :title="labels[locale].projects"
-      :projects="data.projects"
-    />
+    <div id="resume-projects">
+      <ResumeProjects
+        :title="labels[locale].projects"
+        :projects="data.projects"
+      />
+    </div>
 
-    <ResumeTimeline
-      :title="labels[locale].education"
-      :items="data.education"
-      type="education"
-    />
+    <div id="resume-education">
+      <ResumeTimeline
+        :title="labels[locale].education"
+        :items="data.education"
+        type="education"
+      />
+    </div>
 
-    <ResumeSection
-      v-if="data.languages?.length"
-      :title="labels[locale].languages"
-    >
-      <div class="resume-languages">
-        <span v-for="lang in data.languages" :key="lang.language" class="resume-lang-badge">
-          {{ lang.language }} — {{ lang.level }}
-        </span>
-      </div>
-    </ResumeSection>
+    <div id="resume-languages" v-if="data.languages?.length">
+      <ResumeSection :title="labels[locale].languages">
+        <div class="resume-languages">
+          <span v-for="lang in data.languages" :key="lang.language" class="resume-lang-badge">
+            {{ lang.language }} — {{ lang.level }}
+          </span>
+        </div>
+      </ResumeSection>
+    </div>
 
-    <ResumeSection
-      v-if="data.certifications?.length"
-      :title="labels[locale].certs"
-    >
-      <ul class="resume-certs-list">
-        <li v-for="cert in data.certifications" :key="cert.name">
-          <a v-if="cert.link" :href="cert.link" target="_blank" rel="noopener noreferrer">{{ cert.name }}</a>
-          <span v-else>{{ cert.name }}</span>
-          — {{ cert.issuer }} ({{ cert.year }})
-        </li>
-      </ul>
-    </ResumeSection>
+    <div id="resume-certs" v-if="data.certifications?.length">
+      <ResumeSection :title="labels[locale].certs">
+        <ul class="resume-certs-list">
+          <li v-for="cert in data.certifications" :key="cert.name">
+            <a v-if="cert.link" :href="cert.link" target="_blank" rel="noopener noreferrer">{{ cert.name }}</a>
+            <span v-else>{{ cert.name }}</span>
+            — {{ cert.issuer }} ({{ cert.year }})
+          </li>
+        </ul>
+      </ResumeSection>
+    </div>
   </div>
 
   <div v-else-if="loading" class="resume-loading">

@@ -58,6 +58,8 @@ export interface ProjectItem {
   description: string
   stack: string[]
   links: { label: string; url: string }[]
+  category?: string
+  highlights?: string[]
   image?: string
 }
 
