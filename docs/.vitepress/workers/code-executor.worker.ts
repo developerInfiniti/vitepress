@@ -87,14 +87,11 @@ async function executeCode(id: string, code: string, config: PlaygroundConfig) {
     const wrappedCode = wrapCodeForAsyncExecution(code, true)
 
     // Build the execution function with streaming callbacks injected
-    // We use Function constructor with explicit variable declarations
-    // This allows the wrapped code to access __onOutput and __setTimeout
+    // wrappedCode is a function that takes __onOutput and __setTimeout as parameters
     const executorFn = new Function(
-      `
-      const __onOutput = arguments[0];
-      const __setTimeout = arguments[1];
-      return ${wrappedCode};
-      `
+      '__onOutput',
+      '__setTimeout',
+      `return (${wrappedCode})(__onOutput, __setTimeout)`
     )
 
     const result = await executorFn(onOutput, safeSetTimeout)
