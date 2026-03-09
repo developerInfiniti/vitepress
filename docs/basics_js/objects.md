@@ -137,14 +137,10 @@ console.log('Деструктуризация:', userName, userAge);
 const updated = { ...user, age: 31, city: 'Киев' };
 console.log('Spread:', updated);
 
-// Object.freeze
-const frozen = Object.freeze({ x: 1 });
-try {
-  frozen.x = 2; // не изменится
-} catch (e) {
-  // ignored
-}
-console.log('Frozen:', frozen.x);`
+// Object.seal — можно менять, но не добавлять
+const sealed = Object.seal({ x: 1 });
+sealed.x = 2;
+console.log('Sealed:', sealed.x);`
 </script>
 
 <CodePlayground
