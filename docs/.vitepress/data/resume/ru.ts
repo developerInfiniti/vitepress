@@ -10,7 +10,8 @@ const data: ResumeData = {
     name: 'Алексей Зеленко',
     title: 'Full-Stack Developer',
     contacts: [
-      { icon: 'email', label: 'Email', value: 'alexey@example.com', link: 'mailto:alexey@example.com' },
+      { icon: 'email', label: 'Email', value: 'zelenkooleksii75@gmail.com', link: 'mailto:zelenkooleksii75@gmail.com' },
+      { icon: 'telegram', label: 'Telegram', value: '@creator_777_alex', link: 'https://t.me/creator_777_alex' },
       { icon: 'github', label: 'GitHub', value: 'AlexeyZelenko', link: 'https://github.com/AlexeyZelenko' },
       { icon: 'linkedin', label: 'LinkedIn', value: 'alexey-zelenko', link: 'https://linkedin.com/in/alexey-zelenko' },
       { icon: 'location', label: 'Локация', value: 'США' },

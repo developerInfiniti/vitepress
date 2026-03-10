@@ -156,6 +156,7 @@ function isExperience(item: ExperienceItem | EducationItem): item is ExperienceI
   font-size: 0.9em;
   color: var(--vp-c-text-2);
   line-height: 1.6;
+  list-style: disc;
 }
 
 .timeline-stack {

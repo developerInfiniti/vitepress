@@ -175,6 +175,7 @@ const filteredProjects = computed(() => {
   font-size: 0.82em;
   color: var(--vp-c-text-2);
   line-height: 1.5;
+  list-style: disc;
 }
 
 .project-highlights li {

@@ -142,6 +142,41 @@ const tocItems = computed(() => {
   padding-right: 200px;
 }
 
+/* Reset VitePress vp-doc styles that interfere with Resume components */
+.resume-page :deep(h1),
+.resume-page :deep(h2),
+.resume-page :deep(h3),
+.resume-page :deep(h4) {
+  margin: 0;
+  padding: 0;
+  border: none;
+  letter-spacing: normal;
+  line-height: 1.4;
+}
+
+.resume-page :deep(p) {
+  margin: 0;
+}
+
+.resume-page :deep(ul) {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.resume-page :deep(li + li) {
+  margin-top: 0;
+}
+
+.resume-page :deep(a) {
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.resume-page :deep(a:hover) {
+  text-decoration: none;
+}
+
 .resume-actions {
   display: flex;
   justify-content: flex-end;
@@ -199,6 +234,7 @@ const tocItems = computed(() => {
   font-size: 0.9em;
   color: var(--vp-c-text-2);
   line-height: 1.7;
+  list-style: disc;
 }
 
 .resume-certs-list a {
@@ -214,6 +250,12 @@ const tocItems = computed(() => {
   text-align: center;
   padding: 40px;
   color: var(--vp-c-text-3);
+}
+
+@media (max-width: 1024px) {
+  .resume-page {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 640px) {
