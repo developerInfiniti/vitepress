@@ -12,7 +12,7 @@ const data: ResumeData = {
     contacts: [
       { icon: 'email', label: 'Email', value: 'zelenkooleksii75@gmail.com', link: 'mailto:zelenkooleksii75@gmail.com' },
       { icon: 'telegram', label: 'Telegram', value: '@creator_777_alex', link: 'https://t.me/creator_777_alex' },
-      { icon: 'github', label: 'GitHub', value: 'AlexeyZelenko', link: 'https://github.com/AlexeyZelenko' },
+      { icon: 'github', label: 'GitHub', value: 'developerInfiniti', link: 'https://github.com/developerInfiniti' },
       { icon: 'linkedin', label: 'LinkedIn', value: 'alexey-zelenko', link: 'https://linkedin.com/in/alexey-zelenko' },
       { icon: 'location', label: 'Локация', value: 'США' },
     ],
@@ -130,7 +130,7 @@ const data: ResumeData = {
       stack: ['TypeScript', 'Vue 3', 'WebSocket', 'Pinia'],
       category: 'AI',
       highlights: ['Канбан-доска с drag-and-drop', 'Мониторинг процессов в реальном времени', 'Система задач с комментариями и ревью'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/claude_agent_teams_ui' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/claude_agent_teams_ui' }],
     },
     {
       name: 'Claude Notifications (Go)',
@@ -138,7 +138,7 @@ const data: ResumeData = {
       stack: ['Go', 'Cross-platform', 'CLI', 'System Notifications'],
       category: 'AI',
       highlights: ['Написана на Go для производительности', 'Windows/macOS/Linux', 'Настраиваемые звуки и фильтры'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/claude-notifications-go' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/claude-notifications-go' }],
     },
     // --- Web Applications ---
     {
@@ -148,8 +148,8 @@ const data: ResumeData = {
       category: 'Web',
       highlights: ['15+ интерактивных демо-компонентов', 'PDF-экспорт резюме', 'Многоязычность (ru/uk/en)'],
       links: [
-        { label: 'GitHub', url: 'https://github.com/AlexeyZelenko/vitepress' },
-        { label: 'Демо', url: 'https://alexeyzelenko.github.io/vitepress/' },
+        { label: 'GitHub', url: 'https://github.com/developerInfiniti/vitepress' },
+        { label: 'Демо', url: 'https://developerinfiniti.github.io/vitepress/' },
       ],
     },
     {
@@ -158,7 +158,7 @@ const data: ResumeData = {
       stack: ['Nuxt', 'Vue 3', 'Vuex', 'Firebase', 'SCSS'],
       category: 'Web',
       highlights: ['Dashboard с аналитикой', 'Управление клиентами и заказами', 'Firebase аутентификация'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/crm-system-nuxt' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/crm-system-nuxt' }],
     },
     {
       name: 'Nova Poshta Tracker',
@@ -166,7 +166,7 @@ const data: ResumeData = {
       stack: ['TypeScript', 'Vue 3', 'REST API', 'Pinia'],
       category: 'Web',
       highlights: ['Интеграция с API Новой Почты', 'Push-уведомления о статусе', 'История отправлений'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/nova_poshta_tracker' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/nova_poshta_tracker' }],
     },
     {
       name: 'Art Studio',
@@ -174,14 +174,14 @@ const data: ResumeData = {
       stack: ['TypeScript', 'Vue 3', 'Firebase', 'Cloud Storage'],
       category: 'Web',
       highlights: ['Галерея с фильтрацией', 'Видео-контент', 'Онлайн-бронирование'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/art-studio' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/art-studio' }],
     },
     {
       name: 'Art Studio Video',
       description: 'Расширение арт-студии с видео-галереей и стримингом контента.',
       stack: ['TypeScript', 'Vue 3', 'Firebase', 'Video.js'],
       category: 'Web',
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/art_studio_video' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/art_studio_video' }],
     },
     {
       name: 'Fitness Tracker',
@@ -189,7 +189,7 @@ const data: ResumeData = {
       stack: ['TypeScript', 'Vue 3', 'Chart.js', 'PWA'],
       category: 'Web',
       highlights: ['Визуализация прогресса', 'Калькулятор калорий', 'PWA для мобильных'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/fitnes_ex' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/fitnes_ex' }],
     },
     {
       name: 'Aid Ukraine',
@@ -197,14 +197,14 @@ const data: ResumeData = {
       stack: ['Vue.js', 'Firebase', 'Google Maps API', 'Firestore'],
       category: 'Web',
       highlights: ['Интерактивная карта ресурсов', 'Реальное время обновлений', 'Волонтёрская сеть'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/aid_ukraine' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/aid_ukraine' }],
     },
     {
       name: 'BV CK UA',
       description: 'Веб-приложение с UI-компонентами для информационного портала.',
       stack: ['TypeScript', 'Vue 3', 'SCSS', 'Vite'],
       category: 'Web',
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/bv_ck_ua_new' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/bv_ck_ua_new' }],
     },
     {
       name: 'Content Wind',
@@ -212,28 +212,28 @@ const data: ResumeData = {
       stack: ['Nuxt 3', 'Nuxt Content', 'TailwindCSS'],
       category: 'Web',
       highlights: ['Markdown-based контент', 'SEO-оптимизация', 'Минималистичный дизайн'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/content-wind' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/content-wind' }],
     },
     {
       name: 'BV Nuxt',
       description: 'Веб-приложение на Nuxt для региональной платформы.',
       stack: ['Nuxt', 'Vue.js', 'Vuex', 'SCSS'],
       category: 'Web',
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/bv-nuxt' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/bv-nuxt' }],
     },
     {
       name: 'Aleksandr Portfolio',
       description: 'Персональный портфолио-сайт с анимациями и адаптивным дизайном.',
       stack: ['Vue.js', 'CSS3', 'Animations'],
       category: 'Web',
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/aleksandr' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/aleksandr' }],
     },
     {
       name: 'CodeDZEN',
       description: 'Платформа для изучения программирования с интерактивными заданиями.',
       stack: ['Vue.js', 'JavaScript', 'Firebase'],
       category: 'Web',
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/codeDZEN' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/codeDZEN' }],
     },
     {
       name: 'FriendlyChat',
@@ -241,7 +241,7 @@ const data: ResumeData = {
       stack: ['JavaScript', 'Firebase', 'Cloud Messaging', 'Auth'],
       category: 'Web',
       highlights: ['Google Auth', 'Firestore real-time', 'Cloud Functions'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/codelab-friendlychat-web' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/codelab-friendlychat-web' }],
     },
     // --- Desktop ---
     {
@@ -250,14 +250,14 @@ const data: ResumeData = {
       stack: ['Electron', 'Vue.js', 'Node.js', 'SQLite'],
       category: 'Desktop',
       highlights: ['Флеш-карточки с интервальным повторением', 'Тесты и статистика', 'Офлайн-режим'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/electron_english' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/electron_english' }],
     },
     {
       name: 'Bot BLV',
       description: 'Автоматизированный бот для обработки данных и выполнения задач.',
       stack: ['JavaScript', 'Node.js', 'Automation'],
       category: 'Desktop',
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/bot_blv' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/bot_blv' }],
     },
     // --- Browser Extensions ---
     {
@@ -266,7 +266,7 @@ const data: ResumeData = {
       stack: ['JavaScript', 'Chrome Extensions API', 'FaceIT API'],
       category: 'Extensions',
       highlights: ['Статистика в реальном времени', 'Рейтинг и ELO', 'История матчей'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/browser-extension-faceit-csgo' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/browser-extension-faceit-csgo' }],
     },
     {
       name: 'Page Summarizer',
@@ -274,14 +274,14 @@ const data: ResumeData = {
       stack: ['Vue.js', 'Chrome Extensions API', 'NLP'],
       category: 'Extensions',
       highlights: ['Извлечение ключевых фраз', 'Popup-интерфейс', 'Настраиваемый вывод'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/Page-Summarizer' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/Page-Summarizer' }],
     },
     {
       name: 'Tab Master',
       description: 'Расширение для управления вкладками — группировка, поиск и быстрое переключение.',
       stack: ['Vue.js', 'Chrome Extensions API', 'Chrome Tabs API'],
       category: 'Extensions',
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/tab_master' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/tab_master' }],
     },
     // --- Backend ---
     {
@@ -290,7 +290,7 @@ const data: ResumeData = {
       stack: ['Express', 'MongoDB', 'Node.js', 'JWT', 'Mongoose'],
       category: 'Backend',
       highlights: ['JWT аутентификация', 'CRUD операции', 'Валидация данных'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/express-mongo-todos' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/express-mongo-todos' }],
     },
     {
       name: 'API Connectors (BitMEX)',
@@ -298,7 +298,7 @@ const data: ResumeData = {
       stack: ['JavaScript', 'REST API', 'WebSocket', 'Crypto'],
       category: 'Backend',
       highlights: ['WebSocket streaming', 'Торговые ордера', 'Обработка рыночных данных'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/api-connectors' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/api-connectors' }],
     },
     // --- Mobile ---
     {
@@ -307,7 +307,7 @@ const data: ResumeData = {
       stack: ['JavaScript', 'Firebase', 'Google Play', 'PWA'],
       category: 'Mobile',
       highlights: ['Опубликовано в Google Play', 'Офлайн-чтение', 'Поиск по тексту'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/Bible_online_Google' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/Bible_online_Google' }],
     },
     // --- Additional AI & Developer Tools ---
     {
@@ -316,7 +316,7 @@ const data: ResumeData = {
       stack: ['TypeScript', 'Vue 3', 'OpenAI API', 'Markdown'],
       category: 'AI',
       highlights: ['Стриминг ответов в реальном времени', 'Markdown-рендеринг', 'Экспорт диалогов'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/ai-chat-assistant' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/ai-chat-assistant' }],
     },
     {
       name: 'Prompt Library',
@@ -324,7 +324,7 @@ const data: ResumeData = {
       stack: ['TypeScript', 'Vue 3', 'Pinia', 'LocalStorage'],
       category: 'AI',
       highlights: ['Категоризация промптов', 'Быстрый поиск с фильтрами', 'Импорт/экспорт коллекций'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/prompt-library' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/prompt-library' }],
     },
     // --- Additional Web Applications ---
     {
@@ -333,7 +333,7 @@ const data: ResumeData = {
       stack: ['Vue 3', 'TypeScript', 'OpenWeather API', 'Chart.js'],
       category: 'Web',
       highlights: ['Прогноз на 7 дней', 'Геолокация', 'Графики температуры и осадков'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/weather-dashboard' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/weather-dashboard' }],
     },
     {
       name: 'Task Planner',
@@ -341,7 +341,7 @@ const data: ResumeData = {
       stack: ['Vue 3', 'TypeScript', 'Pinia', 'IndexedDB'],
       category: 'Web',
       highlights: ['Pomodoro-таймер', 'Канбан-доска', 'Офлайн-режим через IndexedDB'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/task-planner' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/task-planner' }],
     },
     {
       name: 'Recipe Book',
@@ -349,7 +349,7 @@ const data: ResumeData = {
       stack: ['Vue 3', 'Firebase', 'Firestore', 'PWA'],
       category: 'Web',
       highlights: ['Поиск по ингредиентам', 'Калькулятор порций', 'PWA с офлайн-доступом'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/recipe-book' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/recipe-book' }],
     },
     {
       name: 'Quiz Platform',
@@ -357,7 +357,7 @@ const data: ResumeData = {
       stack: ['Nuxt 3', 'TypeScript', 'Firebase', 'Auth'],
       category: 'Web',
       highlights: ['Конструктор тестов', 'Таблица лидеров', 'Firebase аутентификация'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/quiz-platform' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/quiz-platform' }],
     },
     {
       name: 'Invoice Generator',
@@ -365,7 +365,7 @@ const data: ResumeData = {
       stack: ['Vue 3', 'TypeScript', 'jsPDF', 'Pinia'],
       category: 'Web',
       highlights: ['PDF-генерация', 'Настраиваемые шаблоны', 'История и фильтрация'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/invoice-generator' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/invoice-generator' }],
     },
     {
       name: 'Photo Gallery',
@@ -373,7 +373,7 @@ const data: ResumeData = {
       stack: ['Vue 3', 'TypeScript', 'Cloudinary', 'CSS Grid'],
       category: 'Web',
       highlights: ['Lazy-loading изображений', 'Lightbox с жестами', 'Masonry layout'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/photo-gallery' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/photo-gallery' }],
     },
     {
       name: 'Event Calendar',
@@ -381,7 +381,7 @@ const data: ResumeData = {
       stack: ['Vue 3', 'TypeScript', 'FullCalendar', 'Firebase'],
       category: 'Web',
       highlights: ['Drag-and-drop событий', 'Напоминания', 'Синхронизация с Google'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/event-calendar' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/event-calendar' }],
     },
     {
       name: 'Markdown Editor',
@@ -389,7 +389,7 @@ const data: ResumeData = {
       stack: ['Vue 3', 'TypeScript', 'Marked', 'CodeMirror'],
       category: 'Web',
       highlights: ['Двухпанельный редактор', 'Экспорт в HTML/PDF', 'Подсветка синтаксиса'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/markdown-editor' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/markdown-editor' }],
     },
     // --- Additional Desktop ---
     {
@@ -398,7 +398,7 @@ const data: ResumeData = {
       stack: ['Electron', 'Vue 3', 'FFmpeg', 'Canvas API'],
       category: 'Desktop',
       highlights: ['Запись экрана и камеры', 'Аннотации в реальном времени', 'Экспорт в GIF/MP4'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/screen-recorder' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/screen-recorder' }],
     },
     // --- Additional Extensions ---
     {
@@ -407,7 +407,7 @@ const data: ResumeData = {
       stack: ['Vue.js', 'Chrome Extensions API', 'Canvas API'],
       category: 'Extensions',
       highlights: ['Пипетка с увеличением', 'История цветов', 'Генерация палитр'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/color-picker-pro' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/color-picker-pro' }],
     },
     // --- Additional Backend ---
     {
@@ -416,7 +416,7 @@ const data: ResumeData = {
       stack: ['Node.js', 'Express', 'MongoDB', 'QRCode'],
       category: 'Backend',
       highlights: ['Кастомные короткие ссылки', 'Аналитика кликов', 'Генерация QR-кодов'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/url-shortener' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/url-shortener' }],
     },
     {
       name: 'File Upload Service',
@@ -424,7 +424,7 @@ const data: ResumeData = {
       stack: ['Node.js', 'Express', 'Multer', 'Sharp', 'AWS S3'],
       category: 'Backend',
       highlights: ['Валидация типов и размеров', 'Автоматический резайз', 'S3 интеграция'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/file-upload-service' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/file-upload-service' }],
     },
     // --- Additional Mobile ---
     {
@@ -433,7 +433,7 @@ const data: ResumeData = {
       stack: ['Vue 3', 'Capacitor', 'TypeScript', 'SQLite'],
       category: 'Mobile',
       highlights: ['Цепочки привычек', 'Push-уведомления', 'Статистика за месяц/год'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/habit-tracker' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/habit-tracker' }],
     },
     {
       name: 'Expense Tracker',
@@ -441,7 +441,7 @@ const data: ResumeData = {
       stack: ['Vue 3', 'Capacitor', 'Chart.js', 'Firebase'],
       category: 'Mobile',
       highlights: ['Категории расходов', 'Графики и аналитика', 'Экспорт в CSV'],
-      links: [{ label: 'GitHub', url: 'https://github.com/AlexeyZelenko/expense-tracker' }],
+      links: [{ label: 'GitHub', url: 'https://github.com/developerInfiniti/expense-tracker' }],
     },
   ],
 

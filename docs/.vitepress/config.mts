@@ -35,13 +35,13 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Справочник по IT' }],
     ['meta', { property: 'og:locale', content: 'ru_RU' }],
-    ['meta', { property: 'og:url', content: 'https://alexeyzelenko.github.io/vitepress/' }],
+    ['meta', { property: 'og:url', content: 'https://developerinfiniti.github.io/vitepress/' }],
     ['meta', { property: 'og:title', content: 'Справочник по IT' }],
     ['meta', { property: 'og:description', content: 'Ваш быстрый справочник для разработчиков' }],
   ],
 
   transformPageData(pageData) {
-    const siteUrl = 'https://alexeyzelenko.github.io/vitepress';
+    const siteUrl = 'https://developerinfiniti.github.io/vitepress';
     const canonicalUrl = `${siteUrl}/${pageData.relativePath}`
       .replace(/index\.md$/, '')
       .replace(/\.md$/, '.html');
@@ -957,7 +957,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/AlexeyZelenko/vitepress' }
+      { icon: 'github', link: 'https://github.com/developerInfiniti/vitepress' }
     ]
   }
 });

@@ -3,7 +3,7 @@
 **Дата:** 2026-03-08
 **Проект:** Шпаргалки по IT (VitePress Documentation)
 **Версия VitePress:** v2.0.0-alpha.16
-**Репозиторий:** https://github.com/AlexeyZelenko/vitepress
+**Репозиторий:** https://github.com/developerInfiniti/vitepress
 
 ---
 
